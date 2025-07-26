@@ -2,9 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
-import '../index.css';
-
-
+import "../index.css";
 import colabImage from "../assets/images/Colab.png";
 import img1 from "../assets/images/img1.png";
 import img2 from "../assets/images/img2.png";
@@ -31,14 +29,14 @@ const courseRoutes = {
   "Cloud Computing": "/programs/CloudComputing",
   "App Development": "/programs/AppDevelopment",
   "UI/UX": "/programs/UIUX",
-  "VLSI": "/programs/VLSI",
-  "IOT": "/programs/IOT",
+  VLSI: "/programs/VLSI",
+  IOT: "/programs/IOT",
   "AutoCAD with Self -paced MATLAB": "/programs/AutoCAD",
   "Digital Marketing": "/programs/DigitalMarketing",
   "HRM and Finance": "/programs/HRM",
   "Leadership and Management": "/programs/Leadership",
   "Advanced Excel with Power BI": "/programs/AdvancedExcel",
-  "Accounting": "/programs/Accounting",
+  Accounting: "/programs/Accounting",
 };
 
 // ✅ Motion variants
@@ -169,20 +167,40 @@ export default function HeroSection() {
           animate="show"
           className="flex flex-col items-center gap-4 mt-12 w-full px-4 sm:hidden"
         >
-          <motion.div variants={imageCardVariant} className="w-[140px] h-[180px]">
-            <img src={imageCards[2].img} className="rounded-xl shadow-md object-cover w-full h-full transition-transform duration-500 hover:scale-105" />
+          <motion.div
+            variants={imageCardVariant}
+            className="w-[140px] h-[180px]"
+          >
+            <img
+              src={imageCards[2].img}
+              className="rounded-xl shadow-md object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+            />
           </motion.div>
           <div className="flex gap-4">
             {[1, 3].map((index) => (
-              <motion.div key={index} variants={imageCardVariant} className="w-[160px] h-[200px]">
-                <img src={imageCards[index].img} className="rounded-xl shadow-md object-cover w-full h-full transition-transform duration-500 hover:scale-105" />
+              <motion.div
+                key={index}
+                variants={imageCardVariant}
+                className="w-[160px] h-[200px]"
+              >
+                <img
+                  src={imageCards[index].img}
+                  className="rounded-xl shadow-md object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+                />
               </motion.div>
             ))}
           </div>
           <div className="flex gap-4">
             {[0, 4].map((index) => (
-              <motion.div key={index} variants={imageCardVariant} className="w-[180px] h-[220px]">
-                <img src={imageCards[index].img} className="rounded-xl shadow-md object-cover w-full h-full transition-transform duration-500 hover:scale-105" />
+              <motion.div
+                key={index}
+                variants={imageCardVariant}
+                className="w-[180px] h-[220px]"
+              >
+                <img
+                  src={imageCards[index].img}
+                  className="rounded-xl shadow-md object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+                />
               </motion.div>
             ))}
           </div>
