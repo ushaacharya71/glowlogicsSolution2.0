@@ -57,9 +57,15 @@ const OfferPopup = () => {
             className="w-full px-4 py-2 border rounded-md mb-4 dark:bg-gray-800 dark:border-gray-600 dark:text-white"
           />
 
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-md transition">
-            Get My 33% Off
-          </button>
+          <a
+            href="https://forms.gle/KKCqqLUcHdFRMqGg6"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-md transition">
+              Get My 33% Off
+            </button>
+          </a>
         </div>
 
         {/* Right Image */}
