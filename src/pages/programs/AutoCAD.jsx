@@ -46,8 +46,7 @@ const FullStackCourse = () => {
             AutoCAD
           </h1>
           <p className="text-lg text-gray-700 mb-6">
-            Become a job-ready full-stack developer | Master React, Node.js,
-            MongoDB & APIs
+            Become a job-ready AutoCAD professional | Master 2D Drafting, 3D Modeling & Industry-Level Design Skills
           </p>
 
           {/* Benefits */}
