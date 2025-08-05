@@ -5,16 +5,12 @@ export default defineConfig({
   plugins: [react()],
   base: "/",
   build: {
-    chunkSizeWarningLimit: 1024, // Suppress warning up to 1MB
+    chunkSizeWarningLimit: 1024,
     rollupOptions: {
       output: {
         manualChunks: {
           react: ['react', 'react-dom'],
-          framer: ['framer-motion'],
-          radix: ['@radix-ui/react-dropdown-menu'],
-          ui: ['@shadcn/ui'],
-          chart: ['chart.js'],
-          icons: ['lucide-react'],
+          // Split more if needed
         }
       }
     }
