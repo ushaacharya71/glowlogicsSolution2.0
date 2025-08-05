@@ -423,7 +423,7 @@ const FullStackCourse = () => {
           <div className="w-full lg:w-1/2 mx-auto relative flex flex-col items-center">
   <div className="bg-[#f9fbff] rounded-xl shadow-md p-8 max-w-md mx-auto text-center border border-orange-600 mb-6">
     <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">
-      Next cohort starts on <span className="text-black font-bold">3 Aug 2025</span>
+      Next cohort starts on <span className="text-black font-bold">Sep 2025</span>
     </h3>
   </div>
 
