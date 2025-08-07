@@ -127,16 +127,19 @@ export default function About3DMarquee() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
             <div>
               <h2 className="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
-               Our mission is simple: help you build projects and skills that aren’t just for marks, but for real impact.
+                Our mission is simple: help you build projects and skills that
+                aren’t just for marks, but for real impact.
               </h2>
             </div>
             <div className="space-y-4">
               <h4 className="font-semibold text-lg">Our core strength</h4>
               <p className="text-gray-600">
-                From hidden potential to industry ready professionals,we guide every step.
+                From hidden potential to industry ready professionals,we guide
+                every step.
               </p>
               <p className="text-gray-600">
-                At Glowlogics, we’re here to help students like you unlock skills that match today’s industry needs.
+                At Glowlogics, we’re here to help students like you unlock
+                skills that match today’s industry needs.
               </p>
             </div>
           </div>
@@ -148,18 +151,26 @@ export default function About3DMarquee() {
                 Our story ↓
               </h5>
               <p className="text-gray-600">
-              Glowlogics Solutions was created to make learning feel real again. We saw too many students finish courses but feel lost when facing actual industry challenges. That’s why we designed programs that focus not just on teaching but on building real skills, real portfolios, and real confidence.
-              From our first batch of learners to now partnering with institutions like E-Cell IIT Hyderabad, our focus has always been the same: help individuals grow, get hired, and stay relevant in an ever-changing job market.
-              At Glowlogics, it’s not just about certificates it’s about creating real stories of growth, success, and transformation.
+                Glowlogics Solutions was created to make learning feel real
+                again. We saw too many students finish courses but feel lost
+                when facing actual industry challenges. That’s why we designed
+                programs that focus not just on teaching but on building real
+                skills, real portfolios, and real confidence. From our first
+                batch of learners to now partnering with institutions like
+                E-Cell IIT Hyderabad, our focus has always been the same: help
+                individuals grow, get hired, and stay relevant in an
+                ever-changing job market. At Glowlogics, it’s not just about
+                certificates it’s about creating real stories of growth,
+                success, and transformation.
               </p>
-             <a
-  href="https://www.youtube.com/@Glowlogics"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="text-red-500 font-semibold mt-2 hover:underline inline-block"
->
-  Read more →
-</a>
+              <a
+                href="https://www.youtube.com/@Glowlogics"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-red-500 font-semibold mt-2 hover:underline inline-block"
+              >
+                Read more →
+              </a>
             </div>
             <div className="w-full aspect-video rounded-2xl overflow-hidden shadow-xl">
               <iframe
@@ -190,40 +201,6 @@ export default function About3DMarquee() {
             </div>
           </div>
 
-          {/* <div className="w-full  py-12 px-4">
-            <h2 className="text-3xl font-bold text-center mb-10 text-gray-800">
-              🎓 Our Placed Students
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {placementData.map((student, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden relative hover:shadow-2xl transition duration-300"
-                  initial={{ y: index % 2 === 0 ? -20 : 20 }}
-                  animate={{ y: 0 }}
-                  transition={{ duration: 1, ease: "easeOut" }}
-                >
-                  <div className="h-48 w-full overflow-hidden">
-                    <img
-                      src={student.img}
-                      alt={student.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h2 className="text-lg font-semibold">{student.name}</h2>
-                    <p className="text-sm text-gray-600">
-                      Placed at <strong>{student.company}</strong>
-                    </p>
-                    <p className="text-xs text-gray-500 mt-1">
-                      {student.placed}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div> */}
-
           <div className="mt-20">
             <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl flex flex-col md:flex-row items-center">
               {/* Text Content */}
@@ -238,7 +215,8 @@ export default function About3DMarquee() {
                     Want to be part of something that changes how people learn?
                   </h3>
                   <p className="text-gray-600 mb-6">
-                   Collaborate with a skilled, enthusiastic team building a platform used by learners worldwide.
+                    Collaborate with a skilled, enthusiastic team building a
+                    platform used by learners worldwide.
                   </p>
                   <button className="px-6 py-3 bg-black text-white rounded-full shadow hover:bg-gray-900 transition">
                     Join us now!
@@ -259,21 +237,20 @@ export default function About3DMarquee() {
         </div>
       </div>
 
-      <div className="relative max-w-6xl mx-auto p-6 pt-20 my-20 shadow-xl border border-gray-300 bg-white hover:shadow-2xl transition duration-500 ease-in-out rounded-xl flex flex-col md:flex-row items-center gap-10">
-        {/* Floating Poster Image - increased size */}
-        <div className="absolute -top-14 left-6 w-48 md:w-60 shadow-lg rounded-lg bg-white p-2 hover:scale-95 transition-transform duration-300">
+      {/* Floating Poster Image - increased size */}
+      {/* <div className="absolute -top-14 left-6 w-48 md:w-60 shadow-lg rounded-lg bg-white p-2 hover:scale-95 transition-transform duration-300">
           <img
             src="/1.png" // Replace with your actual image path
             alt="Collaboration Poster"
             className="w-full h-full object-contain rounded-md"
           />
-        </div>
+        </div> */}
 
-        {/* Placeholder for spacing */}
-        <div className="hidden md:block md:w-60" />
+      {/* Placeholder for spacing */}
+      <div className="hidden md:block md:w-60" />
 
-        {/* Center Content */}
-        <div className="flex-1 text-center md:text-left">
+      {/* Center Content */}
+      {/* <div className="flex-1 text-center md:text-left">
           <h2 className="text-2xl md:text-3xl font-extrabold text-gray-800 mb-2">
             Glowlogics × E-Cell IIT Hyderabad
           </h2>
@@ -294,17 +271,16 @@ export default function About3DMarquee() {
             </span>
             .
           </p>
-        </div>
+        </div> */}
 
-        {/* Right Logo - increased size */}
-        <div className="w-32 h-32 md:w-40 md:h-40 flex-shrink-0 shadow-md rounded-lg p-2 bg-white hover:scale-95 transition-transform duration-300 flex items-center justify-center self-center">
+      {/* Right Logo - increased size */}
+      {/* <div className="w-32 h-32 md:w-40 md:h-40 flex-shrink-0 shadow-md rounded-lg p-2 bg-white hover:scale-95 transition-transform duration-300 flex items-center justify-center self-center">
           <img
             src="/eCell.png"
             alt="ICFAI University Logo"
             className="w-full h-full object-contain"
           />
-        </div>
-      </div>
+        </div> */}
 
       <div className="relative max-w-6xl mx-auto p-6 pt-20 my-20 shadow-xl border border-gray-300 bg-white hover:shadow-2xl transition duration-500 ease-in-out rounded-xl flex flex-col md:flex-row items-center gap-10">
         {/* Floating Poster Image - increased size */}
@@ -374,11 +350,11 @@ export default function About3DMarquee() {
           <p className="text-gray-600 leading-relaxed text-lg">
             We’re proud to announce our official collaboration with
             <span className="font-semibold text-black">
-               Canara Engineering College, Managlore
+              Canara Engineering College, Managlore
             </span>
-              through a signed MoU. Together, we aim to empower and educate 1000+ students with
-            industry-relevant skills, real-world projects, and career-focused training designed
-            to bridge the gap between {" "}
+            through a signed MoU. Together, we aim to empower and educate 1000+
+            students with industry-relevant skills, real-world projects, and
+            career-focused training designed to bridge the gap between{" "}
             <span className="font-semibold">academics and </span> and{" "}
             <span className="font-semibold">professional success.</span>.
           </p>
