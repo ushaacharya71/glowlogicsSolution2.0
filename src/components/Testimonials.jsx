@@ -56,6 +56,31 @@ const testimonials = [
     text: "Hello, I’m Preetham. I recently completed my Bachelor's in Engineering. In my final semester, I enrolled in a specialized VLSI course at Glowlogics. The course covered Verilog, FPGA, ASIC flow, and low-power techniques. I also did a Verilog design project that strengthened my hardware skills. This training has prepared me well for the semiconductor field.",
     img: "/pritam.png",
   },
+  {
+    name: "Khusi M",
+    title: " University of Visvesvaraya College of Engineering ",
+    text: "I'm really grateful to GlowLogics Solutions for such a great learning experience in VLSI Design. The training was super well-organized, and the instructors were not just knowledgeable but also really patient and supportive throughout. The hands-on sessions and real-time project work helped me understand the concepts much better and boosted my confidence a lot. Big thanks for the guidance and opportunity — it’s definitely going to help me in the future!",
+    img: "/khushi.png",
+  },
+  {
+    name: "Dusa Abhiram ",
+    title: "University of Visvesvaraya College of Engineering ",
+    text: "I am greatful and thankful to the Glowlogics Solutions team for my internship programme on VLSI, gaining valuable insights into digital circuit design and simulation. During the training, I worked with Verilog and tools like icarus verilog and  Xilinx Hands-on projects helped me understand the VLSI design flow effectively. The experience boosted my technical and problem-solving skills. Overall, it was a great learning journey that deepened my interest in semiconductor technology.",
+    img: "/Dusa.png",
+  },
+  {
+    name: "Jeshwanth Basutkar ",
+    title: "Kommuri Pratap Reddy Institute of Technology",
+    text: "I am extremely thankful to GlowLogics Solutions for providing an exceptional learning experience in Data Science. The training was well-structured with a perfect balance of theory and practical sessions, allowing me to gain real-time project exposure and industry-relevant skills. The instructors were highly knowledgeable, supportive, and always approachable, which made the learning process smooth and engaging. This training has greatly enhanced my confidence and equipped me with the right tools to take the next step in my data science career.",
+    img: "/Jeshwanth.png",
+  },
+   {
+    name: "Sanjana Anand Patil",
+    title: "M.S. RAMAIAH INSTITUTE OF TECHNOLOGY",
+    text: "I am truly grateful to GlowLogics Solutions for providing me with an excellent learning experience in VLSI design. The training was well-structured, and the instructors were knowledgeable, patient, and supportive throughout. The hands-on approach and real-time project exposure significantly enhanced my understanding and confidence in the field. I sincerely appreciate the opportunity and guidance I received, which will definitely help me in my future endeavors.",
+    img: "/Sanjana.png",
+  },
+
 ];
 
 
