@@ -75,9 +75,9 @@ const FullStackCourse = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 mb-4">
-            <Link to="https://rzp.io/rzp/GL6k">
+            <Link to="https://rzp.io/rzp/GL9k">
               <a
-                href="https://rzp.io/rzp/GL6k"
+                href="https://rzp.io/rzp/GL9k"
                 target="_blank"
                 rel="noopener noreferrer"
               >
