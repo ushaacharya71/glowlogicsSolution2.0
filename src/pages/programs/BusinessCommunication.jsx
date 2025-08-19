@@ -661,7 +661,7 @@ const FullStackCourse = () => {
                     name: "Srijib Dey",
                     title: "Working as a Employee",
                     text: "I have been doing a VLSI course from GlowLogics for the last 6 months. This course provided me with valuable exposure to the fundamentals and advanced concepts of VLSI design, including practical insights into design methodologies, simulation class techniques, and industry tools. The structured training, combined with hands-on tasks, helped me enhance my technical knowledge and problem-solving skills. ",
-                  },
+                   img: "/Sri.png", },
                 ].map((item, index) => (
                   <div
                     key={index}
