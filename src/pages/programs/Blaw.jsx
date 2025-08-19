@@ -567,12 +567,6 @@ const FullStackCourse = () => {
                     img: "/TejasvaniK.png",
                   },
                   {
-                    name: "Naziya",
-                    title: "Dr.Ambedkar Institute of Technology",
-                    text: "This is Naziya from Bengaluru, currently studying in the 3rd year of BE in the ECE branch at Dr. AIT, Bengaluru. I recently completed a Full Stack Java course at Glowlogic Solutions, and it was a great learning experience. It was one of the best learning platforms for me, as it covered all the topics thoroughly and helped me become confident in Java. The schedule was very flexible and cooperative, allowing me to balance both my college work and the Java classes. The trainer was highly supportive and knowledgeable, explaining every concept clearly with practical examples. This course helped me build a strong foundation in Java and enhanced my skills significantly. I am truly thankful to the team for their continuous guidance and support throughout this wonderful journey.",
-                    img: "/Naziya.png",
-                  },
-                  {
                     name: "Thotakura Puneeth Sai",
                     title: "Anantha Lakshmi Institute of Technology, 3rd Year",
                     text: "Hi, I'm Thotakura Puneeth Sai, a 3rd-year B.Tech student at Anantha Lakshmi Institute of Technology and Sciences. I completed the Cybersecurity & Ethical Hacking course at Glowlogics, and it was an amazing experience. The instructors were supportive, and the hands-on classes were top-notch. I gained real-world skills essential in cybersecurity. Thank you, Glowlogics!",
@@ -656,7 +650,7 @@ const FullStackCourse = () => {
                     name: "Srijib Dey",
                     title: "Working as a Employee",
                     text: "I have been doing a VLSI course from GlowLogics for the last 6 months. This course provided me with valuable exposure to the fundamentals and advanced concepts of VLSI design, including practical insights into design methodologies, simulation class techniques, and industry tools. The structured training, combined with hands-on tasks, helped me enhance my technical knowledge and problem-solving skills. ",
-                  },
+                    img: "/Sri.png",},
                 ].map((item, index) => (
                   <div
                     key={index}
