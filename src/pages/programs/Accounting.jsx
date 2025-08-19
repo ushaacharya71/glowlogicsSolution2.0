@@ -27,7 +27,7 @@ const FullStackCourse = () => {
       "https://upload.wikimedia.org/wikipedia/commons/f/f0/Salesforce.com_logo.svg",
     ],
     "Financial Analyst (Entry-Level) – Starting Salary (India): ₹4 – ₹7 LPA": [
-       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_P85o6q5b2clTlqYUhvgVMIdgUu6MqvzfBISHBirSsS0R7uJwK3u1Fd1bB-U&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_P85o6q5b2clTlqYUhvgVMIdgUu6MqvzfBISHBirSsS0R7uJwK3u1Fd1bB-U&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQQ2ed2DEYUtBqM5QFnRlUDyMc6naNQ7ZqTLQ3pdl1WOk8NHom7ffKz3ub-g&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_ywGfT6BXzPfdxnmFPHu9WagIC7E_Dz9XlHiCyKOO0jjcX-iktawn2T41-4Q&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSze0EO7gJyuZJ7-LbrCiBH60WrvWTeLenF82OZdK0kaNvhnmmReIiMQFZvRg&s",
@@ -46,32 +46,33 @@ const FullStackCourse = () => {
             Accounting
           </h1>
           <p className="text-lg text-gray-700 mb-6">
-            Become a job-ready accounting professional | Master Tally, Excel, QuickBooks, Financial Reporting & Taxation
+            Become a job-ready accounting professional | Master Tally, Excel,
+            QuickBooks, Financial Reporting & Taxation
           </p>
 
           {/* Benefits */}
           <ul className="space-y-3 text-gray-800 mb-6">
-  <li className="flex items-start">
-    <FaCheckCircle className="text-green-500 mt-1 mr-2" />
-    Learn real-world accounting concepts through hands-on projects
-  </li>
-  <li className="flex items-start">
-    <FaCheckCircle className="text-green-500 mt-1 mr-2" />
-    Master tools like Excel, Tally, QuickBooks & Financial Analysis
-  </li>
-  <li className="flex items-start">
-    <FaCheckCircle className="text-green-500 mt-1 mr-2" />
-    Career Mentorship + Build a strong Accounting Portfolio
-  </li>
-  <li className="flex items-start">
-    <FaCheckCircle className="text-green-500 mt-1 mr-2" />
-    Includes resume review, mock interviews, and LinkedIn guidance
-  </li>
-  <li className="flex items-start">
-    <FaCheckCircle className="text-green-500 mt-1 mr-2" />
-    Guaranteed Live Cohorts in the Next 90 Days
-  </li>
-</ul>
+            <li className="flex items-start">
+              <FaCheckCircle className="text-green-500 mt-1 mr-2" />
+              Learn real-world accounting concepts through hands-on projects
+            </li>
+            <li className="flex items-start">
+              <FaCheckCircle className="text-green-500 mt-1 mr-2" />
+              Master tools like Excel, Tally, QuickBooks & Financial Analysis
+            </li>
+            <li className="flex items-start">
+              <FaCheckCircle className="text-green-500 mt-1 mr-2" />
+              Career Mentorship + Build a strong Accounting Portfolio
+            </li>
+            <li className="flex items-start">
+              <FaCheckCircle className="text-green-500 mt-1 mr-2" />
+              Includes resume review, mock interviews, and LinkedIn guidance
+            </li>
+            <li className="flex items-start">
+              <FaCheckCircle className="text-green-500 mt-1 mr-2" />
+              Guaranteed Live Cohorts in the Next 90 Days
+            </li>
+          </ul>
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 mb-4">
@@ -125,9 +126,13 @@ const FullStackCourse = () => {
           <span className="font-bold text-black">Overview</span>
         </h2>
         <p className="text-gray-600 mb-8 max-w-3xl">
-         Glowlogics AccountingPro training course covers core topics essential for a professional in the field of accounting and finance. It includes subjects such as emerging financial trends, new technologies and tools, regulatory practices, and the core competencies required from an accounting professional. With an emphasis on strategic thinking and business acumen, the course also highlights the evolving role of accountants in todays dynamic landscape.
-
-
+          Glowlogics AccountingPro training course covers core topics essential
+          for a professional in the field of accounting and finance. It includes
+          subjects such as emerging financial trends, new technologies and
+          tools, regulatory practices, and the core competencies required from
+          an accounting professional. With an emphasis on strategic thinking and
+          business acumen, the course also highlights the evolving role of
+          accountants in todays dynamic landscape.
         </p>
 
         {/* Key Features */}
@@ -184,7 +189,11 @@ const FullStackCourse = () => {
       <div className="max-w-7xl mx-auto px-6 py-16 bg-white text-gray-800">
         <h2 className="text-3xl font-semibold mb-2">Benefits</h2>
         <p className="mb-8 text-gray-600 max-w-4xl">
-        The AccountingPro® certification can help you land lucrative roles in finance, auditing, consulting, government, and other dynamic industries. AccountingPro® certified professionals drive greater financial accuracy and compliance, and are often rewarded with substantial pay raises as shown below.
+          The AccountingPro® certification can help you land lucrative roles in
+          finance, auditing, consulting, government, and other dynamic
+          industries. AccountingPro® certified professionals drive greater
+          financial accuracy and compliance, and are often rewarded with
+          substantial pay raises as shown below.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-50 border rounded-lg shadow-sm overflow-hidden">
@@ -362,7 +371,6 @@ const FullStackCourse = () => {
                         className="flex justify-between items-center text-sm py-1"
                       >
                         <span>{lesson.name}</span>
-
                       </div>
                     ))}
                   </div>
@@ -371,20 +379,20 @@ const FullStackCourse = () => {
             ))}
           </div>
         </div>
-         <div>
-                  <br></br>
-                </div>
-                <div className="overflow-hidden w-full max-w-5xl mx-auto rounded-lg shadow-md">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 text-gray-800">
-                    Your 5-Step Career Roadmap with Glowlogics
-                  </h2>
+        <div>
+          <br></br>
+        </div>
+        <div className="overflow-hidden w-full max-w-5xl mx-auto rounded-lg shadow-md">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 text-gray-800">
+            Your 5-Step Career Roadmap with Glowlogics
+          </h2>
 
-                  <img
-                    src={RoadmapFlow}
-                    alt="World map with student locations"
-                    className="transition-transform duration-500 ease-in-out transform hover:scale-105 w-full h-auto"
-                  />
-                </div>
+          <img
+            src={RoadmapFlow}
+            alt="World map with student locations"
+            className="transition-transform duration-500 ease-in-out transform hover:scale-105 w-full h-auto"
+          />
+        </div>
         <div className="max-w-7xl mx-auto px-4 py-16 flex flex-col lg:flex-row gap-10 items-start">
           {/* Left: FAQ Section */}
           <div className="w-full lg:w-2/3">
@@ -450,123 +458,136 @@ const FullStackCourse = () => {
 
           {/* Right: Certificates */}
           <div className="w-full lg:w-1/2 mx-auto relative flex flex-col items-center">
-  <div className="bg-[#f9fbff] rounded-xl shadow-md p-8 max-w-md mx-auto text-center border border-orange-600 mb-6">
-    <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">
-      Next cohort starts on <span className="text-black font-bold">3 Aug 2025</span>
-    </h3>
-  </div>
+            <div className="bg-[#f9fbff] rounded-xl shadow-md p-8 max-w-md mx-auto text-center border border-orange-600 mb-6">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">
+                Next cohort starts on{" "}
+                <span className="text-black font-bold">3 Aug 2025</span>
+              </h3>
+            </div>
 
-  {/* Certificate Image with Hover Zoom */}
-  <div
-    id="cert-container"
-    className="border rounded-lg shadow-md overflow-hidden w-full"
-    onMouseMove={(e) => {
-      const img = document.getElementById("cert-img");
-      if (img) {
-        const rect = img.getBoundingClientRect();
-        const x = ((e.clientX - rect.left) / rect.width) * 100;
-        const y = ((e.clientY - rect.top) / rect.height) * 100;
-        img.style.transformOrigin = `${x}% ${y}%`;
-      }
-    }}
-    onMouseLeave={() => {
-      const img = document.getElementById("cert-img");
-      if (img) {
-        img.style.transformOrigin = "center center";
-      }
-    }}
-  >
-    <img
-      id="cert-img"
-      src="/CourseCompletionGlowlogics.png"
-      alt="Certificate 1"
-      data-index="0"
-      className="w-full h-auto object-contain p-2 transition-transform duration-300 ease-in-out scale-100 hover:scale-[2.5] cursor-zoom-in"
-      onClick={() => {
-        const modal = document.getElementById("cert-modal");
-        modal.style.display = "flex";
-      }}
-    />
-  </div>
+            {/* Certificate Image with Hover Zoom */}
+            <div
+              id="cert-container"
+              className="border rounded-lg shadow-md overflow-hidden w-full"
+              onMouseMove={(e) => {
+                const img = document.getElementById("cert-img");
+                if (img) {
+                  const rect = img.getBoundingClientRect();
+                  const x = ((e.clientX - rect.left) / rect.width) * 100;
+                  const y = ((e.clientY - rect.top) / rect.height) * 100;
+                  img.style.transformOrigin = `${x}% ${y}%`;
+                }
+              }}
+              onMouseLeave={() => {
+                const img = document.getElementById("cert-img");
+                if (img) {
+                  img.style.transformOrigin = "center center";
+                }
+              }}
+            >
+              <img
+                id="cert-img"
+                src="/CourseCompletionGlowlogics.png"
+                alt="Certificate 1"
+                data-index="0"
+                className="w-full h-auto object-contain p-2 transition-transform duration-300 ease-in-out scale-100 hover:scale-[2.5] cursor-zoom-in"
+                onClick={() => {
+                  const modal = document.getElementById("cert-modal");
+                  modal.style.display = "flex";
+                }}
+              />
+            </div>
 
-  {/* Certificate Navigation Buttons */}
-  <div className="flex gap-6 mt-4">
-    <button
-      onClick={() => {
-        const certificates = [
-          "/CourseCompletionGlowlogics.png",
-          "/InternshipGlowlogics.png",
-          "/PlacementGlowlogics.png",
-        ];
-        let currentIndex =
-          parseInt(document.getElementById("cert-img").getAttribute("data-index")) || 0;
-        currentIndex = (currentIndex - 1 + certificates.length) % certificates.length;
-        const img = document.getElementById("cert-img");
-        img.src = certificates[currentIndex];
-        img.setAttribute("alt", `Certificate ${currentIndex + 1}`);
-        img.setAttribute("data-index", currentIndex);
-        document.getElementById("modal-img").src = certificates[currentIndex];
-      }}
-      className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700"
-    >
-      ◀
-    </button>
+            {/* Certificate Navigation Buttons */}
+            <div className="flex gap-6 mt-4">
+              <button
+                onClick={() => {
+                  const certificates = [
+                    "/CourseCompletionGlowlogics.png",
+                    "/InternshipGlowlogics.png",
+                    "/PlacementGlowlogics.png",
+                  ];
+                  let currentIndex =
+                    parseInt(
+                      document
+                        .getElementById("cert-img")
+                        .getAttribute("data-index")
+                    ) || 0;
+                  currentIndex =
+                    (currentIndex - 1 + certificates.length) %
+                    certificates.length;
+                  const img = document.getElementById("cert-img");
+                  img.src = certificates[currentIndex];
+                  img.setAttribute("alt", `Certificate ${currentIndex + 1}`);
+                  img.setAttribute("data-index", currentIndex);
+                  document.getElementById("modal-img").src =
+                    certificates[currentIndex];
+                }}
+                className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700"
+              >
+                ◀
+              </button>
 
-    <button
-      onClick={() => {
-        const certificates = [
-          "/CourseCompletionGlowlogics.png",
-          "/InternshipGlowlogics.png",
-          "/PlacementGlowlogics.png",
-        ];
-        let currentIndex =
-          parseInt(document.getElementById("cert-img").getAttribute("data-index")) || 0;
-        currentIndex = (currentIndex + 1) % certificates.length;
-        const img = document.getElementById("cert-img");
-        img.src = certificates[currentIndex];
-        img.setAttribute("alt", `Certificate ${currentIndex + 1}`);
-        img.setAttribute("data-index", currentIndex);
-        document.getElementById("modal-img").src = certificates[currentIndex];
-      }}
-      className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700"
-    >
-      ▶
-    </button>
-  </div>
+              <button
+                onClick={() => {
+                  const certificates = [
+                    "/CourseCompletionGlowlogics.png",
+                    "/InternshipGlowlogics.png",
+                    "/PlacementGlowlogics.png",
+                  ];
+                  let currentIndex =
+                    parseInt(
+                      document
+                        .getElementById("cert-img")
+                        .getAttribute("data-index")
+                    ) || 0;
+                  currentIndex = (currentIndex + 1) % certificates.length;
+                  const img = document.getElementById("cert-img");
+                  img.src = certificates[currentIndex];
+                  img.setAttribute("alt", `Certificate ${currentIndex + 1}`);
+                  img.setAttribute("data-index", currentIndex);
+                  document.getElementById("modal-img").src =
+                    certificates[currentIndex];
+                }}
+                className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700"
+              >
+                ▶
+              </button>
+            </div>
 
-  {/* Fullscreen Popup Modal */}
-  <div
-    id="cert-modal"
-    className="fixed inset-0 bg-black bg-opacity-80 z-50 hidden items-center justify-center p-4"
-    style={{ display: "none" }}
-  >
-    <div className="relative max-w-4xl w-full">
-      <button
-        onClick={() => {
-          document.getElementById("cert-modal").style.display = "none";
-        }}
-        className="absolute top-2 right-2 text-white bg-red-500 hover:bg-red-600 rounded-full px-3 py-1 text-sm font-semibold"
-      >
-        ✕ Close
-      </button>
-      <img
-        id="modal-img"
-        src="/CourseCompletionGlowlogics.png"
-        alt="Full Certificate"
-        className="w-full h-auto object-contain rounded-lg"
-      />
-    </div>
-  </div>
-</div>
-
+            {/* Fullscreen Popup Modal */}
+            <div
+              id="cert-modal"
+              className="fixed inset-0 bg-black bg-opacity-80 z-50 hidden items-center justify-center p-4"
+              style={{ display: "none" }}
+            >
+              <div className="relative max-w-4xl w-full">
+                <button
+                  onClick={() => {
+                    document.getElementById("cert-modal").style.display =
+                      "none";
+                  }}
+                  className="absolute top-2 right-2 text-white bg-red-500 hover:bg-red-600 rounded-full px-3 py-1 text-sm font-semibold"
+                >
+                  ✕ Close
+                </button>
+                <img
+                  id="modal-img"
+                  src="/CourseCompletionGlowlogics.png"
+                  alt="Full Certificate"
+                  className="w-full h-auto object-contain rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
         </div>
         <div className=" py-12 overflow-hidden">
           <h2 className="text-3xl font-bold text-center mb-10 leading-snug">
             Admiration expressed by others regarding our presence.
           </h2>
 
-          <div className="relative w-full space-y-8 overflow-x-hidden">
-            <div className="flex w-max animate-marquee space-x-6 px-6 items-start">
+          <div className="relative w-full space-y-8 overflow-x-hidden  hover:animation-pause">
+            <div className="flex w-max animate-marquee space-x-6 px-6 items-start  hover:animation-pause">
               {[...Array(2)].flatMap(() =>
                 [
                   {
@@ -600,6 +621,12 @@ const FullStackCourse = () => {
                     img: "/Kulsum.png",
                   },
                   {
+                    name: "Naziya",
+                    title: "Dr.Ambedkar Institute of Technology",
+                    text: "This is Naziya from Bengaluru, currently studying in the 3rd year of BE in the ECE branch at Dr. AIT, Bengaluru. I recently completed a Full Stack Java course at Glowlogic Solutions, and it was a great learning experience. It was one of the best learning platforms for me, as it covered all the topics thoroughly and helped me become confident in Java. The schedule was very flexible and cooperative, allowing me to balance both my college work and the Java classes. The trainer was highly supportive and knowledgeable, explaining every concept clearly with practical examples. This course helped me build a strong foundation in Java and enhanced my skills significantly. I am truly thankful to the team for their continuous guidance and support throughout this wonderful journey.",
+                    img: "/Naziya.png",
+                  },
+                  {
                     name: "Bollepally Jashwanth Varma",
                     title: "Sai Spurthi Institute of Technology, 3rd Year",
                     text: "I recently completed the Cybersecurity Ethical Hacking Internship at GlowLogics Solution and had an excellent experience. The course was well-structured, covering essential topics like penetration testing and vulnerability assessment. The instructors were knowledgeable and supportive. The practical projects gave me real-world exposure. I highly recommend it to aspiring ethical hackers!",
@@ -612,6 +639,12 @@ const FullStackCourse = () => {
                     img: "/TejasvaniK.png",
                   },
                   {
+                    name: "Naziya",
+                    title: "Dr.Ambedkar Institute of Technology",
+                    text: "This is Naziya from Bengaluru, currently studying in the 3rd year of BE in the ECE branch at Dr. AIT, Bengaluru. I recently completed a Full Stack Java course at Glowlogic Solutions, and it was a great learning experience. It was one of the best learning platforms for me, as it covered all the topics thoroughly and helped me become confident in Java. The schedule was very flexible and cooperative, allowing me to balance both my college work and the Java classes. The trainer was highly supportive and knowledgeable, explaining every concept clearly with practical examples. This course helped me build a strong foundation in Java and enhanced my skills significantly. I am truly thankful to the team for their continuous guidance and support throughout this wonderful journey.",
+                    img: "/Naziya.png",
+                  },
+                  {
                     name: "Thotakura Puneeth Sai",
                     title: "Anantha Lakshmi Institute of Technology, 3rd Year",
                     text: "Hi, I'm Thotakura Puneeth Sai, a 3rd-year B.Tech student at Anantha Lakshmi Institute of Technology and Sciences. I completed the Cybersecurity & Ethical Hacking course at Glowlogics, and it was an amazing experience. The instructors were supportive, and the hands-on classes were top-notch. I gained real-world skills essential in cybersecurity. Thank you, Glowlogics!",
@@ -622,6 +655,79 @@ const FullStackCourse = () => {
                     title: "Navkis College of Engineering",
                     text: "Hello, I’m Preetham. I recently completed my Bachelor's in Engineering. In my final semester, I enrolled in a specialized VLSI course at Glowlogics. The course covered Verilog, FPGA, ASIC flow, and low-power techniques. I also did a Verilog design project that strengthened my hardware skills. This training has prepared me well for the semiconductor field.",
                     img: "/pritam.png",
+                  },
+                  {
+                    name: "Khusi M",
+                    title:
+                      " University of Visvesvaraya College of Engineering ",
+                    text: "I'm really grateful to GlowLogics Solutions for such a great learning experience in VLSI Design. The training was super well-organized, and the instructors were not just knowledgeable but also really patient and supportive throughout. The hands-on sessions and real-time project work helped me understand the concepts much better and boosted my confidence a lot. Big thanks for the guidance and opportunity — it’s definitely going to help me in the future!",
+                    img: "/khushi.png",
+                  },
+                  {
+                    name: "Dusa Abhiram ",
+                    title: "University of Visvesvaraya College of Engineering ",
+                    text: "I am greatful and thankful to the Glowlogics Solutions team for my internship programme on VLSI, gaining valuable insights into digital circuit design and simulation. During the training, I worked with Verilog and tools like icarus verilog and  Xilinx Hands-on projects helped me understand the VLSI design flow effectively. The experience boosted my technical and problem-solving skills. Overall, it was a great learning journey that deepened my interest in semiconductor technology.",
+                    img: "/Dusa.png",
+                  },
+                  {
+                    name: "Jeshwanth Basutkar ",
+                    title: "Kommuri Pratap Reddy Institute of Technology",
+                    text: "I am extremely thankful to GlowLogics Solutions for providing an exceptional learning experience in Data Science. The training was well-structured with a perfect balance of theory and practical sessions, allowing me to gain real-time project exposure and industry-relevant skills. The instructors were highly knowledgeable, supportive, and always approachable, which made the learning process smooth and engaging. This training has greatly enhanced my confidence and equipped me with the right tools to take the next step in my data science career.",
+                    img: "/Jeshwanth.png",
+                  },
+                  {
+                    name: "Sanjana Anand Patil",
+                    title: "M.S. RAMAIAH INSTITUTE OF TECHNOLOGY",
+                    text: "I am truly grateful to GlowLogics Solutions for providing me with an excellent learning experience in VLSI design. The training was well-structured, and the instructors were knowledgeable, patient, and supportive throughout. The hands-on approach and real-time project exposure significantly enhanced my understanding and confidence in the field. I sincerely appreciate the opportunity and guidance I received, which will definitely help me in my future endeavors.",
+                    img: "/Sanjana.png",
+                  },
+
+                  {
+                    name: " Vindhya NS",
+                    title: "Sanatan Dharma College",
+                    text: "My name is Vindhya N.S., and I’m from Puttur. I am currently in the second year of my MBA, specializing in Human Resource and Finance at SDIT College. Recently, I completed certification courses in HR and Finance, which provided me with valuable insights and practical knowledge. The training was engaging and well-structured, with a clear focus on both theoretical concepts and their real-world applications. The instructors made learning easy through their approachable teaching style and relevant examples. These courses have helped me build a strong understanding of HR and Finance functions, and I now feel more confident and prepared to take on future professional challenges. I sincerely appreciate the support and guidance I received during the course.",
+                    img: "/Vindhya.png",
+                  },
+
+                  {
+                    name: "Tharani P",
+                    title: "Sri Krishna College of Technology (SKCT)",
+                    text: "I had the opportunity to participate in a 3-month online internship with GlowLogicss , Bangalore.,under the VLSI Design course. This program provided me with valuable exposure to the fundamentals and advanced concepts of VLSI design, including practical insights into design methodologies, simulation techniques, and industry tools. The structured training, combined with hands-on tasks, helped me enhance my technical knowledge and problem-solving skills. I am grateful to Glow Logistics for offering this learning platform and for the guidance provided throughout the internship.",
+                    img: "/Tharani P.png",
+                  },
+
+                  {
+                    name: "M.Harsha Vardhan",
+                    title: "Sri Krishna College of Technology (SKCT)",
+                    text: "I had an excellent experience learning VLSI Design with Glowslogics Solution. The training was well-structured, covering both theoretical foundations and hands-on practical aspects of VLSI. The instructors were knowledgeable, patient, and always ready to clarify doubts. I especially appreciated the real-world examples and industry-relevant projects, which helped me gain confidence in applying concepts. The learning environment was supportive, and the resources provided were up-to-date with current industry standards. I would highly recommend Glowslogics Solution to anyone looking to build a strong career in VLSI design. I am truly grateful to Glowslogics Solution, Bangalore, for offering this learning platform and for the constant guidance provided throughout the internship.",
+                    img: "/M.Harsha Vardhan.png",
+                  },
+
+                  {
+                    name: "Faizan Ul Hassan",
+                    title: "Netaji Subhash University",
+                    text: "Truly speaking, it is a very good course and the mentors are excellent in terms of cooperation. Whenever I ask something, they immediately respond and clear my doubts with real-life examples and guidance on how to avoid mistakes, which I truly appreciate. The entire team is also very supportive—whenever I had any doubt, they personally called me and gave their time to explain everything clearly. The fees are also genuine, especially considering the quality of training provided. Overall, it has been a very good experience with Glowlogics Solutions. Thank you so much, Team Glowlogics Solutions!✨",
+                    img: "/Faizan Ul Hassan.png",
+                  },
+
+                  {
+                    name: "Tejaswini.K",
+                    title: "JSS College Mysore",
+                    text: "My name is Tejaswini K. from Karadahalli, and I am currently in the second year of my M.Sc. in Computer Science at JSS College, Mysore. I recently completed a certification course in Artificial Intelligence and had a great learning experience. The course content was well-structured and beginner-friendly, and the instructor explained the concepts clearly with practical examples. Overall, it was a valuable learning opportunity for me.",
+                    img: "/Tejswani.png",
+                  },
+
+                  {
+                    name: "Manasa.C",
+                    title: "Cambridge College",
+                    text: "My name is Manasa C, and I’m from Bangalore. I am currently in the third year of my B.E., specializing in Information Science and Engineering at Cambridge College. Recently, I completed certification courses in Web Development, which provided me with valuable insights and practical knowledge. The training was engaging and well-organized, with a clear focus on both theoretical concepts and real-world applications. The instructors made learning easy with their approachable teaching style and relevant examples. These courses have helped me build a strong understanding of websites, and I now feel more equipped to take on future professional challenges. I sincerely appreciate the support and guidance I received during the course from Glowlogics Solutions.",
+                    img: "/Manasa.png",
+                  },
+
+                  {
+                    name: "Srijib Dey",
+                    title: "Working as a Employee",
+                    text: "I have been doing a VLSI course from GlowLogics for the last 6 months. This course provided me with valuable exposure to the fundamentals and advanced concepts of VLSI design, including practical insights into design methodologies, simulation class techniques, and industry tools. The structured training, combined with hands-on tasks, helped me enhance my technical knowledge and problem-solving skills. ",
                   },
                 ].map((item, index) => (
                   <div
