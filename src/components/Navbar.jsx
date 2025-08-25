@@ -157,13 +157,13 @@ const Navbar = () => {
               whileHover={{ scale: 1.05 }}
               className="px-5 py-2 border border-black text-sm rounded-full font-semibold hover:bg-black hover:text-white transition"
             >
-              <a href ="https://glowlogics.edmingle.com"> LogIn</a>
+              <a href="https://glowlogics.edmingle.com"> LogIn</a>
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               className="text-sm font-medium text-gray-800 hover:text-black transition"
-            > <b>Contact</b>
-
+            >
+              <b>Contact</b>
             </motion.button>
           </div>
 
@@ -177,6 +177,44 @@ const Navbar = () => {
             </button>
           </div>
         </div>
+
+        {/* ✅ Announcement Bar (below navbar) */}
+       <div className="relative bg-[#ffedd5] text-[#d97706] py-2 overflow-hidden">
+  <div className="flex animate-marquee whitespace-nowrap">
+     <span className="mx-4">
+      🎉 Special Offer: Get <strong>33.33% OFF</strong> on all Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+    </span>
+     <span className="mx-4">
+      🎉 Special Offer: Get <strong>33.33% OFF</strong> on all Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+    </span>
+     <span className="mx-4">
+      🎉 Special Offer: Get <strong>33.33% OFF</strong> on all Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+    </span>
+     <span className="mx-4">
+      🎉 Special Offer: Get <strong>33.33% OFF</strong> on all Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+    </span>
+     <span className="mx-4">
+      🎉 Special Offer: Get <strong>33.33% OFF</strong> on all Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+    </span>
+     <span className="mx-4">
+      🎉 Special Offer: Get <strong>33.33% OFF</strong> on all Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+    </span>
+     <span className="mx-4">
+      🎉 Special Offer: Get <strong>33.33% OFF</strong> on all Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+    </span>
+     <span className="mx-4">
+      🎉 Special Offer: Get <strong>33.33% OFF</strong> on all Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+    </span>
+     <span className="mx-4">
+      🎉 Special Offer: Get <strong>33.33% OFF</strong> on all Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+    </span>
+     <span className="mx-4">
+      🎉 Special Offer: Get <strong>33.33% OFF</strong> on all Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+    </span>
+
+
+  </div>
+</div>
       </motion.nav>
 
       {/* Mobile Menu */}
