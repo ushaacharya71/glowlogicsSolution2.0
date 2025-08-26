@@ -179,50 +179,70 @@ const Navbar = () => {
         </div>
 
         {/* ✅ Announcement Bar (below navbar) */}
-       <div className="relative bg-[#ffedd5] text-[#d97706] py-2 overflow-hidden">
-  <div className="flex animate-marquee whitespace-nowrap">
-     <span className="mx-4">
-      🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-    </span>
-     <span className="mx-4">
-      🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-    </span>
-     <span className="mx-4">
-      🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-    </span>
-     <span className="mx-4">
-      🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-    </span>
-     <span className="mx-4">
-      🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-    </span>
-     <span className="mx-4">
-      🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-    </span>
-     <span className="mx-4">
-      🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-    </span>
-     <span className="mx-4">
-      🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-    </span>
-     <span className="mx-4">
-      🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-    </span>
-     <span className="mx-4">
-      🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-    </span>
-     <span className="mx-4">
-      🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-    </span>
-     <span className="mx-4">
-      🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 | 30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-    </span>
-
-
-
-
-  </div>
-</div>
+        <div className="relative bg-[#ffedd5] text-[#d97706] py-2 overflow-hidden">
+          <div className="flex animate-marquee whitespace-nowrap">
+            <span className="mx-4">
+              🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
+            <span className="mx-4">
+              🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
+            <span className="mx-4">
+              🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
+            <span className="mx-4">
+              🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
+            <span className="mx-4">
+              🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
+            <span className="mx-4">
+              🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
+            <span className="mx-4">
+              🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
+            <span className="mx-4">
+              🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
+            <span className="mx-4">
+              🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
+            <span className="mx-4">
+              🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
+            <span className="mx-4">
+              🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
+            <span className="mx-4">
+              🎉 Special <strong>Ganesh Chaturthi</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
+          </div>
+        </div>
       </motion.nav>
 
       {/* Mobile Menu */}
