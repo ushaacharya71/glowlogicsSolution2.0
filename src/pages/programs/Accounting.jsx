@@ -39,7 +39,8 @@ const FullStackCourse = () => {
   return (
     <>
       {/* Full-Stack Web Dev Section */}
-      <div className="bg-white text-black px-6 pt-20 pb-0 flex flex-col-reverse md:flex-row items-center justify-between gap-10 max-w-7xl mx-auto">
+      <div className="bg-white text-black px-6 pt-32 md:pt-28 pb-0 flex flex-col-reverse md:flex-row items-center justify-between gap-10 max-w-7xl mx-auto">
+
         {/* Left Content */}
         <div className="flex-1 w-full">
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
@@ -466,15 +467,15 @@ const FullStackCourse = () => {
               <ul className="text-gray-800 space-y-3 text-left list-disc list-inside">
                 <li>
                   Current Batch:{" "}
-                  <span className="text-black font-bold">1 Mar to 1 May</span>
-                </li>
-                <li>
-                  Upcoming Batch:{" "}
                   <span className="text-black font-bold">2 July 2025</span>
                 </li>
                 <li>
                   Upcoming Batch:{" "}
                   <span className="text-black font-bold">Oct 2025</span>
+                </li>
+                <li>
+                  Upcoming Batch:{" "}
+                  <span className="text-black font-bold">Dec 2025</span>
                 </li>
               </ul>
             </div>
