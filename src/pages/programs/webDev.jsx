@@ -414,9 +414,23 @@ const FullStackCourse = () => {
           <div className="w-full lg:w-1/2 mx-auto relative flex flex-col items-center">
             <div className="bg-[#f9fbff] rounded-xl shadow-md p-8 max-w-md mx-auto text-center border border-orange-600 mb-6">
               <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">
-                Next cohort starts on{" "}
-                <span className="text-black font-bold">11 Aug 2025</span>
+                Live Batch Updates 📅
               </h3>
+
+              <ul className="text-gray-800 space-y-3 text-left list-disc list-inside">
+                <li>
+                  Current Batch:{" "}
+                  <span className="text-black font-bold">9 June to 9 Aug</span>
+                </li>
+                <li>
+                  Upcoming Batch:{" "}
+                  <span className="text-black font-bold">11 Aug 2025</span>
+                </li>
+                <li>
+                  Upcoming Batch:{" "}
+                  <span className="text-black font-bold">Oct 2025</span>
+                </li>
+              </ul>
             </div>
 
             {/* Certificate Image with Hover Zoom */}
