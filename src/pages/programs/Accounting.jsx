@@ -460,9 +460,23 @@ const FullStackCourse = () => {
           <div className="w-full lg:w-1/2 mx-auto relative flex flex-col items-center">
             <div className="bg-[#f9fbff] rounded-xl shadow-md p-8 max-w-md mx-auto text-center border border-orange-600 mb-6">
               <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">
-                Next cohort starts on{" "}
-                <span className="text-black font-bold">3 Aug 2025</span>
+                Live Batch Updates 📅
               </h3>
+
+              <ul className="text-gray-800 space-y-3 text-left list-disc list-inside">
+                <li>
+                  Current Batch:{" "}
+                  <span className="text-black font-bold">1 Mar to 1 May</span>
+                </li>
+                <li>
+                  Upcoming Batch:{" "}
+                  <span className="text-black font-bold">2 July 2025</span>
+                </li>
+                <li>
+                  Upcoming Batch:{" "}
+                  <span className="text-black font-bold">Oct 2025</span>
+                </li>
+              </ul>
             </div>
 
             {/* Certificate Image with Hover Zoom */}
@@ -724,7 +738,7 @@ const FullStackCourse = () => {
                     title: "Working as a Employee",
                     text: "I have been doing a VLSI course from GlowLogics for the last 6 months. This course provided me with valuable exposure to the fundamentals and advanced concepts of VLSI design, including practical insights into design methodologies, simulation class techniques, and industry tools. The structured training, combined with hands-on tasks, helped me enhance my technical knowledge and problem-solving skills. ",
                     img: "/Sri.png",
-                    },
+                  },
                 ].map((item, index) => (
                   <div
                     key={index}
