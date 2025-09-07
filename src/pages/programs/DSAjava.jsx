@@ -117,15 +117,15 @@ const FullStackCourse = () => {
         </div>
       </div>
 
-      {/*Java FullStack Overview Section */}
+      {/*DSA in JAVA Overview Section */}
       <div className="max-w-7xl mx-auto px-6 py-16 text-gray-800">
         {/* Section Heading */}
         <h2 className="text-3xl md:text-4xl font-semibold mb-4">
-          Java FullStack Certification Course{" "}
+          DSA in JAVA Certification Course{" "}
           <span className="font-bold text-black">Overview</span>
         </h2>
         <p className="text-gray-600 mb-8 max-w-3xl">
-          The GlowlogicsJava FullStack<sup>®</sup> training course is designed
+          The GlowlogicsDSA in JAVA<sup>®</sup> training course is designed
           to equip aspiring project managers with the core skills and knowledge
           required to lead modern web development projects successfully. The
           program covers essential topics including emerging industry trends,
@@ -140,7 +140,7 @@ const FullStackCourse = () => {
         <div className="mb-12">
           <div className="flex items-center gap-4 mb-6">
             <h3 className="text-2xl font-semibold">
-              Java FullStack Course Key Features
+              DSA in JAVA Course Key Features
             </h3>
             <span className="text-green-700 text-sm bg-green-100 border border-green-400 rounded-full px-4 py-1 flex items-center gap-2">
               ✅ 100% ISO Verified Internship
@@ -201,12 +201,12 @@ const FullStackCourse = () => {
       <div className="max-w-7xl mx-auto px-6 py-16 bg-white text-gray-800">
         <h2 className="text-3xl font-semibold mb-2">Benefits</h2>
         <p className="mb-8 text-gray-600 max-w-4xl">
-          The Java FullStack<sup>®</sup> certification opens up high-demand
+          The DSA in JAVA<sup>®</sup> certification opens up high-demand
           career opportunities across IT, manufacturing, finance, healthcare,
           and many other industries. Certified professionals are recognized for
           their ability to build and manage end-to-end web applications using
           technologies like Core Java, Spring Boot, React, and databases.
-          Employers value Java FullStack<sup>®</sup> certified talent for their
+          Employers value DSA in JAVA<sup>®</sup> certified talent for their
           versatility, problem-solving skills, and ability to contribute to both
           frontend and backend development—often leading to faster promotions,
           high-impact roles, and substantial salary growth.
@@ -251,7 +251,7 @@ const FullStackCourse = () => {
         <div className="bg-white text-gray-800 p-6 space-y-6">
           {/* Title */}
           <h2 className="text-2xl font-semibold">
-            Java FullStack Certification Program{" "}
+            DSA in JAVA Certification Program{" "}
             <span className="font-bold">Curriculum</span>
           </h2>
 
