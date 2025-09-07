@@ -110,7 +110,7 @@ const FullStackCourse = () => {
         {/* Right Image */}
         <div className="flex-1 w-full flex justify-center max-w-2xl">
           <img
-            src="https://img.freepik.com/premium-photo/business-man-pushing-touch-screen-interface-java-programming-concept-virtual-machine_1085052-2842.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740"
+            src="https://img.freepik.com/premium-photo/java-programming-code-abstract-technology-background_272306-149.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740&q=80"
             alt="Full Stack Web Dev"
             className="rounded-2xl shadow-xl max-w-xl w-full"
           />
