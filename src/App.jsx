@@ -51,6 +51,7 @@ import Accounting from "./pages/programs/Accounting"; //   added
 import Entrepreneurship from "./pages/programs/Entrepreneurship"; //   added
 import BusinessCommunication from "./pages/programs/BusinessCommunication"; //   added
 import Blaw from "./pages/programs/Blaw"; //   added
+import DSAjava from "./pages/programs/DSAjava"; //   added
 
 // ✅ Scroll to section if route state has scrollTo
 function ScrollHandler() {
@@ -136,7 +137,8 @@ function App() {
         <Route path="/programs/IOT" element={<IOT />} />
         <Route path="/programs/AutoCAD" element={<AutoCAD />} />
         <Route path="/programs/JavaFullstack" element={<JavaFullstack />} />
-        <Route path="/programs/AppDevelopment" element={<AppDevelopment />} />
+        <Route path="/programs/dsajava" element={<DSAjava />} />
+        <Route path="/programs/AppDevelopment" element={<AppDevelopment />} />  {/* <added dsain java /> */}
         <Route
           path="/programs/DigitalMarketing"
           element={<DigitalMarketing />}
