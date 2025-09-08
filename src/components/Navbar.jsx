@@ -179,7 +179,7 @@ const Navbar = () => {
         </div>
 
         {/* ✅ Announcement Bar (below navbar) */}
-        <div className="relative bg-[#ffedd5] text-[#d97706] py-2 overflow-hidden">
+         <div className="relative bg-[#ffedd5] text-[#d97706] py-2 overflow-hidden">
           <div className="flex animate-marquee whitespace-nowrap">
             <span className="mx-4">
               🎉 Special <strong>Onam</strong> Offer: Get{" "}
