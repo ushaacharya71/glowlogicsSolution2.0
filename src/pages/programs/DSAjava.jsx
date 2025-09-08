@@ -9,71 +9,74 @@ const FullStackCourse = () => {
 
 
   const roleLogos = {
-    "Java Full Stack Developer - Starting Salary (India): ₹5 – ₹9 LPA": [
-      "data:image/png;base64,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",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1mfxOyRFkqOsS2bqbAv6Jme5aZst5647elBXv3sNokwJNbq3Wohed1XLWWg&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjl7XELiAxlFFuJltyWm6Th6inOxlVzxc7MMrSSbAJyYiszxgXSb41DDrv8Q&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPR10Fz15vjWryAGF7LWpwGCBpDyAiBOpgW5o3r--4GHkybcmtt0q5FI7cavs&s",
-    ],
-    "Backend Developer (Java) - Starting Salary (India): ₹4.5 – ₹8 LPA": [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxSdO7qhiIhfW64Jzgkz4Cj7q0QULsDwlU1aoDKHgzoOwE7zTdiQXABFQI2Q&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFUnTw99fm9fVevBAnkSKTEI5XV_T9LbhKusHHYOdxLt2w6vvDTX-15ZO6uw&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWpsGe5iEJob0dcSB5w9P5aWFjriI1hp0gyk5BlsAn303UpqPqoxUUqNhUuZ0&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFJWrxnzTPiaRgGMzwh2fyV6kD15A-ihppe3wEcKFGD8pj1znEEBk1RytrrA&s",
-    ],
-    "Software Engineer (Java Stack) - Starting Salary (India): ₹5 – ₹8.5 LPA": [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9K8eaqkEKLNFWf7fzbQAca3McYHsdkvpKMtXwLKgEB_hDmtMn61N2v0DEgA&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRKP2CNJ_0aX4DAuhMIOmzxvMXUE8adsc5v8z44BExycJHV6oFEDsB1a1HmNA&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXESL8W6aoDD3CHdJhAz5rmb-MbmKKvvuatyvydeY-fxSHcDheXyKvmYG2W0A&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD75Ew8D4llFJk_ZTfQVFS8PwxlhVYwES4SOUQqTcmZtHPw5Pz42sC1coMWQ&s",
-    ],
-    "Web Application Developer – Starting Salary (India): ₹4 – ₹7.5 LPA": [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_P85o6q5b2clTlqYUhvgVMIdgUu6MqvzfBISHBirSsS0R7uJwK3u1Fd1bB-U&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQQ2ed2DEYUtBqM5QFnRlUDyMc6naNQ7ZqTLQ3pdl1WOk8NHom7ffKz3ub-g&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_ywGfT6BXzPfdxnmFPHu9WagIC7E_Dz9XlHiCyKOO0jjcX-iktawn2T41-4Q&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSze0EO7gJyuZJ7-LbrCiBH60WrvWTeLenF82OZdK0kaNvhnmmReIiMQFZvRg&s",
-    ],
-  };
+  "Software Engineer (DSA + Java) - Starting Salary (India): ₹5 – ₹9 LPA": [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9K8eaqkEKLNFWf7fzbQAca3McYHsdkvpKMtXwLKgEB_hDmtMn61N2v0DEgA&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRKP2CNJ_0aX4DAuhMIOmzxvMXUE8adsc5v8z44BExycJHV6oFEDsB1a1HmNA&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXESL8W6aoDD3CHdJhAz5rmb-MbmKKvvuatyvydeY-fxSHcDheXyKvmYG2W0A&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD75Ew8D4llFJk_ZTfQVFS8PwxlhVYwES4SOUQqTcmZtHPw5Pz42sC1coMWQ&s",
+  ],
+  "Problem-Solving & Competitive Programming Roles - Starting Salary (India): ₹6 – ₹10 LPA": [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxSdO7qhiIhfW64Jzgkz4Cj7q0QULsDwlU1aoDKHgzoOwE7zTdiQXABFQI2Q&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFUnTw99fm9fVevBAnkSKTEI5XV_T9LbhKusHHYOdxLt2w6vvDTX-15ZO6uw&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWpsGe5iEJob0dcSB5w9P5aWFjriI1hp0gyk5BlsAn303UpqPqoxUUqNhUuZ0&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFJWrxnzTPiaRgGMzwh2fyV6kD15A-ihppe3wEcKFGD8pj1znEEBk1RytrrA&s",
+  ],
+  "Data Engineer (Strong DSA + Java) - Starting Salary (India): ₹5 – ₹8.5 LPA": [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_P85o6q5b2clTlqYUhvgVMIdgUu6MqvzfBISHBirSsS0R7uJwK3u1Fd1bB-U&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQQ2ed2DEYUtBqM5QFnRlUDyMc6naNQ7ZqTLQ3pdl1WOk8NHom7ffKz3ub-g&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_ywGfT6BXzPfdxnmFPHu9WagIC7E_Dz9XlHiCyKOO0jjcX-iktawn2T41-4Q&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSze0EO7gJyuZJ7-LbrCiBH60WrvWTeLenF82OZdK0kaNvhnmmReIiMQFZvRg&s",
+  ],
+  "SDE Roles (Top Tech Companies) - Starting Salary (India): ₹8 – ₹15 LPA": [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1mfxOyRFkqOsS2bqbAv6Jme5aZst5647elBXv3sNokwJNbq3Wohed1XLWWg&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjl7XELiAxlFFuJltyWm6Th6inOxlVzxc7MMrSSbAJyYiszxgXSb41DDrv8Q&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPR10Fz15vjWryAGF7LWpwGCBpDyAiBOpgW5o3r--4GHkybcmtt0q5FI7cavs&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9x9euq8D8I7HZ6X9BzBz9QfV2FS07y1UuXwcJLLA0yo3RATcfVrJjFvTqYQ&s",
+  ],
+};
+
 
   const [activeRole, setActiveRole] = useState("Project Director");
 
   return (
     <>
-      {/* Full-Stack Web Dev Section */}
+      {/* DSA in java Section */}
       <div className="bg-white text-black px-6 pt-20 pb-0 flex flex-col-reverse md:flex-row items-center justify-between gap-10 max-w-7xl mx-auto">
         {/* Left Content */}
         <div className="flex-1 w-full">
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
-           DSA in Java
+           DSA in JAVA
           </h1>
-          <p className="text-lg text-gray-700 mb-6">
-            Become a job-ready full-stack developer | Master Core Java, Spring
-            Boot, React, MySQL, and RESTful APIs
-          </p>
+         <p className="text-lg text-gray-700 mb-6">
+  Master Data Structures & Algorithms in Java | Strengthen problem-solving skills,
+  ace coding interviews, and build a strong foundation for your tech career
+</p>
+
 
           {/* Benefits */}
-          <ul className="space-y-3 text-gray-800 mb-6">
-            <li className="flex items-start">
-              <FaCheckCircle className="text-green-500 mt-1 mr-2" />
-              Build real-world Java Full Stack projects from scratch
-            </li>
-            <li className="flex items-start">
-              <FaCheckCircle className="text-green-500 mt-1 mr-2" />
-              Master Core Java, Spring Boot, React, REST APIs & Deployment
-            </li>
-            <li className="flex items-start">
-              <FaCheckCircle className="text-green-500 mt-1 mr-2" />
-              Career mentorship with GitHub portfolio-building support
-            </li>
-            <li className="flex items-start">
-              <FaCheckCircle className="text-green-500 mt-1 mr-2" />
-              Includes resume review, mock interviews & LinkedIn optimization
-            </li>
-            <li className="flex items-start">
-              <FaCheckCircle className="text-green-500 mt-1 mr-2" />
-              Guaranteed live cohort batches starting within the next 90 days
-            </li>
-          </ul>
+         <ul className="space-y-3 text-gray-800 mb-6">
+  <li className="flex items-start">
+    <FaCheckCircle className="text-green-500 mt-1 mr-2" />
+    Master Data Structures & Algorithms using Java from basics to advanced
+  </li>
+  <li className="flex items-start">
+    <FaCheckCircle className="text-green-500 mt-1 mr-2" />
+    Solve 300+ coding problems to strengthen problem-solving skills
+  </li>
+  <li className="flex items-start">
+    <FaCheckCircle className="text-green-500 mt-1 mr-2" />
+    Learn competitive programming techniques & time complexity analysis
+  </li>
+  <li className="flex items-start">
+    <FaCheckCircle className="text-green-500 mt-1 mr-2" />
+    Includes resume review, mock coding interviews & LinkedIn optimization
+  </li>
+  <li className="flex items-start">
+    <FaCheckCircle className="text-green-500 mt-1 mr-2" />
+    Live mentor-led cohorts starting within the next 90 days
+  </li>
+</ul>
+
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 mb-4">
@@ -125,7 +128,7 @@ const FullStackCourse = () => {
           <span className="font-bold text-black">Overview</span>
         </h2>
         <p className="text-gray-600 mb-8 max-w-3xl">
-          The GlowlogicsDSA in JAVA<sup>®</sup> training course is designed
+          The Glowlogics DSA in JAVA<sup>®</sup> training course is designed
           to equip aspiring project managers with the core skills and knowledge
           required to lead modern web development projects successfully. The
           program covers essential topics including emerging industry trends,
@@ -170,31 +173,32 @@ const FullStackCourse = () => {
 
         {/* Skills Covered */}
         <div>
-          <h3 className="text-2xl font-semibold mb-6">Skills Covered</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-8 text-gray-700">
-            {[
-              "Work Breakdown Structure (WBS)",
-              "Project Cost Estimation & Budgeting",
-              "Resource Allocation & Utilization",
-              "Cost and Risk Management",
-              "Gantt Charts & Project Scheduling",
-              "Engineering Economics & ROI Analysis",
-              "Agile and Scrum Methodologies",
-              "Mathematical Project Scheduling Models (CPM, PERT)",
-              "Stakeholder Communication & Collaboration",
-              "Leadership and Team Management",
-              "Project Lifecycle & Scope Management",
-              "Change Management",
-              "Quality Assurance & Control",
-              "Project Documentation and Reporting",
-            ].map((skill, index) => (
-              <div key={index} className="flex items-start gap-2">
-                <span className="text-[#ff6e0c] text-xl">✔</span>
-                <p>{skill}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+  <h3 className="text-2xl font-semibold mb-6">Skills Covered</h3>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-8 text-gray-700">
+    {[
+      "Time & Space Complexity Analysis",
+      "Arrays, Strings & Recursion",
+      "Sorting & Searching Algorithms",
+      "Stacks, Queues & Linked Lists",
+      "HashMaps, Heaps & Priority Queues",
+      "Trees & Binary Search Trees",
+      "Graphs & Graph Traversal (BFS, DFS)",
+      "Dynamic Programming & Memoization",
+      "Greedy Algorithms & Backtracking",
+      "Bit Manipulation & Mathematics",
+      "Advanced Problem-Solving Patterns",
+      "System Design Basics for Interviews",
+      "Competitive Programming Techniques",
+      "Mock Coding Interviews & Problem Discussions",
+    ].map((skill, index) => (
+      <div key={index} className="flex items-start gap-2">
+        <span className="text-[#ff6e0c] text-xl">✔</span>
+        <p>{skill}</p>
+      </div>
+    ))}
+  </div>
+</div>
+
       </div>
 
       {/* Benefits Section */}
@@ -259,18 +263,19 @@ const FullStackCourse = () => {
           <div>
             <h3 className="text-xl font-semibold mb-2">Definition</h3>
             <p>
-              Java Full Stack<sup>®</sup> Development is a comprehensive program
-              that covers both front-end and back-end development using Java and
-              related technologies. This course equips learners with the skills
-              to build complete, end-to-end web applications — starting from
-              designing responsive user interfaces to developing robust
-              server-side logic and managing databases. With hands-on training
-              in tools like HTML, CSS, JavaScript, Java, Spring Boot, and SQL,
-              the program prepares you to handle real-world development
-              projects. Ideal for aspiring developers, this program opens doors
-              to exciting career opportunities in software development, web
-              applications, and enterprise solutions.
-            </p>
+  Data Structures and Algorithms (DSA) in Java is a comprehensive program
+  designed to build strong problem-solving and coding skills essential for
+  cracking technical interviews and excelling in software development roles.
+  This course equips learners with in-depth knowledge of core concepts such as
+  arrays, strings, linked lists, stacks, queues, trees, graphs, recursion,
+  dynamic programming, and advanced algorithms — all implemented in Java.
+  Through hands-on coding practice, competitive programming challenges, and
+  mock interview sessions, learners develop the ability to approach and solve
+  complex problems with efficiency. Ideal for aspiring software engineers, this
+  program opens doors to career opportunities in top product companies,
+  startups, and global tech firms.
+</p>
+
           </div>
 
           {/* Pre-requisites */}
