@@ -286,64 +286,111 @@ const FullStackCourse = () => {
 
             {[
               {
-                title: "Module 1: Introduction to Java",
-                lessons: [
-                  { name: "Java basics, syntax, and control structures." },
-                  { name: "Object-Oriented Programming (OOP) concepts." },
-                  { name: "Arrays and Strings" },
-                ],
-              },
+    title: "Module 1: Introduction to Java",
+    lessons: [
+      { name: "Java basics, syntax, and control structures." },
+      { name: "Object-Oriented Programming (OOP) concepts." },
+      { name: "Arrays and Strings." },
+    ],
+  },
+             {
+    title: "Module 2: Array Manipulation Techniques",
+    lessons: [
+      { name: "Array operations and problem-solving techniques." },
+      { name: "Strings and string operations." },
+      { name: "Multi-dimensional arrays." },
+    ],
+  },
               {
-                title: "Module 2. Array manipulation techniques",
-                lessons: [
-                  { name: "Strings and string operations." },
-                  { name: "Multi-dimensional arrays." },
-                  { name: "Linked Lists" },
-                ],
-              },
+    title: "Module 3: Linked Lists",
+    lessons: [
+      { name: "Singly, doubly, and circular linked lists." },
+      { name: "Implementation and operations (insertion, deletion, traversal)." },
+    ],
+  },
+  {
+    title: "Module 4: Stacks and Queues",
+    lessons: [
+      { name: "Stack operations using arrays and linked lists." },
+      { name: "Queue and priority queue implementation." },
+      { name: "Circular queues and dequeues." },
+    ],
+  },
+  {
+    title: "Module 5: Hashing",
+    lessons: [
+      { name: "Hash tables and hash functions." },
+      { name: "Open addressing and chaining techniques." },
+      { name: "Collision resolution." },
+    ],
+  },
               {
-                title: "Module 3. Singly, doubly, and circular linked lists",
-                lessons: [
-                  {
-                    name: "Implementation and operations (insertion, deletion, traversal).",
-                  },
-                  { name: "Stacks and Queues" },
-                ],
-              },
-              {
-                title:
-                  "Module 4. Stack operations using arrays and linked lists",
-                lessons: [
-                  { name: "Queue and priority queue implementation." },
-                  { name: "Circular queues and dequeues." },
-                  { name: "Hashing" },
-                ],
-              },
-              {
-                title: "Module 5. Hash tables and hash functions",
-                lessons: [
-                  { name: "Open addressing and chaining techniques." },
-                  { name: "Collision resolution." },
-                  { name: "Trees" },
-                ],
-              },
-              {
-                title:
-                  "Module 6. Binary trees, binary search trees, and balanced trees",
-                lessons: [
-                  { name: "Tree traversals (preorder, inorder, postorder)." },
-                  { name: "Advanced trees: AVL, red-black trees, B-trees." },
-                  { name: "Heaps" },
-                ],
-              },
-              {
-                title: "Module 7. Binary heaps and heap operations",
-                lessons: [
-                  { name: "Priority queues using heaps." },
-                  { name: "Heapify algorithm and its applications" },
-                  { name: "Graphs" },
-                ],
-              },
+    title: "Module 6: Trees",
+    lessons: [
+      { name: "Binary trees, binary search trees, and balanced trees." },
+      { name: "Tree traversals (preorder, inorder, postorder)." },
+      { name: "Advanced trees: AVL, red-black trees, B-trees." },
+    ],
+  },
+  {
+    title: "Module 7: Heaps",
+    lessons: [
+      { name: "Binary heaps and heap operations." },
+      { name: "Priority queues using heaps." },
+      { name: "Heapify algorithm and its applications." },
+    ],
+  },
+ {
+    title: "Module 8: Graphs",
+    lessons: [
+      { name: "Graph representation (adjacency list, adjacency matrix)." },
+      { name: "Graph traversals: BFS (Breadth-First Search), DFS (Depth-First Search)." },
+      { name: "Shortest path algorithms (Dijkstra, Bellman-Ford)." },
+    ],
+  },
+  {
+    title: "Module 9: Dynamic Programming",
+    lessons: [
+      { name: "Understanding recursion and memoization." },
+      { name: "Common dynamic programming problems (Knapsack, LCS, etc.)." },
+    ],
+  },
+  {
+    title: "Module 10: Sorting and Searching Algorithms",
+    lessons: [
+      { name: "Classic sorting techniques: Quick sort, Merge sort, Heap sort, Bubble sort." },
+      { name: "Binary search and other efficient searching methods." },
+    ],
+  },
+  {
+    title: "Module 11: Greedy Algorithms",
+    lessons: [
+      { name: "Greedy approach and optimization problems." },
+      { name: "Common greedy algorithms (Huffman coding, Kruskal’s algorithm)." },
+    ],
+  },
+  {
+    title: "Module 12: Backtracking",
+    lessons: [
+      { name: "Solving constraint satisfaction problems using backtracking." },
+      { name: "N-Queens problem, maze problems." },
+    ],
+  },
+  {
+    title: "Module 13: Divide and Conquer",
+    lessons: [
+      { name: "Recursion and divide-and-conquer strategy." },
+      { name: "Common algorithms like Merge sort, Quick sort." },
+    ],
+  },
+  {
+    title: "Module 14: Interview Problem Solving",
+    lessons: [
+      { name: "Pattern-based problem solving." },
+      { name: "Mock coding interviews with real-world problems." },
+      { name: "Tips & tricks for cracking FAANG/product company interviews." },
+    ],
+  },
             ].map((section, index) => (
               <div
                 key={index}
@@ -399,7 +446,7 @@ const FullStackCourse = () => {
             <div className="bg-white border rounded-lg shadow-md divide-y">
               {[
                 {
-                  q: "Who can join this Full Stack Java Certification Program?",
+                  q: "Who can join this DSA in JAVA Certification Program?",
                   a: "Engineering and degree students from any year or background can join. No prior coding experience is required to get started.",
                 },
                 {
@@ -407,8 +454,8 @@ const FullStackCourse = () => {
                   a: "No. The course starts from basics like Core Java, then moves step by step into advanced topics like Spring Boot and Full Stack Development.",
                 },
                 {
-                  q: "How long is the Full Stack Java certification valid for?",
-                  a: "The Full Stack Java Certification from Glowlogics is ISO- and MSME-recognized and valid for a lifetime.",
+                  q: "How long is the DSA in JAVA certification valid for?",
+                  a: "The DSA in JAVA Certification from Glowlogics is ISO- and MSME-recognized and valid for a lifetime.",
                 },
                 {
                   q: "What skills will I learn in this course?",
@@ -420,7 +467,7 @@ const FullStackCourse = () => {
                 },
                 {
                   q: "Will I get a certificate after completing the course?",
-                  a: "Yes. You’ll receive an ISO- and MSME-recognized Full Stack Java Certification after successfully completing the training and submitting your projects.",
+                  a: "Yes. You’ll receive an ISO- and MSME-recognized DSA in JAVA Certification after successfully completing the training and submitting your projects.",
                 },
                 {
                   q: "Is there any placement guarantee?",
@@ -622,7 +669,7 @@ const FullStackCourse = () => {
                   {
                     name: "Naziya",
                     title: "Dr.Ambedkar Institute of Technology",
-                    text: "This is Naziya from Bengaluru, currently studying in the 3rd year of BE in the ECE branch at Dr. AIT, Bengaluru. I recently completed a Full Stack Java course at Glowlogic Solutions, and it was a great learning experience. It was one of the best learning platforms for me, as it covered all the topics thoroughly and helped me become confident in Java. The schedule was very flexible and cooperative, allowing me to balance both my college work and the Java classes. The trainer was highly supportive and knowledgeable, explaining every concept clearly with practical examples. This course helped me build a strong foundation in Java and enhanced my skills significantly. I am truly thankful to the team for their continuous guidance and support throughout this wonderful journey.",
+                    text: "This is Naziya from Bengaluru, currently studying in the 3rd year of BE in the ECE branch at Dr. AIT, Bengaluru. I recently completed a DSA in JAVA course at Glowlogic Solutions, and it was a great learning experience. It was one of the best learning platforms for me, as it covered all the topics thoroughly and helped me become confident in Java. The schedule was very flexible and cooperative, allowing me to balance both my college work and the Java classes. The trainer was highly supportive and knowledgeable, explaining every concept clearly with practical examples. This course helped me build a strong foundation in Java and enhanced my skills significantly. I am truly thankful to the team for their continuous guidance and support throughout this wonderful journey.",
                     img: "/Naziya.png",
                   },
                   {
