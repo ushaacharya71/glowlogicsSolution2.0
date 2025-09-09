@@ -14,7 +14,7 @@ const programData = [
     slug: "UIUX",
     category: "Crash Course",
     author: "📅 This Batch Is Now Live",
-    date: "20 June 25",
+
     image:
       "https://img.freepik.com/premium-vector/modern-3d-illustration-landing-page-ui-design_145666-1960.jpg",
     desc: "Design apps and websites people love to use.",
@@ -29,7 +29,7 @@ const programData = [
     slug: "AdvancedExcel",
     category: "Crash Course",
     author: "Selfbased",
-    date: "",
+
     image:
       "https://img.freepik.com/premium-photo/spreadsheet-document-information-financial-startup-concept-snugly_31965-600877.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Master Excel for data analysis, reporting & automation.",
@@ -44,7 +44,7 @@ const programData = [
     slug: "DigitalMarketing",
     category: "Crash Course",
     author: "📅 This Batch Is Now Live",
-    date: "7 June 25",
+
     image:
       "https://img.freepik.com/premium-photo/search-engine-marketing-composition-design_23-2150923510.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Master Digital Marketing: SEO, Social Media, Ads & Analytics",
@@ -58,7 +58,7 @@ const programData = [
     slug: "JavaFullstack",
     category: "Crash Course",
     author: "📅 This Batch Is Now Live",
-    date: "2 June 25",
+
     image:
       "https://img.freepik.com/premium-photo/writing-code-creating-website-dashboards-programming-help-technology-website-upkeep_27634-1240.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Master Java, Spring, SQL & Full Stack Web Development",
@@ -72,7 +72,7 @@ const programData = [
     slug: "DataSciences",
     category: "Crash Course",
     author: "📅 This Batch Is Now Live",
-    date: "9 June 25",
+
     image:
       "https://img.freepik.com/premium-photo/businessman-working-with-business-analytics-data-management-system-computer-online-document-management-metrics-connected-database-corporate-strategy-finance-operations-salesx9_661047-4235.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Master Data Science: Python, Machine Learning & Analytics.",
@@ -86,7 +86,7 @@ const programData = [
     slug: "AppDevelopment",
     category: "Crash Course",
     author: "📅 This Batch Is Now Live",
-    date: "8 June 25",
+
     image:
       "https://img.freepik.com/free-photo/man-working-with-computer-side-view_23-2149930994.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Learn Mobile App Development with Android & Flutter.",
@@ -103,7 +103,7 @@ const programData = [
     slug: "dsajava", // I Added the slug for routing
     category: "BTech",
     author: "📅 This Batch Is Now Live",
-    date: "09 Jun 25",
+
     image:
       "https://img.freepik.com/premium-photo/java-programming-code-abstract-technology-background_272306-149.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740&q=80",
       desc: "Master Java & DSA: Arrays, Linked Lists, Stacks, Queues & More.",
@@ -117,7 +117,7 @@ const programData = [
     slug: "webDev", // I Added the slug for routing
     category: "BTech",
     author: "📅 This Batch Is Now Live",
-    date: "09 Jun 25",
+
     image:
       "https://img.freepik.com/premium-photo/html-system-websites-concept_23-2150323528.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Learn HTML, CSS, JavaScript, React & Backend.",
@@ -131,7 +131,7 @@ const programData = [
     slug: "AI",
     category: "BTech",
     author: "📅 This Batch Is Now Live",
-    date: "2 June 25",
+
     image:
       "https://img.freepik.com/free-vector/ai-futuristic-technology-background_53876-97391.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Learn AI concepts, Python, Machine Learning & NLP.",
@@ -145,7 +145,7 @@ const programData = [
     slug: "DataSciences",
     category: "BTech",
     author: "📅 This Batch Is Now Live",
-    date: "9 June 25",
+
     image:
       "https://img.freepik.com/free-photo/representation-user-experience-interface-design_23-2150169861.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Master Data Science: Python, Machine Learning & Analytics.",
@@ -159,7 +159,7 @@ const programData = [
     slug: "CyberSecurity",
     category: "BTech",
     author: "📅 This Batch Is Now Live",
-    date: "1 June 25",
+
     image:
       "https://img.freepik.com/free-photo/cyber-security-concept-digital-art_23-2151637765.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Learn Ethical Hacking, Network Security & Cyber Laws",
@@ -174,7 +174,7 @@ const programData = [
     slug: "UIUX",
     category: "BTech",
     author: "📅 This Batch Is Now Live",
-    date: "20 June 25",
+
     image:
       "https://img.freepik.com/free-photo/representations-user-experience-interface-design_23-2150104516.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Design apps and websites people love to use.",
@@ -188,7 +188,7 @@ const programData = [
     slug: "CloudComputing",
     category: "BTech",
     author: "📅 This Batch Is Now Live",
-    date: "3 June 25",
+
     image:
       "https://img.freepik.com/premium-photo/creative-square-circuit-button-hologram-with-cloud-icon-dark-wallpaper-technology-cloud-computing-concept-3d-rendering_670147-96675.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Learn Cloud Platforms, AWS, Azure & Virtualization.",
@@ -202,7 +202,7 @@ const programData = [
     title: "VLSI",
     category: "BTech",
     author: "📅 This Batch Is Now Live",
-    date: "2 July 25",
+
     image:
       "https://plus.unsplash.com/premium_photo-1683121713210-97667d2e83c8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNlbWljb25kdWN0b3J8ZW58MHx8MHx8fDA%3D",
     desc: "Learn VLSI Design, Verilog, RTL Simulation & FPGA",
@@ -216,7 +216,7 @@ const programData = [
     slug: "IOT",
     category: "BTech",
     author: "📅 This Batch Is Now Live",
-    date: "4 June 25",
+
     image:
       "https://img.freepik.com/premium-vector/internet-things-iot_35632-74.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Learn IoT Systems, Sensors, Arduino & Cloud Integration.",
@@ -230,7 +230,7 @@ const programData = [
     slug: "AutoCAD",
     category: "BTech",
     author: "📅 This Batch Is Now Live",
-    date: "5 June 25",
+
     image:
       "https://img.freepik.com/free-photo/tired-woman-architect-working-modern-cad-program-overtime-sitting-desk-start-up-office-industrial-female-engineer-studying-prototype-idea-pc-showing-cad-software-device-display_482257-13399.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Learn 2D & 3D Drafting, Modeling, and Design with AutoCAD.",
@@ -244,7 +244,7 @@ const programData = [
     slug: "JavaFullstack",
     category: "BTech",
     author: "📅 This Batch Is Now Live",
-    date: "2 June 25",
+
     image:
       "https://img.freepik.com/premium-photo/business-man-pushing-touch-screen-interface-java-programming-concept-virtual-machine_1085052-2842.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Learn Java, Spring Boot, SQL & Full Stack Development",
@@ -258,7 +258,7 @@ const programData = [
     slug: "AppDevelopment",
     category: "BTech",
     author: "📅 This Batch Is Now Live",
-    date: "8 June 25",
+
     image:
       "https://img.freepik.com/free-photo/representation-user-experience-interface-design_23-2150169839.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Learn Android, Flutter & Cross-Platform App Development.",
@@ -274,7 +274,7 @@ const programData = [
     slug: "DigitalMarketing",
     category: "Graduates",
     author: "📅 This Batch Is Now Live",
-    date: "7 June 25",
+
     image:
       "https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGRpZ2l0YWwlMjBtYXJrZXRpbmd8ZW58MHx8MHx8fDA%3D",
     desc: "Google Ads, SEO, branding—all in one course.",
@@ -288,7 +288,7 @@ const programData = [
     slug: "PowerBi",
     category: "Graduates",
     author: "📅 Next Batch Starting Soon",
-    date: "August 2025",
+
     image:
       "https://img.freepik.com/premium-photo/businessman-hand-pressing-keyboard-with-mock-up-chart-slide-show-presentation-display-laptop_281691-370.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Turn data into powerful insights with Power BI",
@@ -302,7 +302,7 @@ const programData = [
     slug: "HRM",
     category: "Graduates",
     author: "📅 This Batch Is Now Live",
-    date: "5 May 25",
+
     image:
       "https://img.freepik.com/free-photo/three-business-people-meeting_23-2147626533.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Learn Core HR Practices, Payroll, and Financial Management",
@@ -317,7 +317,7 @@ const programData = [
     slug: "Leadership",
     category: "Crash Course",
     author: "Selfbased",
-    date: "",
+
     image:
       "https://img.freepik.com/premium-photo/business-teamwork-meeting-success-achievement-goal_42957-2564.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Develop Leadership Skills, Team Management & Business Strategies.",
@@ -331,7 +331,7 @@ const programData = [
     slug: "AdvancedExcel",
     category: "Graduates",
     author: "Selfbased",
-    date: "",
+
     image:
       "https://img.freepik.com/premium-photo/spreadsheet-document-information-financial-startup-concept-snugly_31965-600877.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Master Excel for data analysis, reporting & automation.",
@@ -346,7 +346,7 @@ const programData = [
     slug: "Accounting",
     category: "Graduates",
     author: "Glowlogics Solutions",
-    date: "28 Aug 25",
+
     image:
       "https://img.freepik.com/free-photo/top-viewtop-view-manager-employee-doing-teamwork-business-office-looking-charts-laptop-display_482257-2443.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Learn Business Accounting, Taxation & Financial Reporting.",
@@ -360,7 +360,7 @@ const programData = [
     // slug: "Entrepreneurship",
     category: "Graduates",
     author: "Batch will be Live Soon!",
-    date: "",
+
     image:
       "https://img.freepik.com/free-photo/businessmen-closing-deal-with-handshake_1098-3793.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Learn Startup Building, Business Strategy & Growth Planning.",
@@ -374,7 +374,7 @@ const programData = [
     // slug: "Blaw",
     category: "Graduates",
     author: "Batch will be Live Soon!",
-    date: "",
+    // date: "",
     image:
       "https://img.freepik.com/premium-photo/justice-law-concept-legal-counsel-presents-client-signed-contract-with-gavel-legal-law-legal-having-team-meeting-law-firm-background_265022-79598.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Understand Legal Basics for Business & Corporate Compliance.",
@@ -388,7 +388,7 @@ const programData = [
     // slug: "BusinessCommunication",
     category: "Graduates",
     author: "Glowlogics Solutions",
-    date: "28 Aug 25",
+    // date: "28 Aug 25",
     image:
       "https://img.freepik.com/premium-photo/justice-law-concept-legal-counsel-presents-client-signed-contract-with-gavel-legal-law-legal-having-team-meeting-law-firm-background_265022-79598.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Master Professional Communication, Presentation & Negotiation Skills.",
@@ -404,7 +404,7 @@ const programData = [
     slug: "DigitalMarketing",
     category: "Masters",
     author: "📅 This Batch Is Now Live",
-    date: "7 June 25",
+    // date: "7 June 25",
     image:
       "https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGRpZ2l0YWwlMjBtYXJrZXRpbmd8ZW58MHx8MHx8fDA%3D",
     desc: "Master Digital Marketing: SEO, Social Media, Ads & Analytics",
@@ -418,7 +418,7 @@ const programData = [
     slug: "HRM",
     category: "Masters",
     author: "📅 This Batch Is Now Live",
-    date: "5 May 25",
+    // date: "5 May 25",
     image:
       "https://img.freepik.com/free-photo/three-business-people-meeting_23-2147626533.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Learn Core HR Practices, Payroll, and Financial Management",
@@ -432,7 +432,7 @@ const programData = [
     slug: "AdvancedExcel",
     category: "Masters",
     author: "Selfbased",
-    date: "",
+    // date: "",
     image:
       "https://img.freepik.com/premium-photo/spreadsheet-document-information-financial-startup-concept-snugly_31965-600877.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Master Excel for data analysis, reporting & automation.",
@@ -460,7 +460,7 @@ const programData = [
     title: "Entrepreneurship",
     category: "Masters",
     author: "Batch will be Live Soon!",
-    date: "",
+    // date: "",
     image:
       "https://img.freepik.com/free-photo/businessmen-closing-deal-with-handshake_1098-3793.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Learn Startup Building, Business Strategy & Growth Planning.",
@@ -475,7 +475,7 @@ const programData = [
     // slug: "Blaw",
     category: "Masters",
     author: "Batch will be Live Soon!",
-    date: "20 Sep 25",
+    // date: "20 Sep 25",
     image:
       "https://img.freepik.com/free-photo/business-advisor-working-with-documentation_1098-15366.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Understand Legal Basics for Business & Corporate Compliance.",
@@ -489,7 +489,7 @@ const programData = [
     // slug: "BusinessCommunication",
     category: "Masters",
     author: "Batch will be Live Soon!",
-    date: "",
+    // date: "",
     image:
       "https://img.freepik.com/premium-photo/cooperation-action-group-young-modern-people-smart-casual-wear-working-together_425904-9440.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
     desc: "Master Professional Communication, Presentation & Negotiation Skills.",
