@@ -33,7 +33,7 @@ const FullStackProgram = () => {
     ],
   };
 
-  const [activeRole, setActiveRole] = useState("Project Director");
+ const [activeRole, setActiveRole] = useState(Object.keys(roleLogos)[0]);
 
   return (
     <>

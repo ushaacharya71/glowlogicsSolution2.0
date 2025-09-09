@@ -34,8 +34,7 @@ const FullStackCourse = () => {
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSze0EO7gJyuZJ7-LbrCiBH60WrvWTeLenF82OZdK0kaNvhnmmReIiMQFZvRg&s",
     ],
   };
-
-  const [activeRole, setActiveRole] = useState("Project Director");
+ const [activeRole, setActiveRole] = useState(Object.keys(roleLogos)[0]);
 
   return (
     <>
