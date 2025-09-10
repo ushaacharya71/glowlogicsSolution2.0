@@ -19,7 +19,7 @@ import OfferPopup from "./components/OfferPopup";
 import GlowlogicsChatbot from "./components/GlowlogicsChatbot";
 import GlobalReachSection from "./components/GlobalReachSection";
 import HeroSection from "./components/HeroSection";
-import Payment from "./components/Payment";
+
 //////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////
 
