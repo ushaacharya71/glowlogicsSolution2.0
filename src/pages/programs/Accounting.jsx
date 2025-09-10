@@ -180,7 +180,7 @@ const FullStackCourse = () => {
                 >
                   <img
                     ref={qrRef}
-                    src="/public/barcode.jpg" // <-- Replace with your QR code
+                    src="barcode.jpg" // <-- Replace with your QR code
                     alt="UPI QR Code"
                     className="max-w-[80%] max-h-[80%] object-contain rounded-xl shadow-2xl border-4 border-white"
                   />
