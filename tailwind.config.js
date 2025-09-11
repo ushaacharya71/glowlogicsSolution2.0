@@ -10,7 +10,7 @@ export default {
         'x-180': '180deg',
       },
 
-      // ✅ Seamless marquee keyframes
+      // ✅ Custom Keyframes
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0%)' },
@@ -25,14 +25,25 @@ export default {
           '50%': { transform: 'scale(1.5)' },
           '100%': { transform: 'scale(1)' },
         },
+
+        // ⚡ Running border animation
+        borderRun: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '100%': { backgroundPosition: '200% 50%' },
+        },
       },
 
+      // ✅ Animations
       animation: {
         marquee: 'marquee 20s linear infinite',
         'marquee-reverse': 'marquee-reverse 20s linear infinite',
         'cursor-click': 'pop 0.2s ease-in-out',
+
+        // ⚡ Running orange border
+        'border-run': 'borderRun 4s linear infinite',
       },
 
+      // ✅ Custom Colors
       colors: {
         learniverse: '#8BCA1E',
       },
