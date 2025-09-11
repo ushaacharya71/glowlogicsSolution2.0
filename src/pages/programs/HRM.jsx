@@ -108,7 +108,7 @@ const FullStackCourse = () => {
               </button>
 
               {/* Brochure Download */}
-              <a href="/ProgramsPDF/ACCOUNTS.pdf" download>
+              <a href="/ProgramsPDF/HRM.pdf" download>
                 <button className="border border-black text-black px-6 py-2 rounded-lg hover:bg-white transition">
                   Download brochure
                 </button>
