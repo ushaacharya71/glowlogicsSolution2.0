@@ -144,7 +144,7 @@ export default function Testimonials() {
   return (
     <div className="bg-orange-100 py-12 overflow-hidden">
       <h2 className="text-3xl font-bold text-center mb-10 leading-snug">
-        Admiration expressed by others regarding our presence.
+        Admiration expressed by others regarding our presence
       </h2>
 
       <div className="relative w-full space-y-8 overflow-x-hidden">

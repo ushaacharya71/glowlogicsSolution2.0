@@ -3,6 +3,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { useEffect, useState, useRef } from "react";
 import logo from "../assets/BlackGL.png";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   { name: "Home", id: "home" },
@@ -113,15 +114,16 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <motion.div
-              whileHover={{ scale: 1.05, rotate: 1 }}
+              // whileHover={{ scale: 1.05, rotate: 1 }}
               transition={{ type: "spring", stiffness: 300 }}
               className="w-auto"
             >
+              <Link to="/">
               <img
                 src={logo}
                 alt="Logo"
                 className="h-6 sm:h-7 md:h-7 object-contain"
-              />
+              /></Link>
             </motion.div>
           </div>
 
@@ -163,7 +165,7 @@ const Navbar = () => {
               whileHover={{ scale: 1.05 }}
               className="text-sm font-medium text-gray-800 hover:text-black transition"
             >
-              <b>Contact</b>
+              {/* <b>Contact</b> */}
             </motion.button>
           </div>
 
@@ -179,58 +181,55 @@ const Navbar = () => {
         </div>
 
         {/* ✅ Announcement Bar (below navbar) */}
-         <div className="relative bg-[#ffedd5] text-[#d97706] py-0 overflow-hidden">
+        <div className="relative bg-[#ffedd5] text-[#d97706] py-0 overflow-hidden">
           <div className="flex animate-marquee whitespace-nowrap">
-           <span className="mx-4">
-  🎉 Special <strong>Navratri/Durga Puja</strong> Offer: Get{" "}
-  <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
-  30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-</span>
-<span className="mx-4">
-  🎉 Special <strong>Navratri/Durga Puja</strong> Offer: Get{" "}
-  <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
-  30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-</span>
+            <span className="mx-4">
+              🎉 Special <strong>Navratri/Durga Puja</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
+            <span className="mx-4">
+              🎉 Special <strong>Navratri/Durga Puja</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
 
-<span className="mx-4">
-  🎉 Special <strong>Navratri/Durga Puja</strong> Offer: Get{" "}
-  <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
-  30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-</span>
-<span className="mx-4">
-  🎉 Special <strong>Navratri/Durga Puja</strong> Offer: Get{" "}
-  <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
-  30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-</span>
-<span className="mx-4">
-  🎉 Special <strong>Navratri/Durga Puja</strong> Offer: Get{" "}
-  <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
-  30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-</span><span className="mx-4">
-  🎉 Special <strong>Navratri/Durga Puja</strong> Offer: Get{" "}
-  <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
-  30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-</span>
-<span className="mx-4">
-  🎉 Special <strong>Navratri/Durga Puja</strong> Offer: Get{" "}
-  <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
-  30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-</span>
+            <span className="mx-4">
+              🎉 Special <strong>Navratri/Durga Puja</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
+            <span className="mx-4">
+              🎉 Special <strong>Navratri/Durga Puja</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
+            <span className="mx-4">
+              🎉 Special <strong>Navratri/Durga Puja</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
+            <span className="mx-4">
+              🎉 Special <strong>Navratri/Durga Puja</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
+            <span className="mx-4">
+              🎉 Special <strong>Navratri/Durga Puja</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
 
-<span className="mx-4">
-  🎉 Special <strong>Navratri/Durga Puja</strong> Offer: Get{" "}
-  <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
-  30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-</span>
-<span className="mx-4">
-  🎉 Special <strong>Navratri/Durga Puja</strong> Offer: Get{" "}
-  <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
-  30 slots Only ⏳ | First come First serve | Enroll Today 🙌
-</span>
-
-
-
-
+            <span className="mx-4">
+              🎉 Special <strong>Navratri/Durga Puja</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
+            <span className="mx-4">
+              🎉 Special <strong>Navratri/Durga Puja</strong> Offer: Get{" "}
+              <strong>33.33% OFF</strong> on Selected Glowlogics Programs! 🎓 |
+              30 slots Only ⏳ | First come First serve | Enroll Today 🙌
+            </span>
           </div>
         </div>
       </motion.nav>

@@ -144,7 +144,7 @@ export default function HeroSection() {
             variants={fadeUpVariant}
             className="flex flex-col sm:flex-row gap-4 mt-6 justify-center items-center"
           >
-            <button className="bg-black text-white px-6 py-2 rounded-full text-sm transition-all duration-300 hover:scale-105 hover:ring-2 hover:ring-[#FFA500] hover:ring-offset-2">
+            <button className="bg-black text-white px-6 py-2 rounded-full text-sm transition-all duration-300 hover:scale-105 hover:ring-2 hover:ring-black ">
               <a
                 href="https://forms.gle/jhJhFcEiMQrGgdub6"
                 target="_blank"
