@@ -19,6 +19,7 @@ import OfferPopup from "./components/OfferPopup";
 import GlowlogicsChatbot from "./components/GlowlogicsChatbot";
 import GlobalReachSection from "./components/GlobalReachSection";
 import HeroSection from "./components/HeroSection";
+import Offer from "./components/Offer";
 
 //////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////
@@ -102,6 +103,7 @@ function HomePage() {
       <Image3DSlider />
       <Testimonial />
       <SectionOne />
+
       {/* <Payment /> */}
 
       {/* <Niche /> */}
@@ -118,16 +120,17 @@ function App() {
       <Navbar />
       <ScrollToTopOnLoad />
       <ScrollHandler />
+       <Offer />
 
       <Routes>
         {/* 🌐 Static Pages */}
+        <Route element={<Offer />}></Route>
         <Route path="/" element={<HomePage />} />
         <Route path="/career" element={<Career />} />
         <Route path="/about" element={<About />} />
         <Route path="/eventHub" element={<EventHub />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/legal-terms" element={<LegalTerms />} />
-
         {/* 📘 Program Pages */}
         <Route path="/programs/webDev" element={<WebDev />} />
         <Route path="/programs/VLSI" element={<VLSI />} />
@@ -140,7 +143,11 @@ function App() {
         <Route path="/programs/AutoCAD" element={<AutoCAD />} />
         <Route path="/programs/JavaFullstack" element={<JavaFullstack />} />
         <Route path="/programs/dsajava" element={<DSAjava />} />
-        <Route path="/programs/AppDevelopment" element={<AppDevelopment />} />  {/* <added dsain java /> */}
+        <Route
+          path="/programs/AppDevelopment"
+          element={<AppDevelopment />}
+        />{" "}
+        {/* <added dsa in java /> */}
         <Route
           path="/programs/DigitalMarketing"
           element={<DigitalMarketing />}
@@ -162,11 +169,9 @@ function App() {
       </Routes>
       <Niche />
 
-
       <OfferPopup />
       <FloatingSocials />
-       <GlowlogicsChatbot />
-
+      <GlowlogicsChatbot />
     </div>
   );
 }
