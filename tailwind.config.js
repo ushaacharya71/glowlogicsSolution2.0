@@ -35,8 +35,8 @@ export default {
 
       // ✅ Animations
       animation: {
-        marquee: 'marquee 20s linear infinite',
-        'marquee-reverse': 'marquee-reverse 20s linear infinite',
+        marquee: 'marquee 40s linear infinite', // ⏳ slower
+        'marquee-reverse': 'marquee-reverse 40s linear infinite',
         'cursor-click': 'pop 0.2s ease-in-out',
 
         // ⚡ Running orange border

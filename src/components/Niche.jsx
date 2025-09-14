@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { FaInstagram, FaLinkedin, FaFacebook, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   const location = useLocation();
@@ -56,31 +57,48 @@ export default function Footer() {
             <div className="space-y-4">
               <div>
                 <p className="font-semibold mb-1">Social Media:</p>
-                <ul className="space-y-1">
-                  <li>
-                    <a
-                      href="https://www.instagram.com/glowlogics/"
-                      className="underline"
-                    >
-                      Instagram
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="underline">
-                      LinkedIn
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="underline">
-                      Facebook
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="underline">
-                      WhatsApp
-                    </a>
-                  </li>
-                </ul>
+               <ul className="flex space-x-4">
+      <li>
+        <a
+          href="https://www.instagram.com/glowlogics/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-pink-600 hover:text-pink-800 text-3xl"
+        >
+          <FaInstagram />
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/company/glowlogics/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-600 hover:text-blue-600 text-3xl"
+        >
+          <FaLinkedin />
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.facebook.com/glowlogics/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-600 hover:text-blue-500 text-3xl"
+        >
+          <FaFacebook />
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://wa.me/919876543210" // replace with your WhatsApp number
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-600 hover:text-green-500 text-3xl"
+        >
+          <FaWhatsapp />
+        </a>
+      </li>
+    </ul>
               </div>
 
               <div>
