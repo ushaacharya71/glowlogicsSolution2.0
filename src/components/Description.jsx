@@ -12,7 +12,6 @@ function About() {
     >
       {/* 🔶 Inner Glassy Orange Container */}
       <div className="rounded-3xl overflow-hidden m-4 md:m-10 bg-gradient-to-r from-[#ff6e0c] via-[#ff823d] to-[#ff994f] backdrop-blur-md border border-white/30 shadow-2xl max-w-[90rem] w-full">
-
         {/* First Section */}
         <motion.section
           initial={{ opacity: 0, y: 50 }}
@@ -52,7 +51,9 @@ function About() {
               >
                 {/* Text */}
                 <div className="md:w-1/2 space-y-4">
-                  <h3 className="text-2xl font-bold text-white/90">{item.title}</h3>
+                  <h3 className="text-2xl font-bold text-white/90">
+                    {item.title}
+                  </h3>
                   <p className="text-base leading-relaxed text-white/80 hover:text-white transition-colors duration-300">
                     {item.text}
                   </p>
@@ -144,18 +145,21 @@ function About() {
               <div className="flex flex-col gap-4">
                 <p className="text-xl font-semibold">Our Blogs 📚</p>
                 <ul className="space-y-2 underline text-base md:text-lg text-white/90">
-                  {["Latest Trends", "Career Tips", "Industry Insights", "Learning Resources"].map(
-                    (blog, i) => (
-                      <li key={i}>
-                        <a
-                          href="#"
-                          className="hover:text-white transition-colors"
-                        >
-                          {blog}
-                        </a>
-                      </li>
-                    )
-                  )}
+                  {[
+                    "Latest Trends",
+                    "Career Tips",
+                    "Industry Insights",
+                    "Learning Resources",
+                  ].map((blog, i) => (
+                    <li key={i}>
+                      <a
+                        href="#"
+                        className="hover:text-white transition-colors"
+                      >
+                        {blog}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
 

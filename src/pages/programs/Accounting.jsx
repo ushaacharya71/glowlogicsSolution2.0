@@ -712,8 +712,8 @@ const FullStackCourse = () => {
             Admiration expressed by others regarding our presence.
           </h2>
 
-          <div className="relative w-full space-y-8 overflow-x-hidden  hover:animation-pause">
-            <div className="flex w-max animate-marquee space-x-6 px-6 items-start  hover:animation-pause">
+          <div className="relative w-full space-y-8 overflow-x-hidden group">
+            <div className="flex w-max animate-marquee space-x-6 px-6 items-start animation-running hover:[animation-play-state:paused]">
               {[...Array(2)].flatMap(() =>
                 [
                   {
