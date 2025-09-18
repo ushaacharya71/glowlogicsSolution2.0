@@ -7,7 +7,7 @@ import {
   FaBullseye,
   FaUsers,
 } from "react-icons/fa";
-import { MdPeopleAlt, MdCalendarMonth } from "react-icons/md";
+import { MdPeopleAlt, MdCalendarMonth, MdAssignment } from "react-icons/md";
 
 export default function GlowlogicsUltimate() {
   const cursorRef = useRef(null);
@@ -99,6 +99,7 @@ export default function GlowlogicsUltimate() {
               >
                 {item.icon}
               </div>
+
             </div>
             <h3 className="text-lg font-semibold text-center mb-2 text-gray-900">
               {item.title}
@@ -159,5 +160,11 @@ const data = [
     title: "30,000+ Students",
     desc: "A growing community learning and getting hired across industries.",
     color: "text-indigo-500",
+  },
+   {
+    icon: <MdAssignment />,
+    title: "Certificate Verification",
+    desc: "Comming Soon..",
+    color: "text-orange-500",
   },
 ];
