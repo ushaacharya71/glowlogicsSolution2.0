@@ -85,7 +85,7 @@ const Navbar = () => {
     else if (location.pathname === "/") {
       scrollToSection(id);
     }
-    // Otherwise, go to home and scroll from there
+    // Otherwise, go to home and scroll from there thik h ye ab
     else {
       navigate("/", { state: { scrollTo: id } });
     }

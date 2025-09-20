@@ -8,7 +8,6 @@ import gsap from "gsap";
 const FullStackCourse = () => {
   const [openSection, setOpenSection] = useState(null);
 
-
   const roleLogos = {
     "AutoCAD Draftsman –  Starting Salary (India): ₹2.5 – ₹4.5 LPA": [
       "data:image/png;base64,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",
@@ -17,7 +16,7 @@ const FullStackCourse = () => {
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPR10Fz15vjWryAGF7LWpwGCBpDyAiBOpgW5o3r--4GHkybcmtt0q5FI7cavs&s",
     ],
     "Design Engineer (AutoCAD) –  Starting Salary (India): ₹3.5 – ₹6 LPA": [
-     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxSdO7qhiIhfW64Jzgkz4Cj7q0QULsDwlU1aoDKHgzoOwE7zTdiQXABFQI2Q&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxSdO7qhiIhfW64Jzgkz4Cj7q0QULsDwlU1aoDKHgzoOwE7zTdiQXABFQI2Q&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFUnTw99fm9fVevBAnkSKTEI5XV_T9LbhKusHHYOdxLt2w6vvDTX-15ZO6uw&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWpsGe5iEJob0dcSB5w9P5aWFjriI1hp0gyk5BlsAn303UpqPqoxUUqNhUuZ0&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFJWrxnzTPiaRgGMzwh2fyV6kD15A-ihppe3wEcKFGD8pj1znEEBk1RytrrA&s",
@@ -35,12 +34,12 @@ const FullStackCourse = () => {
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSze0EO7gJyuZJ7-LbrCiBH60WrvWTeLenF82OZdK0kaNvhnmmReIiMQFZvRg&s",
     ],
   };
- const [activeRole, setActiveRole] = useState(Object.keys(roleLogos)[0]);
+  const [activeRole, setActiveRole] = useState(Object.keys(roleLogos)[0]);
 
-   const [showPayment, setShowPayment] = useState(false);
+  const [showPayment, setShowPayment] = useState(false);
   const [showQR, setShowQR] = useState(false);
   const qrRef = useRef(null);
-///////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////
   // GSAP animation when QR shows
   useEffect(() => {
     if (showQR && qrRef.current) {
@@ -51,7 +50,6 @@ const FullStackCourse = () => {
       );
     }
   }, [showQR]);
-
 
   ////////////////////////////////////////////////////////////////////////////////////////////
   return (
@@ -64,7 +62,8 @@ const FullStackCourse = () => {
             AutoCAD
           </h1>
           <p className="text-lg text-gray-700 mb-6">
-            Become a job-ready AutoCAD professional | Master 2D Drafting, 3D Modeling & Industry-Level Design Skills
+            Become a job-ready AutoCAD professional | Master 2D Drafting, 3D
+            Modeling & Industry-Level Design Skills
           </p>
 
           {/* Benefits */}
@@ -126,33 +125,32 @@ const FullStackCourse = () => {
                   {/* Payment Options Row */}
                   <div className="flex flex-wrap gap-10 justify-center">
                     {/* UPI Box */}
-                   <div className="relative">
-  {/* Small Heading */}
-  <h3 className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-orange-500 font-semibold text-lg">
-     Trusted UPI QR Payment
-  </h3>
+                    <div className="relative">
+                      {/* Small Heading */}
+                      <h3 className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-orange-500 font-semibold text-lg">
+                        Trusted UPI QR Payment
+                      </h3>
 
-  {/* Animated Border Wrapper */}
-  <div className="relative w-80 h-80 p-[3px] rounded-2xl bg-gradient-to-r from-orange-400 via-transparent to-orange-400 bg-[length:200%_200%] animate-border-run">
-    <div className="w-full h-full bg-white rounded-2xl shadow-lg flex flex-col items-center justify-center gap-4">
-      <img
-       src="data:image/jpeg;base64,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4ha0+r8TqDRkUsUbqipmYXPLQXhsjnVVQAeAIBB6URZ/jDbXxNt0iybdu/E3PdmLHoVd6Y0LE7SDKanoqeeGmgdI6AlscQkqX5PzBBdaI9q5un6eI1babxOEtZA2mjjxNFNBU1OKU4nWyNmixAzPSgth8oG8gdJAXrHAi4II5+CrOq0Q59XDSmnZpAUNFHG8SvDWGSU+ecQNzhj6sS+et+n44YxR07oqUUrGTPjZezpWuEjaVhaLW3uccvyjibNC0SsI6hjgS1zXAbyCCB02UUr3iurmUrnHxdtM2pewEjbmRxEbXEZljQ0kjcSRda2uOh6elop3UsMcM07W0jdmMOLbPawXAyvne5CKmrJ2nIOaeggr6KL6oaEZAXO8Rp6N2FrA6N7XveOOIhotmB03UoUBERAREQEREEan1JpXOkN6hrJXl8kLZntp3uPnF0YPHiNxXUi0RE2o8YAIeIhA0fkawOxWa3hnbsC6KIOZXaChkdI8tLXywmB72mzyw8L844FeUmgoY5Y5WhwMUAp2C/JbGCDkOc2GfsXURByqvQMUkssrjJilg8XJDrWju4nB6JJcc+haMGqETYXwbWrdHJEYMDpiWtYQBZgtyTYWvzKRogj9DqjBG9j3OqJzFbZiaV0jGECwc1h5IIG42uOC6WmNGMqYTDLiwOLSQDYnC4OAJ5iQLhbyIOfVaKjkmimficYcRY2/9MOcLY8PFwFwDwuUfoqM1IqeUJBEYcjyS0uDsxxIO4+0roIg4rNWoBSspP6myY9r7YuU8tftLPP5gXZkcVuHRUW3dUYBtXxiIv44AXENHNm493Mt5EEYGpMA2WCSrjMUIgYWSlpwA3sSBmb/ACC6tLoaNk/jAMjpNiyC7nYuQwlw/USSSeOS6SINNmjImzuqA0CV7BG543ua0ktB6L71oDVin8TNGQ8xElx5REmIv2mPGLHFjzuu2iDlaH0DFTFz2mR8j7B0sj3SSuDfNbiduaLnIZZlfLSGrcMzqhz9pephbA8h1rRtxHCzLk3xOufau0iDSrNFRS05p5GB0TmYC0+iBYW5iMs/YsJdExumhlOLFAHCMX5AxgNJI4mwt1ldBEHAqdVY31D6gS1cb5MGMRyljTgFmiwG4C/aVlVarU8jahrg8+MyNme7Fyw9gaGGM/lw4G26+dd1EHOotEsifNI0vxzlrnuJubtYGNw5ZAAXtzkrGi0HDFTGmaDgcHhxJu95kvjc53FxJJuumiCPTao07mQAGdjqdgijlZI5kwYABhc8ecMhkUqNUIHQtixVIwy7fHtXGZ0gFg50jrk2G4cLDmUhRBp6KoBAzAHzSZk4pXl78+GI8PYtxEQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREH//Z"
-        alt="UPI"
-        className="h-28"
-      />
-      <p className="text-black text-lg font-semibold text-center">
-        Pay using <br /> UPI QR Code
-      </p>
-      <button
-        className="px-6 py-2 bg-gray-800 text-white rounded-full shadow hover:bg-gray-700 transition"
-        onClick={() => setShowQR(true)}
-      >
-        Open QR
-      </button>
-    </div>
-  </div>
-</div>
-
+                      {/* Animated Border Wrapper */}
+                      <div className="relative w-80 h-80 p-[3px] rounded-2xl bg-gradient-to-r from-orange-400 via-transparent to-orange-400 bg-[length:200%_200%] animate-border-run">
+                        <div className="w-full h-full bg-white rounded-2xl shadow-lg flex flex-col items-center justify-center gap-4">
+                          <img
+                            src="data:image/jpeg;base64,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4ha0+r8TqDRkUsUbqipmYXPLQXhsjnVVQAeAIBB6URZ/jDbXxNt0iybdu/E3PdmLHoVd6Y0LE7SDKanoqeeGmgdI6AlscQkqX5PzBBdaI9q5un6eI1babxOEtZA2mjjxNFNBU1OKU4nWyNmixAzPSgth8oG8gdJAXrHAi4II5+CrOq0Q59XDSmnZpAUNFHG8SvDWGSU+ecQNzhj6sS+et+n44YxR07oqUUrGTPjZezpWuEjaVhaLW3uccvyjibNC0SsI6hjgS1zXAbyCCB02UUr3iurmUrnHxdtM2pewEjbmRxEbXEZljQ0kjcSRda2uOh6elop3UsMcM07W0jdmMOLbPawXAyvne5CKmrJ2nIOaeggr6KL6oaEZAXO8Rp6N2FrA6N7XveOOIhotmB03UoUBERAREQEREEan1JpXOkN6hrJXl8kLZntp3uPnF0YPHiNxXUi0RE2o8YAIeIhA0fkawOxWa3hnbsC6KIOZXaChkdI8tLXywmB72mzyw8L844FeUmgoY5Y5WhwMUAp2C/JbGCDkOc2GfsXURByqvQMUkssrjJilg8XJDrWju4nB6JJcc+haMGqETYXwbWrdHJEYMDpiWtYQBZgtyTYWvzKRogj9DqjBG9j3OqJzFbZiaV0jGECwc1h5IIG42uOC6WmNGMqYTDLiwOLSQDYnC4OAJ5iQLhbyIOfVaKjkmimficYcRY2/9MOcLY8PFwFwDwuUfoqM1IqeUJBEYcjyS0uDsxxIO4+0roIg4rNWoBSspP6myY9r7YuU8tftLPP5gXZkcVuHRUW3dUYBtXxiIv44AXENHNm493Mt5EEYGpMA2WCSrjMUIgYWSlpwA3sSBmb/ACC6tLoaNk/jAMjpNiyC7nYuQwlw/USSSeOS6SINNmjImzuqA0CV7BG543ua0ktB6L71oDVin8TNGQ8xElx5REmIv2mPGLHFjzuu2iDlaH0DFTFz2mR8j7B0sj3SSuDfNbiduaLnIZZlfLSGrcMzqhz9pephbA8h1rRtxHCzLk3xOufau0iDSrNFRS05p5GB0TmYC0+iBYW5iMs/YsJdExumhlOLFAHCMX5AxgNJI4mwt1ldBEHAqdVY31D6gS1cb5MGMRyljTgFmiwG4C/aVlVarU8jahrg8+MyNme7Fyw9gaGGM/lw4G26+dd1EHOotEsifNI0vxzlrnuJubtYGNw5ZAAXtzkrGi0HDFTGmaDgcHhxJu95kvjc53FxJJuumiCPTao07mQAGdjqdgijlZI5kwYABhc8ecMhkUqNUIHQtixVIwy7fHtXGZ0gFg50jrk2G4cLDmUhRBp6KoBAzAHzSZk4pXl78+GI8PYtxEQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREH//Z"
+                            alt="UPI"
+                            className="h-28"
+                          />
+                          <p className="text-black text-lg font-semibold text-center">
+                            Pay using <br /> UPI QR Code
+                          </p>
+                          <button
+                            className="px-6 py-2 bg-gray-800 text-white rounded-full shadow hover:bg-gray-700 transition"
+                            onClick={() => setShowQR(true)}
+                          >
+                            Open QR
+                          </button>
+                        </div>
+                      </div>
+                    </div>
 
                     {/* Razorpay Box */}
                     <div className="w-80 h-80 bg-white rounded-2xl shadow-lg flex flex-col items-center justify-center gap-4">
@@ -206,7 +204,6 @@ const FullStackCourse = () => {
               </div>
             )}
           </div>
-
 
           {/* Rating & Learners */}
           <div className="flex items-center gap-6 mt-6 text-gray-700">
@@ -523,20 +520,20 @@ const FullStackCourse = () => {
             ))}
           </div>
         </div>
-         <div>
-                  <br></br>
-                </div>
-                <div className="overflow-hidden w-full max-w-5xl mx-auto rounded-lg shadow-md">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 text-gray-800">
-                    Your 5-Step Career Roadmap with Glowlogics
-                  </h2>
+        <div>
+          <br></br>
+        </div>
+        <div className="overflow-hidden w-full max-w-5xl mx-auto rounded-lg shadow-md">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 text-gray-800">
+            Your 5-Step Career Roadmap with Glowlogics
+          </h2>
 
-                  <img
-                    src={RoadmapFlow}
-                    alt="World map with student locations"
-                    className="transition-transform duration-500 ease-in-out transform hover:scale-105 w-full h-auto"
-                  />
-                </div>
+          <img
+            src={RoadmapFlow}
+            alt="World map with student locations"
+            className="transition-transform duration-500 ease-in-out transform hover:scale-105 w-full h-auto"
+          />
+        </div>
         <div className="max-w-7xl mx-auto px-4 py-16 flex flex-col lg:flex-row gap-10 items-start">
           {/* Left: FAQ Section */}
           <div className="w-full lg:w-2/3">
@@ -546,37 +543,37 @@ const FullStackCourse = () => {
             <div className="bg-white border rounded-lg shadow-md divide-y">
               {[
                 {
-    "q": "Who can join this AutoCAD Certification Program?",
-    "a": "Engineering and degree students from any year or background can join. No prior design or drafting experience is required."
-  },
-  {
-    "q": "Do I need any specific background before enrolling?",
-    "a": "No. This program is designed for beginners and covers everything from basic drawing tools to advanced AutoCAD features."
-  },
-  {
-    "q": "How long is the AutoCAD certification valid for?",
-    "a": "The AutoCAD Certification from Glowlogics is ISO- and MSME-recognized and valid for a lifetime."
-  },
-  {
-    "q": "What skills will I learn in this course?",
-    "a": "You’ll learn 2D drafting, 3D modeling, blueprint reading, layer management, dimensioning, annotations, and working on real-world AutoCAD projects."
-  },
-  {
-    "q": "How long is the course, and what is the learning mode?",
-    "a": "The course runs for 1–2 months with 30+ hours of live interactive classes, weekly doubt-clearing sessions, and project-based learning."
-  },
-  {
-    "q": "Will I get a certificate after completing the course?",
-    "a": "Yes. You’ll receive an ISO- and MSME-recognized AutoCAD Certification after successfully completing training and submitting required project work."
-  },
-  {
-    "q": "Is there any placement guarantee?",
-    "a": "We provide placement assistance, including resume building and interview preparation. Final job offers depend on your performance and interview results."
-  },
-  {
-    "q": "How do I register and pay the course fee?",
-    "a": "You can register through our official form link or Company QR Code. Payment details will be shared once your registration is confirmed."
-  },
+                  q: "Who can join this AutoCAD Certification Program?",
+                  a: "Engineering and degree students from any year or background can join. No prior design or drafting experience is required.",
+                },
+                {
+                  q: "Do I need any specific background before enrolling?",
+                  a: "No. This program is designed for beginners and covers everything from basic drawing tools to advanced AutoCAD features.",
+                },
+                {
+                  q: "How long is the AutoCAD certification valid for?",
+                  a: "The AutoCAD Certification from Glowlogics is ISO- and MSME-recognized and valid for a lifetime.",
+                },
+                {
+                  q: "What skills will I learn in this course?",
+                  a: "You’ll learn 2D drafting, 3D modeling, blueprint reading, layer management, dimensioning, annotations, and working on real-world AutoCAD projects.",
+                },
+                {
+                  q: "How long is the course, and what is the learning mode?",
+                  a: "The course runs for 1–2 months with 30+ hours of live interactive classes, weekly doubt-clearing sessions, and project-based learning.",
+                },
+                {
+                  q: "Will I get a certificate after completing the course?",
+                  a: "Yes. You’ll receive an ISO- and MSME-recognized AutoCAD Certification after successfully completing training and submitting required project work.",
+                },
+                {
+                  q: "Is there any placement guarantee?",
+                  a: "We provide placement assistance, including resume building and interview preparation. Final job offers depend on your performance and interview results.",
+                },
+                {
+                  q: "How do I register and pay the course fee?",
+                  a: "You can register through our official form link or Company QR Code. Payment details will be shared once your registration is confirmed.",
+                },
               ].map((item, idx) => (
                 <div key={idx} className="group">
                   <button
@@ -601,8 +598,8 @@ const FullStackCourse = () => {
           </div>
 
           {/* Right: Certificates */}
-         <div className="w-full lg:w-1/2 mx-auto relative flex flex-col items-center">
-   <div className="bg-[#f9fbff] rounded-xl shadow-md p-8 max-w-md mx-auto text-center border border-orange-600 mb-6">
+          <div className="w-full lg:w-1/2 mx-auto relative flex flex-col items-center">
+            <div className="bg-[#f9fbff] rounded-xl shadow-md p-8 max-w-md mx-auto text-center border border-orange-600 mb-6">
               <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">
                 Live Batch Updates 📅
               </h3>
@@ -623,118 +620,130 @@ const FullStackCourse = () => {
               </ul>
             </div>
 
-  {/* Certificate Image with Hover Zoom */}
-  <div
-    id="cert-container"
-    className="border rounded-lg shadow-md overflow-hidden w-full"
-    onMouseMove={(e) => {
-      const img = document.getElementById("cert-img");
-      if (img) {
-        const rect = img.getBoundingClientRect();
-        const x = ((e.clientX - rect.left) / rect.width) * 100;
-        const y = ((e.clientY - rect.top) / rect.height) * 100;
-        img.style.transformOrigin = `${x}% ${y}%`;
-      }
-    }}
-    onMouseLeave={() => {
-      const img = document.getElementById("cert-img");
-      if (img) {
-        img.style.transformOrigin = "center center";
-      }
-    }}
-  >
-    <img
-      id="cert-img"
-      src="/CourseCompletionGlowlogics.png"
-      alt="Certificate 1"
-      data-index="0"
-      className="w-full h-auto object-contain p-2 transition-transform duration-300 ease-in-out scale-100 hover:scale-[2.5] cursor-zoom-in"
-      onClick={() => {
-        const modal = document.getElementById("cert-modal");
-        modal.style.display = "flex";
-      }}
-    />
-  </div>
+            {/* Certificate Image with Hover Zoom */}
+            <div
+              id="cert-container"
+              className="border rounded-lg shadow-md overflow-hidden w-full"
+              onMouseMove={(e) => {
+                const img = document.getElementById("cert-img");
+                if (img) {
+                  const rect = img.getBoundingClientRect();
+                  const x = ((e.clientX - rect.left) / rect.width) * 100;
+                  const y = ((e.clientY - rect.top) / rect.height) * 100;
+                  img.style.transformOrigin = `${x}% ${y}%`;
+                }
+              }}
+              onMouseLeave={() => {
+                const img = document.getElementById("cert-img");
+                if (img) {
+                  img.style.transformOrigin = "center center";
+                }
+              }}
+            >
+              <img
+                id="cert-img"
+                src="/CourseCompletionGlowlogics.png"
+                alt="Certificate 1"
+                data-index="0"
+                className="w-full h-auto object-contain p-2 transition-transform duration-300 ease-in-out scale-100 hover:scale-[2.5] cursor-zoom-in"
+                onClick={() => {
+                  const modal = document.getElementById("cert-modal");
+                  modal.style.display = "flex";
+                }}
+              />
+            </div>
 
-  {/* Certificate Navigation Buttons */}
-  <div className="flex gap-6 mt-4">
-    <button
-      onClick={() => {
-        const certificates = [
-          "/CourseCompletionGlowlogics.png",
-          "/InternshipGlowlogics.png",
-          "/PlacementGlowlogics.png",
-        ];
-        let currentIndex =
-          parseInt(document.getElementById("cert-img").getAttribute("data-index")) || 0;
-        currentIndex = (currentIndex - 1 + certificates.length) % certificates.length;
-        const img = document.getElementById("cert-img");
-        img.src = certificates[currentIndex];
-        img.setAttribute("alt", `Certificate ${currentIndex + 1}`);
-        img.setAttribute("data-index", currentIndex);
-        document.getElementById("modal-img").src = certificates[currentIndex];
-      }}
-      className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700"
-    >
-      ◀
-    </button>
+            {/* Certificate Navigation Buttons */}
+            <div className="flex gap-6 mt-4">
+              <button
+                onClick={() => {
+                  const certificates = [
+                    "/CourseCompletionGlowlogics.png",
+                    "/InternshipGlowlogics.png",
+                    "/PlacementGlowlogics.png",
+                  ];
+                  let currentIndex =
+                    parseInt(
+                      document
+                        .getElementById("cert-img")
+                        .getAttribute("data-index")
+                    ) || 0;
+                  currentIndex =
+                    (currentIndex - 1 + certificates.length) %
+                    certificates.length;
+                  const img = document.getElementById("cert-img");
+                  img.src = certificates[currentIndex];
+                  img.setAttribute("alt", `Certificate ${currentIndex + 1}`);
+                  img.setAttribute("data-index", currentIndex);
+                  document.getElementById("modal-img").src =
+                    certificates[currentIndex];
+                }}
+                className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700"
+              >
+                ◀
+              </button>
 
-    <button
-      onClick={() => {
-        const certificates = [
-          "/CourseCompletionGlowlogics.png",
-          "/InternshipGlowlogics.png",
-          "/PlacementGlowlogics.png",
-        ];
-        let currentIndex =
-          parseInt(document.getElementById("cert-img").getAttribute("data-index")) || 0;
-        currentIndex = (currentIndex + 1) % certificates.length;
-        const img = document.getElementById("cert-img");
-        img.src = certificates[currentIndex];
-        img.setAttribute("alt", `Certificate ${currentIndex + 1}`);
-        img.setAttribute("data-index", currentIndex);
-        document.getElementById("modal-img").src = certificates[currentIndex];
-      }}
-      className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700"
-    >
-      ▶
-    </button>
-  </div>
+              <button
+                onClick={() => {
+                  const certificates = [
+                    "/CourseCompletionGlowlogics.png",
+                    "/InternshipGlowlogics.png",
+                    "/PlacementGlowlogics.png",
+                  ];
+                  let currentIndex =
+                    parseInt(
+                      document
+                        .getElementById("cert-img")
+                        .getAttribute("data-index")
+                    ) || 0;
+                  currentIndex = (currentIndex + 1) % certificates.length;
+                  const img = document.getElementById("cert-img");
+                  img.src = certificates[currentIndex];
+                  img.setAttribute("alt", `Certificate ${currentIndex + 1}`);
+                  img.setAttribute("data-index", currentIndex);
+                  document.getElementById("modal-img").src =
+                    certificates[currentIndex];
+                }}
+                className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700"
+              >
+                ▶
+              </button>
+            </div>
 
-  {/* Fullscreen Popup Modal */}
-  <div
-    id="cert-modal"
-    className="fixed inset-0 bg-black bg-opacity-80 z-50 hidden items-center justify-center p-4"
-    style={{ display: "none" }}
-  >
-    <div className="relative max-w-4xl w-full">
-      <button
-        onClick={() => {
-          document.getElementById("cert-modal").style.display = "none";
-        }}
-        className="absolute top-2 right-2 text-white bg-red-500 hover:bg-red-600 rounded-full px-3 py-1 text-sm font-semibold"
-      >
-        ✕ Close
-      </button>
-      <img
-        id="modal-img"
-        src="/CourseCompletionGlowlogics.png"
-        alt="Full Certificate"
-        className="w-full h-auto object-contain rounded-lg"
-      />
-    </div>
-  </div>
-</div>
-
+            {/* Fullscreen Popup Modal */}
+            <div
+              id="cert-modal"
+              className="fixed inset-0 bg-black bg-opacity-80 z-50 hidden items-center justify-center p-4"
+              style={{ display: "none" }}
+            >
+              <div className="relative max-w-4xl w-full">
+                <button
+                  onClick={() => {
+                    document.getElementById("cert-modal").style.display =
+                      "none";
+                  }}
+                  className="absolute top-2 right-2 text-white bg-red-500 hover:bg-red-600 rounded-full px-3 py-1 text-sm font-semibold"
+                >
+                  ✕ Close
+                </button>
+                <img
+                  id="modal-img"
+                  src="/CourseCompletionGlowlogics.png"
+                  alt="Full Certificate"
+                  className="w-full h-auto object-contain rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
         </div>
         <div className=" py-12 overflow-hidden">
           <h2 className="text-3xl font-bold text-center mb-10 leading-snug">
             Admiration expressed by others regarding our presence.
           </h2>
 
-           <div className="relative w-full space-y-8 overflow-x-hidden group">
+          <div className="relative w-full space-y-8 overflow-x-hidden group">
             <div className="flex w-max animate-marquee space-x-6 px-6 items-start animation-running hover:[animation-play-state:paused]">
-             {[...Array(2)].flatMap(() =>
+              {[...Array(2)].flatMap(() =>
                 [
                   {
                     name: "Vrinda K",
@@ -869,7 +878,14 @@ const FullStackCourse = () => {
                     name: "Srijib Dey",
                     title: "Working as a Employee",
                     text: "I have been doing a VLSI course from GlowLogics for the last 6 months. This course provided me with valuable exposure to the fundamentals and advanced concepts of VLSI design, including practical insights into design methodologies, simulation class techniques, and industry tools. The structured training, combined with hands-on tasks, helped me enhance my technical knowledge and problem-solving skills. ",
-                   img: "/Sri.png", },
+                    img: "/Sri.png",
+                  },
+                   {
+    name: "Jating Kola",
+    title: "Gandhi Institute of Technology and Management",
+    text: " I’m Jatin Kola, a third-year Computer Science student at GITAM (Gandhi Institute of Technology and Management), Visakhapatnam. I recently completed the UI/UX course at GlowLogics, and it was a great experience overall. The way they teach is very clear and practical. The trainers don’t just stick to theory—they focus on real-time projects and hands-on learning, which helped me understand how UI/UX works in actual product design. They also guided us with useful tools and tips that are relevant in the industry. What I liked most is that they make even beginners feel comfortable. Whether you are from a design background or not, they break down the concepts in a very simple way. Thankyou so much Glowlogics ✨ ",
+    img: "/jatin.png",
+  },
                 ].map((item, index) => (
                   <div
                     key={index}

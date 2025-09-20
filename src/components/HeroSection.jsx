@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 import "../index.css";
@@ -9,6 +9,8 @@ import img2 from "../assets/images/img2.png";
 import img3 from "../assets/images/img3.png";
 import img4 from "../assets/images/img4.png";
 import img5 from "../assets/images/img5.png";
+import Crackers from "./Crackers"; // ✅ Import Crackers
+
 
 // ✅ Image cards
 const imageCards = [
@@ -61,9 +63,9 @@ const imageCardVariant = {
   },
 };
 
-// ✅ Hero Section-
 export default function HeroSection() {
   const navigate = useNavigate();
+  const location = useLocation(); // ✅ Get current route
   const [selectedCourse, setSelectedCourse] = useState("");
 
   const handleStartClick = () => {
@@ -77,6 +79,9 @@ export default function HeroSection() {
 
   return (
     <AnimatePresence mode="wait">
+      {/* ✅ Show Crackers only on homepage */}
+      {location.pathname === "/" && <Crackers />}
+
       <motion.section
         id="home"
         key="hero"
@@ -84,7 +89,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -30 }}
-        transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+        transition={{ duration: 10, ease: [0.25, 1, 0.5, 1] }}
         className="w-full min-h-screen flex flex-col items-center justify-center text-center bg-orange-100 px-4 pt-36 pb-20 font-sans"
       >
         <motion.div
@@ -167,10 +172,7 @@ export default function HeroSection() {
           animate="show"
           className="flex flex-col items-center gap-4 mt-12 w-full px-4 sm:hidden"
         >
-          <motion.div
-            variants={imageCardVariant}
-            className="w-[140px] h-[180px]"
-          >
+          <motion.div variants={imageCardVariant} className="w-[140px] h-[180px]">
             <img
               src={imageCards[2].img}
               className="rounded-xl shadow-md object-cover w-full h-full transition-transform duration-500 hover:scale-105"
