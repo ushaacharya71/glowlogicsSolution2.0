@@ -103,7 +103,7 @@ export default function CertificatePage() {
             <div className="flex flex-wrap gap-2">
               {[
                 "✅ ISO Certified Credential",
-
+                "✅ VTU Verified",
                 "✅ MSME & Startup India Affiliation",
                 "✅ Partnership with IIT Bombay TechFest",
                 "✅ Career Credibility",
