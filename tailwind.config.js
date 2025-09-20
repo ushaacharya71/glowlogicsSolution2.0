@@ -41,6 +41,8 @@ export default {
 
         // ⚡ Running orange border
         'border-run': 'borderRun 4s linear infinite',
+           "0%": { backgroundPosition: "0% 50%" },
+      "100%": { backgroundPosition: "200% 50%" },
       },
 
       // ✅ Custom Colors

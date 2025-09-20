@@ -8,9 +8,11 @@ import {
   FaUsers,
 } from "react-icons/fa";
 import { MdPeopleAlt, MdCalendarMonth, MdAssignment } from "react-icons/md";
+import { useNavigate } from "react-router-dom"; // <-- added for navigation
 
 export default function GlowlogicsUltimate() {
   const cursorRef = useRef(null);
+  const navigate = useNavigate(); // <-- initialize navigate
 
   useEffect(() => {
     const cursor = cursorRef.current;
@@ -55,26 +57,24 @@ export default function GlowlogicsUltimate() {
             trusted by employers.
           </li>
           <li>
-             Live Projects & Case Studies: Build real-world skills with
+            Live Projects & Case Studies: Build real-world skills with
             portfolio-worthy projects.
           </li>
           <li>
-             Dedicated Career Support: Resume building, LinkedIn profile
+            Dedicated Career Support: Resume building, LinkedIn profile
             guidance, mock interviews, and placement help.
           </li>
           <li>
-             Lifetime Learning Access: Stay updated with evolving tech through
+            Lifetime Learning Access: Stay updated with evolving tech through
             lifetime course access.
           </li>
           <li>
-             National Hackathons & Workshops: Exclusive events in
+            National Hackathons & Workshops: Exclusive events in
             collaboration with E-Cell IIT Hyderabad & Techfest IIT Bombay.
           </li>
+          <li>Flexible Programs: Options for engineering students, graduates.</li>
           <li>
-             Flexible Programs: Options for engineering students, graduates.
-          </li>
-          <li>
-             Strong Learner Community: Connect with mentors, peers, and hiring
+            Strong Learner Community: Connect with mentors, peers, and hiring
             companies.
           </li>
         </ul>
@@ -91,6 +91,7 @@ export default function GlowlogicsUltimate() {
           <motion.div
             key={index}
             whileHover={{ scale: 1.08 }}
+            onClick={item.onClick} // <-- attach the click handler
             className="cursor-pointer group bg-white/30 backdrop-blur-lg rounded-2xl p-8 border border-white/30 shadow-lg hover:shadow-2xl transition-all duration-500"
           >
             <div className="flex justify-center items-center mb-6">
@@ -99,7 +100,6 @@ export default function GlowlogicsUltimate() {
               >
                 {item.icon}
               </div>
-
             </div>
             <h3 className="text-lg font-semibold text-center mb-2 text-gray-900">
               {item.title}
@@ -158,13 +158,14 @@ const data = [
   {
     icon: <MdPeopleAlt />,
     title: "30,000+ Students",
-    desc: "A growing community learning and getting hired across industries.",
+    desc: "A growing community learning and getting hired across industries.",
     color: "text-indigo-500",
   },
-   {
+  {
     icon: <MdAssignment />,
     title: "Certificate Verification",
-    desc: "Comming Soon..",
+    desc: "Verify your GlowLogics certificate instantly using your unique ID. Share and showcase your achievement.",
     color: "text-orange-500",
+    onClick: () => window.location.pathname = "/certificate-verification", // <-- for navagation routing nad import kr diyaa hai
   },
 ];

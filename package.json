@@ -10,20 +10,29 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.12.2",
     "framer-motion": "^11.18.2",
     "gsap": "^3.13.0",
     "keen-slider": "^6.8.6",
+    "lottie-react": "^2.4.1",
     "lucide-react": "^0.513.0",
     "prop-types": "^15.8.1",
+    "qrcode.react": "^4.2.0",
     "react": "^18.3.1",
     "react-animated-cursor": "^2.11.2",
+    "react-canvas-confetti": "^2.0.7",
+    "react-confetti": "^6.4.0",
     "react-dom": "^18.3.1",
     "react-draggable": "^4.5.0",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^7.6.3",
+    "react-pdf": "^10.1.0",
+    "react-router-dom": "^7.9.1",
     "react-scroll": "^1.9.3",
+    "react-tsparticles": "^2.12.2",
     "react-type-animation": "^3.2.0",
-    "styled-components": "^6.1.18"
+    "react-use": "^17.6.0",
+    "styled-components": "^6.1.18",
+    "tsparticles": "^3.9.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

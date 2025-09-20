@@ -4,7 +4,7 @@ Welcome to the official repository of **Glowlogics Solutions**! This is our prim
 
 ----
 
-## 🚀 Overview
+## Overview
 
 At Glowlogics, we aim to empower learners through industry-relevant programs, hands-on experiences, and career-enabling skillsets. Our website is a gateway to explore our offerings, stay updated with events, and get involved with our vibrant tech community.
 
@@ -30,7 +30,7 @@ Each program is curated by experts and includes real-world projects, quizzes, an
 ### 🎉 EventHub – Workshops & Hackathons
 One of the standout features of our site is the **EventHub** page. This is your go-to destination for:
 
-- 🚀 Upcoming **Hackathons**
+- 🎉 Upcoming **Hackathons**
 - 🛠️ Interactive **Workshops**
 - 🎤 **Webinars** hosted by industry professionals
 - 🏆 Live **Competitions** with exciting prizes

@@ -96,7 +96,11 @@ const HeroSection = () => {
     "Accounting",
   ];
   const otherCourses = ["Placement Training with Certificate"];
-  const allCourses = [...technicalCourses, ...nonTechnicalCourses, ...otherCourses];
+  const allCourses = [
+    ...technicalCourses,
+    ...nonTechnicalCourses,
+    ...otherCourses,
+  ];
 
   return (
     <motion.section
@@ -114,7 +118,10 @@ const HeroSection = () => {
       >
         <div className="flex flex-col items-center">
           <div className="relative grid grid-cols-2 gap-6 items-center">
-            <motion.div className="row-span-2 relative" variants={childVariants}>
+            <motion.div
+              className="row-span-2 relative"
+              variants={childVariants}
+            >
               <motion.div
                 variants={floatVariants}
                 animate="animate"
@@ -129,19 +136,39 @@ const HeroSection = () => {
                   alt={tutors[0].name}
                 />
                 <div className="p-6 text-center bg-white">
-                  <h3 className="text-2xl font-bold text-gray-900">{tutors[0].name}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    {tutors[0].name}
+                  </h3>
                   <p className="text-gray-600 text-sm">{tutors[0].role}</p>
-                  <p className="text-gray-500 text-sm">{tutors[0].university}</p>
-                  <div className="mt-1 text-yellow-500 text-lg">{tutors[0].rating}</div>
+                  <p className="text-gray-500 text-sm">
+                    {tutors[0].university}
+                  </p>
+                  <div className="mt-1 text-yellow-500 text-lg">
+                    {tutors[0].rating}
+                  </div>
                 </div>
               </motion.div>
-              <motion.div whileHover={{ scale: 1.07 }} className="absolute top-6 -left-32 bg-white p-5 rounded-xl shadow-xl w-56">
-                <p className="font-semibold text-gray-800 text-base">Academic Success</p>
-                <p className="text-sm text-gray-500 mt-1">Build a strong foundation.</p>
+              <motion.div
+                whileHover={{ scale: 1.07 }}
+                className="absolute top-6 -left-32 bg-white p-5 rounded-xl shadow-xl w-56"
+              >
+                <p className="font-semibold text-gray-800 text-base">
+                  Academic Success
+                </p>
+                <p className="text-sm text-gray-500 mt-1">
+                  Build a strong foundation.
+                </p>
               </motion.div>
-              <motion.div whileHover={{ scale: 1.07 }} className="absolute bottom-6 -left-32 bg-white p-5 rounded-xl shadow-xl w-56">
-                <p className="font-semibold text-gray-800 text-base">Career Guidance</p>
-                <p className="text-sm text-gray-500 mt-1">Mentorship for your goals.</p>
+              <motion.div
+                whileHover={{ scale: 1.07 }}
+                className="absolute bottom-6 -left-32 bg-white p-5 rounded-xl shadow-xl w-56"
+              >
+                <p className="font-semibold text-gray-800 text-base">
+                  Career Guidance
+                </p>
+                <p className="text-sm text-gray-500 mt-1">
+                  Mentorship for your goals.
+                </p>
               </motion.div>
             </motion.div>
             {[1, 2].map((i) => (
@@ -161,14 +188,24 @@ const HeroSection = () => {
               ◯◯◯◯
             </div>
             <div className="absolute -top-4 left-1/4 transform -translate-x-1/2 rotate-[175deg] z-10">
-              <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </div>
             <div className="absolute top-[10%] left-[10%] w-3 h-3 bg-yellow-400 rounded-full animate-ping"></div>
             <div className="absolute bottom-[12%] right-[15%] w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
           </div>
-          <motion.div whileHover={{ scale: 1.05, rotate: 1 }} transition={{ type: "spring", stiffness: 300 }} className="mt-6">
+          <motion.div
+            whileHover={{ scale: 1.05, rotate: 1 }}
+            transition={{ type: "spring", stiffness: 300 }}
+            className="mt-6"
+          >
             <img
               src={colabImage}
               alt="Collaboration Logos"
@@ -178,17 +215,36 @@ const HeroSection = () => {
         </div>
       </motion.div>
 
-      <motion.div variants={sectionVariants} initial="hidden" animate="show" className="w-full lg:w-[45%] text-left space-y-6">
-        <motion.h1 variants={childVariants} className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
-          Find The <span className="text-[#8BCA1E] drop-shadow-sm">Best Tutors</span> <br />
+      <motion.div
+        variants={sectionVariants}
+        initial="hidden"
+        animate="show"
+        className="w-full lg:w-[45%] text-left space-y-6"
+      >
+        <motion.h1
+          variants={childVariants}
+          className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight"
+        >
+          Find The{" "}
+          <span className="text-[#8BCA1E] drop-shadow-sm">Best Tutors</span>{" "}
+          <br />
           Around The Globe <br />
           For Your Career Success.
         </motion.h1>
-        <motion.p variants={childVariants} className="text-base sm:text-lg text-gray-500 max-w-md">
-          Learn from world‑class educators across Technical and Non‑Technical domains. Certification included.
+        <motion.p
+          variants={childVariants}
+          className="text-base sm:text-lg text-gray-500 max-w-md"
+        >
+          Learn from world‑class educators across Technical and Non‑Technical
+          domains. Certification included.
         </motion.p>
-        <motion.div variants={childVariants} className="bg-white border border-gray-200 text-black p-4 rounded-xl w-full max-w-md shadow-sm">
-          <p className="text-base font-semibold mb-2">Want to upskill myself on..</p>
+        <motion.div
+          variants={childVariants}
+          className="bg-white border border-gray-200 text-black p-4 rounded-xl w-full max-w-md shadow-sm"
+        >
+          <p className="text-base font-semibold mb-2">
+            Want to upskill myself on..
+          </p>
           <div className="flex flex-col sm:flex-row gap-3 items-stretch">
             <select
               className="rounded-full px-4 py-2 text-sm text-black w-full outline-none border border-gray-300"
@@ -207,13 +263,21 @@ const HeroSection = () => {
             </button>
           </div>
         </motion.div>
-        <motion.div variants={childVariants} className="flex flex-wrap gap-4 items-center mt-6">
-          <button className="bg-black text-white font-semibold px-6 py-3 rounded-full hover:bg-gray-800 transition">Join now</button>
+        <motion.div
+          variants={childVariants}
+          className="flex flex-wrap gap-4 items-center mt-6"
+        >
+          <button className="bg-black text-white font-semibold px-6 py-3 rounded-full hover:bg-gray-800 transition">
+            Join now
+          </button>
           <button className="flex items-center text-black font-medium">
             <FaPlay className="text-orange-500 mr-2" /> Watch Demo
           </button>
         </motion.div>
-        <motion.div variants={childVariants} className="flex items-center gap-2 mt-6">
+        <motion.div
+          variants={childVariants}
+          className="flex items-center gap-2 mt-6"
+        >
           {tutors.slice(0, 4).map((t, index) => (
             <img
               key={index}
