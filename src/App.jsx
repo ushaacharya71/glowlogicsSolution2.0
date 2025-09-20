@@ -106,7 +106,7 @@ function HomePage() {
       <Testimonial />
       <SectionOne />
 
-      <Certificate />
+      {/* <Certificate /> */}
     </>
   );
 }
