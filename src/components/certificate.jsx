@@ -32,7 +32,7 @@ export default function CertificatePage() {
     <div className="min-h-screen bg-orange-100 flex flex-col items-center p-20">
       {/* Header */}
       <div className="flex flex-col items-center p-6">
-        <h1 className="text-2xl font-bold mb-4">Verify Certificate</h1>
+        <h1 className="text-5xl font-bold mb-4">Verify Certificate</h1>
         <input
           type="text"
           placeholder="Enter Certificate ID"
@@ -87,7 +87,7 @@ export default function CertificatePage() {
           {/* User Info */}
           <div className="flex items-center mb-4 ">
             <div className="w-12 h-12 flex items-center justify-center  bg-white text-white ">
-              <img src="/public/1.svg" alt="gl-logo" />
+              <img src="/1.svg" alt="gl-logo" />
             </div>
             <div className="ml-3">
               <p className="font-semibold">Glowlogics Solutions</p>
