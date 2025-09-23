@@ -12,12 +12,15 @@ export default function CertificatePage() {
   const [certId, setCertId] = useState("");
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
-  // const [loading, setLoading] = useState(true);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3000); // 3 sec loading
-    return () => clearTimeout(timer);
-  }, []);
+    if (open) {
+      setLoading(true);
+      const timer = setTimeout(() => setLoading(false), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [open]);
 
   const handleVerify = async () => {
     if (!certId) return;
@@ -64,8 +67,8 @@ export default function CertificatePage() {
         </button>
 
         {result && result.status === "found" && (
-          <div className="mt-6 p-4 border rounded bg-green-100 w-80">
-            <h2 className="text-lg font-semibold text-green-700">
+          <div className="mt-6 p-4 border rounded bg-orange-100 w-80">
+            <h2 className="text-lg font-semibold text-orange-400">
               ✅ Verified
             </h2>
             <p> {result.data.certificate_id || result.data.id}</p>
@@ -141,7 +144,7 @@ export default function CertificatePage() {
               <strong>Verification Authority: </strong> Glowlogics Solutions
             </p>
 
-             <p>
+            <p>
               <strong>Expires on: </strong> Does not expire
             </p>
           </div>
@@ -240,96 +243,106 @@ export default function CertificatePage() {
           </div>
         </aside>
       </main>
-      <div className="mt-10 w-[380px] rounded-xl border shadow-md bg-white p-4 ml-[790px]">
-        <h2 className="text-lg font-semibold mb-4">Credential Verification</h2>
-
-        {loading ? (
-          <div className="flex justify-center items-center h-24">
-            <motion.div
-              className="w-10 h-10 border-4 border-green-500 border-t-transparent rounded-full"
-              animate={{ rotate: 360 }}
-              transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
-            />
+      <div className="mt-10 w-[380px] rounded-xl border shadow-md bg-white p-4 mx-auto text-center ml-[1080px]">
+        {/* Small square button */}
+        {!open && (
+          <div className="flex flex-col items-center">
+            <h2 className="text-lg font-semibold mb-4">
+              Credential Verification
+            </h2>
+            <button
+              onClick={() => setOpen(true)}
+              className="w-64 py-3 bg-orange-400 text-white font-semibold rounded-xl shadow-md hover:bg-orange-500"
+            >
+              Verify Credential
+            </button>
           </div>
-        ) : (
+        )}
+
+        {/* Small square box (instead of full modal) */}
+        {open && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3 }}
+            className="w-[600px] h-[400px] rounded-xl border shadow-md bg-white p-4 relative mx-auto"
           >
-            <div className="flex items-center gap-2 text-green-600 font-medium mb-2">
-              <CheckCircle className="w-6 h-6" />
-              <span>
-                This <strong>Glowlogics Solution&apos;s Program</strong>{" "}
-                Credential is VERIFIED
-              </span>
-            </div>
+            {/* Close button */}
+            <button
+              onClick={() => setOpen(false)}
+              className="absolute top-2 right-2 text-gray-500 hover:text-black"
+            >
+              ✕
+            </button>
 
-            <p className="text-gray-600 text-sm mb-4">
-              This digital credential was securely issued via Accredible and its
-              information is valid.
-            </p>
-
-            <div className="border-t pt-3">
-              <div className="flex items-center gap-2 text-green-600 text-sm mb-2">
-                <CheckCircle className="w-4 h-4" />
-                <span>This issuer is verified by Accredible</span>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/5/53/Simplilearn_logo.png"
-                  alt="issuer"
-                  className="w-8 h-8 rounded-full border"
+            {loading ? (
+              <div className="flex flex-col justify-center items-center h-[250px]">
+                <motion.div
+                  className="w-12 h-12 border-4 border-orange-400 border-t-transparent rounded-full"
+                  animate={{ rotate: 360 }}
+                  transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
                 />
-                <div>
-                  <p className="font-medium">ISO</p>
-                  <a href="#" className="text-blue-600 text-sm hover:underline">
-                    Issuer&apos;s Website
-                  </a>
-                </div>
+                <p className="mt-3 text-sm text-gray-500">
+                  Verifying credential...
+                </p>
               </div>
-            </div>
-            <div className="border-t pt-3">
-              <div className="flex items-center gap-2 text-green-600 text-sm mb-2">
-                <CheckCircle className="w-4 h-4" />
-                <span>This issuer is verified by Accredible</span>
-              </div>
+            ) : (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4 }}
+                className="overflow-y-auto max-h-[320px] pr-2"
+              >
+                <h2 className="text-lg font-semibold mb-3 text-center">
+                  Credential Verification
+                </h2>
 
-              <div className="flex items-center gap-2">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/5/53/Simplilearn_logo.png"
-                  alt="issuer"
-                  className="w-8 h-8 rounded-full border"
-                />
-                <div>
-                  <p className="font-medium">MSME</p>
-                  <a href="#" className="text-blue-600 text-sm hover:underline">
-                    Issuer&apos;s Website
-                  </a>
+                <div className="flex items-center gap-2 justify-center text-orange-400 font-medium mb-2">
+                  <CheckCircle className="w-6 h-6" />
+                  <span>
+                    This <strong>Glowlogics Solution&apos;s Program</strong>{" "}
+                    Credential is VERIFIED
+                  </span>
                 </div>
-              </div>
-            </div>
-            <div className="border-t pt-3">
-              <div className="flex items-center gap-2 text-green-600 text-sm mb-2">
-                <CheckCircle className="w-4 h-4" />
-                <span>This issuer is verified by Accredible</span>
-              </div>
 
-              <div className="flex items-center gap-2">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/5/53/Simplilearn_logo.png"
-                  alt="issuer"
-                  className="w-8 h-8 rounded-full border"
-                />
-                <div>
-                  <p className="font-medium">VTU</p>
-                  <a href="#" className="text-blue-600 text-sm hover:underline">
-                    Issuer&apos;s Website
-                  </a>
-                </div>
-              </div>
-            </div>
+                <p className="text-gray-600 text-sm mb-3 text-center">
+                  This digital credential was securely issued via Accredible and
+                  its information is valid.
+                </p>
+
+                {/* Issuers */}
+                {[
+                  { name: "ISO", logo: "", website: "https://www.iso.org/" },
+                  { name: "MSME", logo: "", website: "https://msme.gov.in/" },
+                  { name: "VTU", logo: "", website: "https://vtu.ac.in/" },
+                ].map((issuer) => (
+                  <div key={issuer.name} className="border-t pt-2 mb-2">
+                    <div className="flex items-center gap-2 text-orange-400 text-sm mb-2">
+                      <CheckCircle className="w-4 h-4" />
+                      <span>This issuer is verified by Accredible</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <img
+                        src={issuer.logo}
+                        alt={issuer.name}
+                        className="w-8 h-8 rounded-full border"
+                      />
+                      <div>
+                        <p className="font-medium">{issuer.name}</p>
+                        <a
+                          href={issuer.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 text-sm hover:underline"
+                        >
+                          Issuer&apos;s Website
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
+            )}
           </motion.div>
         )}
       </div>
