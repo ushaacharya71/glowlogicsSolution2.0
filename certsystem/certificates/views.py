@@ -3,6 +3,7 @@ from rest_framework.decorators import api_view
 from rest_framework import status
 from .sheets import get_certificate_from_sheet
 
+
 @api_view(["GET"])
 def verify_certificate(request, cert_id):
     """

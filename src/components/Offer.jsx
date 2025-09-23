@@ -49,7 +49,7 @@ const RunningLightTab = ({ onClick }) => {
       className="relative cursor-pointer rotate-180 [writing-mode:vertical-lr] rounded-r-2xl shadow-lg"
     >
       {/* running light bg */}
-      <div className="p-4 py-12 bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-400 animate-running-light bg-[length:200%_200%] text-white font-semibold text-3xl flex items-center justify-center gap-2">
+      <div className="p-1 py-12 bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-400  text-white font-semibold text-2xl flex items-center justify-center gap-2">
         Dussehra Offers
        <button className="bg-orange-500 text-white p-2 rounded-2xl shadow">
   <span className="inline-block transform rotate-180 transition-transform duration-500 hover:rotate-0">

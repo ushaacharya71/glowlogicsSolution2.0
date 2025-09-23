@@ -20,7 +20,7 @@ import GlowlogicsChatbot from "./components/GlowlogicsChatbot";
 import GlobalReachSection from "./components/GlobalReachSection";
 import HeroSection from "./components/HeroSection";
 import Offer from "./components/Offer";
-import Certificate from "./components/certificate";  /*/////////{--------This is the database file to verify the certificate---}//////////*/
+import Certificate from "./components/certificate"; /*/////////{--------This is the database file to verify the certificate---}//////////*/
 
 //////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////
@@ -55,7 +55,6 @@ import Entrepreneurship from "./pages/programs/Entrepreneurship"; //   added
 import BusinessCommunication from "./pages/programs/BusinessCommunication"; //   added
 import Blaw from "./pages/programs/Blaw"; //   added
 import DSAjava from "./pages/programs/DSAjava"; //   added
-
 
 // ✅ Scroll to section if route state has scrollTo
 function ScrollHandler() {
@@ -115,12 +114,12 @@ function HomePage() {
 function App() {
   return (
     <div className="w-full min-h-screen text-black">
+      <Offer />
       <Background />
       <ScrollToTop />
       <Navbar />
       <ScrollToTopOnLoad />
       <ScrollHandler />
-      <Offer />
 
       <Routes>
         {/* 🌐 Static Pages */}
@@ -167,7 +166,6 @@ function App() {
         />
         <Route path="/programs/Blaw" element={<Blaw />} />
         <Route path="/certificate-verification" element={<Certificate />} />
-
       </Routes>
       <Niche />
 
