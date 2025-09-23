@@ -1,15 +1,28 @@
 from pathlib import Path
+import os
+from datetime import timedelta
+import dj_database_url  # Make sure it's installed
 
+# -----------------------
+# 📁 Base Directory
+# -----------------------
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = "django-insecure-p1ju+1iozin(ov4xt5u_cll)7qdx+wd_uwl2h(fp=e9rb_k-p^"
+# -----------------------
+# 🔑 Secret & Debug
+# -----------------------
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "dev-secret-key")
+DEBUG = os.getenv("DEBUG", "False") == "True"
 
-DEBUG = True
+# -----------------------
+# 🌍 Allowed Hosts
+# -----------------------
+# Set this in Cloud Run: DJANGO_ALLOWED_HOSTS=your-service-url.a.run.app
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
-# Allow local frontend (React) to talk to Django backend
-ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
-
-# Application definition
+# -----------------------
+# 📦 Installed Apps
+# -----------------------
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -17,17 +30,22 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    # Third-party apps
+
+    # Third-party
     "rest_framework",
     "corsheaders",
-    # Your app
+
+    # Your apps
     "certificates",
 ]
 
+# -----------------------
+# ⚙️ Middleware
+# -----------------------
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # ✅ Required for serving static files
     "django.contrib.sessions.middleware.SessionMiddleware",
-    # Must be above CommonMiddleware
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -38,6 +56,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "certsystem.urls"
 
+# -----------------------
+# 🧩 Templates
+# -----------------------
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -55,7 +76,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "certsystem.wsgi.application"
 
-# Database (using SQLite for now)
+# -----------------------
+# 🗄️ Database
+# -----------------------
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
@@ -63,35 +86,41 @@ DATABASES = {
     }
 }
 
-# Password validation
+# Use PostgreSQL if DATABASE_URL is provided
+if os.getenv("DATABASE_URL"):
+    DATABASES["default"] = dj_database_url.parse(os.getenv("DATABASE_URL"))
+
+# -----------------------
+# 🔐 Password Validators
+# -----------------------
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
-    },
+    {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
+    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
+    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
+    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
 
-# Internationalization
+# -----------------------
+# 🌐 i18n
+# -----------------------
 LANGUAGE_CODE = "en-us"
 TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
 
-# Static files
-STATIC_URL = "static/"
+# -----------------------
+# 📂 Static Files
+# -----------------------
+STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
+# -----------------------
+# 🔧 Default Primary Key Field
+# -----------------------
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # -----------------------
-# ✅ Django REST + CORS
+# ✅ Django REST Framework
 # -----------------------
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
@@ -99,7 +128,18 @@ REST_FRAMEWORK = {
     ]
 }
 
-# Allow React frontend to call Django APIs
-CORS_ALLOW_ALL_ORIGINS = (
-    True  # (For dev only. In production, restrict to your frontend domain.)
-)
+# -----------------------
+# 🔁 CORS (Cross-Origin Requests)
+# -----------------------
+
+# Read allowed origins from env (recommended)
+CORS_ALLOWED_ORIGINS = os.getenv("CORS_ALLOWED_ORIGINS", "")
+
+# Split and clean up any empty strings
+CORS_ALLOWED_ORIGINS = [origin.strip() for origin in CORS_ALLOWED_ORIGINS.split(",") if origin.strip()]
+
+# Fallback: allow all in dev if no origins provided
+if not CORS_ALLOWED_ORIGINS:
+    CORS_ALLOW_ALL_ORIGINS = True
+else:
+    CORS_ALLOW_ALL_ORIGINS = False

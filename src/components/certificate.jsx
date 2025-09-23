@@ -3,13 +3,22 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FiLinkedin } from "react-icons/fi";
 import axios from "axios";
 import { useState } from "react";
+import { useEffect } from "react";
 
-
+import { motion } from "framer-motion";
+import { CheckCircle } from "lucide-react";
 
 export default function CertificatePage() {
   const [certId, setCertId] = useState("");
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 3000); // 3 sec loading
+    return () => clearTimeout(timer);
+  }, []);
+
   const handleVerify = async () => {
     if (!certId) return;
     setLoading(true);
@@ -18,9 +27,9 @@ export default function CertificatePage() {
         `http://127.0.0.1:8000/api/certificates/${certId}/`
       );
       setResult({ status: "found", data: res.data });
-    }  catch (err) {
-    console.error("Verification error:", err);
-    setResult({ status: "notfound" });
+    } catch (err) {
+      console.error("Verification error:", err);
+      setResult({ status: "notfound" });
     }
     setLoading(false);
   };
@@ -32,7 +41,14 @@ export default function CertificatePage() {
     <div className="min-h-screen bg-orange-100 flex flex-col items-center p-20">
       {/* Header */}
       <div className="flex flex-col items-center p-6">
-        <h1 className="text-5xl font-bold mb-4">Verify Certificate</h1>
+        <div className="w-full lg:w-1/2 mx-auto relative flex flex-col items-center border-4 border-orange-700">
+          <img
+            src="/Sample Internship Certificate- Glowlogics.pdf.png"
+            alt=""
+          />
+        </div>
+
+        <h1 className="text-5xl font-bold mb-4 p-8">Verify Certificate</h1>
         <input
           type="text"
           placeholder="Enter Certificate ID"
@@ -124,6 +140,10 @@ export default function CertificatePage() {
             <p>
               <strong>Verification Authority: </strong> Glowlogics Solutions
             </p>
+
+             <p>
+              <strong>Expires on: </strong> Does not expire
+            </p>
           </div>
         </section>
 
@@ -182,19 +202,22 @@ export default function CertificatePage() {
               <FaWhatsapp className="text-green-500 text-xl" />
             </a>
           </div>
-         <button
-  onClick={() => {
-    const certUrl = typeof window !== "undefined" ? window.location.href : "";
-    // LinkedIn sharing URL for a certificate page
-    window.open(
-      `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(certUrl)}`,
-      "_blank"
-    );
-  }}
-  className="w-full bg-orange-400 text-white py-2 rounded-lg"
->
-  Add to My LinkedIn Profile
-</button>
+          <button
+            onClick={() => {
+              const certUrl =
+                typeof window !== "undefined" ? window.location.href : "";
+              // LinkedIn sharing URL for a certificate page
+              window.open(
+                `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+                  certUrl
+                )}`,
+                "_blank"
+              );
+            }}
+            className="w-full bg-orange-400 text-white py-2 rounded-lg"
+          >
+            Add to My LinkedIn Profile
+          </button>
 
           <div className="mt-8">
             <h3 className="font-semibold mb-3">Continue Learning...</h3>
@@ -204,15 +227,112 @@ export default function CertificatePage() {
                 standards
               </li>
 
-
               <li>
                 <strong>MSME & Startup India Affiliation </strong> –
                 Government-supported initiative
+              </li>
+              <li>
+                <strong>Affiliated with VTU </strong> – We are proudly
+                affiliated with Visvesvaraya Technological University (VTU),
+                ensuring quality education and recognized academic standards.
               </li>
             </ul>
           </div>
         </aside>
       </main>
+      <div className="mt-10 w-[380px] rounded-xl border shadow-md bg-white p-4 ml-[790px]">
+        <h2 className="text-lg font-semibold mb-4">Credential Verification</h2>
+
+        {loading ? (
+          <div className="flex justify-center items-center h-24">
+            <motion.div
+              className="w-10 h-10 border-4 border-green-500 border-t-transparent rounded-full"
+              animate={{ rotate: 360 }}
+              transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
+            />
+          </div>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="flex items-center gap-2 text-green-600 font-medium mb-2">
+              <CheckCircle className="w-6 h-6" />
+              <span>
+                This <strong>Glowlogics Solution&apos;s Program</strong>{" "}
+                Credential is VERIFIED
+              </span>
+            </div>
+
+            <p className="text-gray-600 text-sm mb-4">
+              This digital credential was securely issued via Accredible and its
+              information is valid.
+            </p>
+
+            <div className="border-t pt-3">
+              <div className="flex items-center gap-2 text-green-600 text-sm mb-2">
+                <CheckCircle className="w-4 h-4" />
+                <span>This issuer is verified by Accredible</span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/5/53/Simplilearn_logo.png"
+                  alt="issuer"
+                  className="w-8 h-8 rounded-full border"
+                />
+                <div>
+                  <p className="font-medium">ISO</p>
+                  <a href="#" className="text-blue-600 text-sm hover:underline">
+                    Issuer&apos;s Website
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="border-t pt-3">
+              <div className="flex items-center gap-2 text-green-600 text-sm mb-2">
+                <CheckCircle className="w-4 h-4" />
+                <span>This issuer is verified by Accredible</span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/5/53/Simplilearn_logo.png"
+                  alt="issuer"
+                  className="w-8 h-8 rounded-full border"
+                />
+                <div>
+                  <p className="font-medium">MSME</p>
+                  <a href="#" className="text-blue-600 text-sm hover:underline">
+                    Issuer&apos;s Website
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="border-t pt-3">
+              <div className="flex items-center gap-2 text-green-600 text-sm mb-2">
+                <CheckCircle className="w-4 h-4" />
+                <span>This issuer is verified by Accredible</span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/5/53/Simplilearn_logo.png"
+                  alt="issuer"
+                  className="w-8 h-8 rounded-full border"
+                />
+                <div>
+                  <p className="font-medium">VTU</p>
+                  <a href="#" className="text-blue-600 text-sm hover:underline">
+                    Issuer&apos;s Website
+                  </a>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </div>
     </div>
   );
 }
