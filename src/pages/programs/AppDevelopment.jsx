@@ -647,7 +647,7 @@ const FullStackCourse = () => {
                 </li>
                 <li>
                   Upcoming Batch:{" "}
-                  <span className="text-black font-bold">14 Sep 2025</span>
+                  <span className="text-black font-bold">Temporarily Paused</span>
                 </li>
                 <li>
                   Upcoming Batch:{" "}
