@@ -50,7 +50,7 @@ const RunningLightTab = ({ onClick }) => {
     >
       {/* running light bg */}
       <div className="p-1 py-12 bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-400  text-white font-semibold text-2xl flex items-center justify-center gap-2">
-        Dussehra Offers
+        Diwali Offers
        <button className="bg-orange-500 text-white p-2 rounded-2xl shadow">
   <span className="inline-block transform rotate-180 transition-transform duration-500 hover:rotate-0">
     <FaPlay size={14} />

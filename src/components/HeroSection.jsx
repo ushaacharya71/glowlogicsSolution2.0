@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate,} from "react-router-dom";
 import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 import "../index.css";
@@ -9,7 +9,7 @@ import img2 from "../assets/images/img2.png";
 import img3 from "../assets/images/img3.png";
 import img4 from "../assets/images/img4.png";
 import img5 from "../assets/images/img5.png";
-import Crackers from "./Crackers"; // ✅ Import Crackers
+// import Crackers from "./Crackers"; // ✅ Import Crackers
 
 
 // ✅ Image cards
@@ -65,7 +65,7 @@ const imageCardVariant = {
 
 export default function HeroSection() {
   const navigate = useNavigate();
-  const location = useLocation(); // ✅ Get current route
+  // const location = useLocation(); // ✅ Get current route  of the cracker not turned off
   const [selectedCourse, setSelectedCourse] = useState("");
 
   const handleStartClick = () => {
@@ -80,7 +80,7 @@ export default function HeroSection() {
   return (
     <AnimatePresence mode="wait">
       {/* ✅ Show Crackers only on homepage */}
-      {location.pathname === "/" && <Crackers />}
+      {/* {location.pathname === "/" && <Crackers />} */} {/* ✅ Crackers component now turned off*/}
 
       <motion.section
         id="home"
