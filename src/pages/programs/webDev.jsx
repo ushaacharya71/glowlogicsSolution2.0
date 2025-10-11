@@ -807,7 +807,7 @@ const FullStackCourse = () => {
     img: "/Sri.png",
   },
   {
-    name: "Jating Kola",
+    name: "Jatin Kola",
     title: "Gandhi Institute of Technology and Management",
     text: " I’m Jatin Kola, a third-year Computer Science student at GITAM (Gandhi Institute of Technology and Management), Visakhapatnam. I recently completed the UI/UX course at GlowLogics, and it was a great experience overall. The way they teach is very clear and practical. The trainers don’t just stick to theory—they focus on real-time projects and hands-on learning, which helped me understand how UI/UX works in actual product design. They also guided us with useful tools and tips that are relevant in the industry. What I liked most is that they make even beginners feel comfortable. Whether you are from a design background or not, they break down the concepts in a very simple way. Thankyou so much Glowlogics ✨ ",
     img: "/jatin.png",
