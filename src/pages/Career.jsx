@@ -154,14 +154,14 @@ export default function Career() {
   {[
     {
       title: "Google",
-      img: "/public/googlemap.jpeg",
+      img: "/googlemap.jpeg",
       rating: "4.6/5 – reviews",
       platform: "Google Map",
       link: "https://www.google.com/maps/place/Glowlogics+Solutions/@12.9163113,77.632504,17z/data=!4m18!1m9!4m8!1m6!1m2!1s0x3bae15005309cf71:0x2f15b757ea19a355!2sGround+Floor,+Glowlogics+Solutions,+Outer+Ring+Road,+Jakkasandra,+1st+Block+Koramangala,+HSR+Layout+5th+Sector,+Bengaluru,+Karnataka!2m2!1d77.6350789!2d12.9163061!1m0!3m7!1s0x3bae15005309cf71:0x2f15b757ea19a355!8m2!3d12.9163061!4d77.6350789!9m1!1b1!16s%2Fg%2F11wqn_ds03?entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D", // your URL
     },
     {
       title: "Glassdoor",
-      img: "/public/glassdoor.png",
+      img: "/glassdoor.png",
       rating: "4.6/5 – reviews",
       platform: "Glassdoor",
       link: "https://www.glassdoor.co.in/Overview/Working-at-GlowLogics-Solutions-EI_IE10427430.11,31.htm",
