@@ -53,11 +53,11 @@ const RunningLightTab = ({ onClick }) => {
       className="relative cursor-pointer rotate-180 [writing-mode:vertical-lr] rounded-r-2xl shadow-2xl"
     >
       {/* Glowing gradient border animation */}
-      <div className="p-1 py-12 bg-gradient-to-b from-orange-500 via-yellow-400 to-orange-500 text-white font-bold text-2xl flex items-center justify-center gap-2 animate-pulse">
-        🎉 Anniversary Offers
-        <button className="bg-white text-orange-600 p-2 rounded-2xl shadow-inner">
+      <div className="p-1 py-12 bg-gradient-to-b from-orange-500 via-yellow-400 to-orange-500 text-white font-bold text-1xl flex items-center justify-center gap-2 animate-pulse">
+
+        <button className="bg-white text-orange-600 p-2 rounded-3xl shadow-inner">
           <span className="inline-block transform rotate-180 transition-transform duration-500 hover:rotate-0">
-            <FaPlay size={14} />
+            <FaPlay size={15} />
           </span>
         </button>
       </div>
