@@ -235,63 +235,64 @@ const Navbar = () => {
       </motion.nav>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.4 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black backdrop-blur-md z-40"
-              onClick={() => setIsMobileMenuOpen(false)}
-            />
-            <motion.div
-              variants={mobileMenuVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              transition={{ type: "tween", duration: 0.4 }}
-              className="fixed top-0 right-0 w-4/5 max-w-sm h-full bg-white z-50 p-6 flex flex-col gap-6 shadow-xl"
-            >
-              {/* Mobile Header */}
-              <div className="flex justify-between items-center mb-6">
-                <img src={logo} alt="Logo" className="h-8 object-contain" />
-                <button
-                  className="text-2xl text-black"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <FaTimes />
-                </button>
-              </div>
+     <AnimatePresence>
+  {isMobileMenuOpen && (
+    <>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.4 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 bg-black backdrop-blur-md z-40"
+        onClick={() => setIsMobileMenuOpen(false)}
+      />
+      <motion.div
+        variants={mobileMenuVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        transition={{ type: "tween", duration: 0.4 }}
+        className="fixed top-0 right-0 w-4/5 max-w-sm h-full bg-white z-50 p-6 flex flex-col gap-6 shadow-xl"
+      >
+        {/* Mobile Header */}
+        <div className="flex justify-between items-center mb-6">
+          <img src={logo} alt="Logo" className="h-8 object-contain" />
+          <button
+            className="text-2xl text-black"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            <FaTimes />
+          </button>
+        </div>
 
-              {/* Mobile Links */}
-              {navLinks.map((link, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleNavClick(link.id)}
-                  className={`text-lg font-semibold text-left transition ${
-                    activeLink === link.id
-                      ? "text-black font-bold"
-                      : "text-gray-800 hover:text-black"
-                  }`}
-                >
-                  {link.name}
-                </button>
-              ))}
+        {/* Mobile Links */}
+        {navLinks.map((link, index) => (
+          <button
+            key={index}
+            onClick={() => handleNavClick(link.id)}
+            className={`text-lg font-semibold text-left transition ${
+              activeLink === link.id
+                ? "text-black font-bold"
+                : "text-gray-800 hover:text-black"
+            }`}
+          >
+            {link.name}
+          </button>
+        ))}
 
-              <hr />
+        <hr />
 
-              {/* Mobile Buttons */}
-              <button className="w-full px-5 py-3 border border-black text-sm rounded-full font-semibold hover:bg-black hover:text-white transition">
-                Get Started
-              </button>
-              <button className="w-full mt-2 text-sm font-medium text-gray-800 hover:text-black transition">
-                Sign In
-              </button>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+        {/* ✅ Single Sign In Button */}
+        <a
+          href="https://glowlogics.edmingle.com"
+          className="w-full mt-2 px-5 py-3 border border-black text-sm rounded-full font-semibold text-center hover:bg-black hover:text-white transition"
+        >
+          Sign In
+        </a>
+      </motion.div>
+    </>
+  )}
+</AnimatePresence>
+
     </>
   );
 };
