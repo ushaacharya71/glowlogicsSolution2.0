@@ -374,7 +374,7 @@ export default function CertificatePage() {
                         name: "VTU",
                         logo: "vtu.jpeg",
                         website:
-                          "https://vtu.internyet.in/companies/glowlogics-solutions-pvt-ltd",
+                          "https://vtu.internyet.in/internships/435-data-science",
                         description:
                           "Visvesvaraya Technological University (VTU) is a renowned public university in Karnataka, India, dedicated to excellence in engineering and technology education.",
                       },
