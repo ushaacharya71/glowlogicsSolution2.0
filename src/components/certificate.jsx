@@ -114,12 +114,12 @@ export default function CertificatePage() {
                 <b>Email:</b> {result.data.email}
               </p>
               <a
-                href={result.data.link}
+                // href={result.data.link}
                 target="_blank"
                 rel="noreferrer"
-                className="text-orange-600 underline font-medium mt-2 inline-block"
+                className="text-orange-600  font-medium mt-2 inline-block"
               >
-                Download Original Certificate
+                Download Certificate : Comming Soon...
               </a>
             </div>
           </div>
