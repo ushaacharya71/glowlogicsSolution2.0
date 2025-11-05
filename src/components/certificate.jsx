@@ -1,17 +1,12 @@
 import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiLinkedin } from "react-icons/fi";
-import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
-
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 
 export default function CertificatePage() {
-  const [certId, setCertId] = useState("");
-  const [result, setResult] = useState(null);
-  const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -22,19 +17,39 @@ export default function CertificatePage() {
     }
   }, [open]);
 
+  ///////////////////////////////////////////////////////////////////////////////////
+  const [certId, setCertId] = useState("");
+  const [result, setResult] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  // Replace with your real Google Apps Script URL
+  const apiURL =
+    "https://script.google.com/macros/s/AKfycbwyd9G-DoprZ2yBqZogM2QBHFi4C545qat_vEKNrLzbHaPrS21Ezbmw_0yt6zDxJ6nrYA/exec";
+
   const handleVerify = async () => {
-    if (!certId) return;
-    setLoading(true);
-    try {
-      const res = await axios.get(
-        `http://127.0.0.1:8000/api/certificates/${certId}/`
-      );
-      setResult({ status: "found", data: res.data });
-    } catch (err) {
-      console.error("Verification error:", err);
-      setResult({ status: "notfound" });
+    if (!certId.trim()) {
+      alert("Please enter a Certificate ID");
+      return;
     }
-    setLoading(false);
+
+    setLoading(true);
+    setResult(null);
+
+    try {
+      const res = await fetch(`${apiURL}?id=${certId}`);
+      const data = await res.json();
+
+      if (data.valid) {
+        setResult({ status: "found", data });
+      } else {
+        setResult({ status: "notfound" });
+      }
+    } catch (error) {
+      console.error("Error verifying certificate:", error);
+      alert("Something went wrong. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const url = typeof window !== "undefined" ? window.location.href : "";
@@ -43,51 +58,84 @@ export default function CertificatePage() {
   return (
     <div className="min-h-screen bg-orange-100 flex flex-col items-center p-20">
       {/* Header */}
-      <div className="flex flex-col items-center p-6">
-        <div className="w-full lg:w-1/2 mx-auto relative flex flex-col items-center border-4 border-orange-700">
+      <div className="flex flex-col items-center p-6 min-h-screen bg-gradient-to-br">
+        <div className="w-full lg:w-1/2 mx-auto relative flex flex-col items-center border-4 border-orange-700 rounded-xl shadow-md overflow-hidden">
           <img
             src="/Sample Internship Certificate- Glowlogics.pdf.png"
-            alt=""
+            alt="Glowlogics Certificate Sample"
+            className="object-contain"
           />
         </div>
 
-        <h1 className="text-5xl font-bold mb-4 p-8">Verify Certificate</h1>
+        <h1 className="text-5xl font-bold mb-4 p-8 text-orange-600">
+          Verify Certificate
+        </h1>
+
         <input
           type="text"
           placeholder="Enter Certificate ID"
           value={certId}
           onChange={(e) => setCertId(e.target.value)}
-          className="border p-2 rounded w-80 mb-4"
+          className="border-2 border-orange-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-300 p-3 rounded-lg w-80 mb-4 outline-none text-center"
         />
+
         <button
           onClick={handleVerify}
-          className="bg-orange-400 text-white px-4 py-2 rounded"
+          className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-medium transition duration-200"
         >
           {loading ? "Verifying..." : "Verify"}
         </button>
 
         {result && result.status === "found" && (
-          <div className="mt-6 p-4 border rounded bg-orange-100 w-80">
-            <h2 className="text-lg font-semibold text-orange-400">
-              ✅ Verified
+          <div className="mt-8 p-5 border rounded-lg bg-orange-50 w-full max-w-md shadow-inner">
+            <h2 className="text-lg font-semibold text-orange-600 mb-3">
+              ✅ Certificate Verified
             </h2>
-            <p> {result.data.certificate_id || result.data.id}</p>
+            <div className="text-sm text-gray-800 space-y-1">
+              <p>
+                <b>Certificate ID:</b> {result.data.certificateId}
+              </p>
+              <p>
+                <b>Name:</b> {result.data.name}
+              </p>
+              <p>
+                <b>Course:</b> {result.data.course}
+              </p>
+              <p>
+                <b>Batch:</b> {result.data.batch}
+              </p>
+              <p>
+                <b>Issue Date:</b> {result.data.issueDate}
+              </p>
+              <p>
+                <b>Phone:</b> {result.data.phone}
+              </p>
+              <p>
+                <b>Email:</b> {result.data.email}
+              </p>
+              <a
+                href={result.data.link}
+                target="_blank"
+                rel="noreferrer"
+                className="text-orange-600 underline font-medium mt-2 inline-block"
+              >
+                Download Original Certificate
+              </a>
+            </div>
           </div>
         )}
 
         {result && result.status === "notfound" && (
-          <div className="mt-6 p-4 border rounded bg-red-100 w-80">
+          <div className="mt-8 p-5 border rounded-lg bg-red-100 w-full max-w-md shadow-inner">
             <h2 className="text-lg font-semibold text-red-700">
               ❌ Certificate Not Found
             </h2>
+            <p className="text-sm text-gray-700 mt-2">
+              Please check the Certificate ID and try again.
+            </p>
           </div>
         )}
       </div>
-      <header className="w-full max-w-6xl flex justify-between items-center border-b pb-4 mb-6">
-        <a href="#" className="text-orange-400 font-bold text-2xl">
-          Glowlogics Solutions
-        </a>
-      </header>
 
       {/* Main Content */}
       <main className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -345,7 +393,6 @@ export default function CertificatePage() {
                   </p>
 
                   {/* Issuers in grid layout */}
-                  {/* Issuers in grid layout */}
                   <div className="grid md:grid-cols-3 gap-6">
                     {[
                       {
@@ -356,20 +403,24 @@ export default function CertificatePage() {
                           "The International Organization for Standardization (ISO) develops and publishes international standards to ensure quality, safety, and efficiency across industries.",
                       },
                       {
-  name: "MSME",
-  logo: "MSME.png",
-  website: "https://udyamregistration.gov.in/Udyam_Verify.aspx",
-  description: (
-    <>
-      The Ministry of Micro, Small & Medium Enterprises fosters entrepreneurship,
-      supports innovation, and provides certification for small and medium businesses in India.
-      <br />
-      <strong style={{ color: "black" }}>
-        UDYAM REGISTRATION NUMBER:<br /> UDYAM-KR-11-0071314
-      </strong>
-    </>
-  ),
-},
+                        name: "MSME",
+                        logo: "MSME.png",
+                        website:
+                          "https://udyamregistration.gov.in/Udyam_Verify.aspx",
+                        description: (
+                          <>
+                            The Ministry of Micro, Small & Medium Enterprises
+                            fosters entrepreneurship, supports innovation, and
+                            provides certification for small and medium
+                            businesses in India.
+                            <br />
+                            <strong style={{ color: "black" }}>
+                              UDYAM REGISTRATION NUMBER:
+                              <br /> UDYAM-KR-11-0071314
+                            </strong>
+                          </>
+                        ),
+                      },
                       {
                         name: "VTU",
                         logo: "vtu.jpeg",
