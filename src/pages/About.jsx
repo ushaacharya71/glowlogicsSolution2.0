@@ -286,6 +286,45 @@ export default function About3DMarquee() {
         {/* Floating Poster Image - increased size */}
         <div className="absolute -top-14 left-6 w-48 md:w-60 shadow-lg rounded-lg bg-white p-2 hover:scale-95 transition-transform duration-300">
           <img
+            src="/hj.png" // Replace with your actual image path
+            alt="Collaboration Poster"
+            className="w-full h-full object-contain rounded-md"
+          />
+        </div>
+
+        {/* Placeholder for spacing */}
+        <div className="hidden md:block md:w-60" />
+
+        {/* Center Content */}
+        <div className="flex-1 text-center md:text-left">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-800 mb-2">
+            Glowlogics × VTU
+          </h2>
+          <p className="text-gray-600 leading-relaxed text-lg">
+            We’re proud to announce our official collaboration with {""}
+            <span className="font-semibold text-black">VTU {""}</span>A powerful
+            collaboration igniting innovation and learning! Together, we’re
+            building a community where ideas turn into impact {" "}
+            <span className="font-semibold">empowering
+            students to explore,</span> and{" "}
+            <span className="font-semibold"> innovate, and lead the future of technology.</span>
+          </p>
+        </div>
+
+        {/* Right Logo - increased size */}
+        <div className="w-44 h-44 md:w-52 md:h-52 flex-shrink-0 shadow-md rounded-lg p-2 bg-white hover:scale-95 transition-transform duration-300 flex items-center justify-center self-center">
+          <img
+            src="/vtu.jpeg"
+            alt="ICFAI University Logo"
+            className="w-full h-full object-contain"
+          />
+        </div>
+      </div>
+
+      <div className="relative max-w-6xl mx-auto p-6 pt-20 my-20 shadow-xl border border-gray-300 bg-white hover:shadow-2xl transition duration-500 ease-in-out rounded-xl flex flex-col md:flex-row items-center gap-10">
+        {/* Floating Poster Image - increased size */}
+        <div className="absolute -top-14 left-6 w-48 md:w-60 shadow-lg rounded-lg bg-white p-2 hover:scale-95 transition-transform duration-300">
+          <img
             src="/2.png" // Replace with your actual image path
             alt="Collaboration Poster"
             className="w-full h-full object-contain rounded-md"
@@ -344,22 +383,17 @@ export default function About3DMarquee() {
         {/* Center Content */}
         <div className="flex-1 text-center md:text-left">
           <h2 className="text-2xl md:text-3xl font-extrabold text-gray-800 mb-2">
-           Glowlogics × SRINIVAS UNIVERSITY
+            Glowlogics × SRINIVAS UNIVERSITY
           </h2>
           <p className="text-gray-600 leading-relaxed text-lg">
             Excited to announce our collaboration with{" "}
             <span className="font-semibold text-black">
-             SRINIVAS UNIVERSITY
+              SRINIVAS UNIVERSITY
             </span>{" "}
-           Inspiring innovation and knowledge-sharing among the next generation of leaders, empowering them to create meaningful impact and drive positive change.{" "}
-            <span className="font-semibold">
-              {" "}
-              {" "}
-            </span>{" "}
-           {" "}
-            <span className="font-semibold">
-
-            </span>
+            Inspiring innovation and knowledge-sharing among the next generation
+            of leaders, empowering them to create meaningful impact and drive
+            positive change. <span className="font-semibold"> </span>{" "}
+            <span className="font-semibold"></span>
           </p>
         </div>
 
