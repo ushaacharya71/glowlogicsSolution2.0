@@ -673,10 +673,11 @@ const FullStackProgram = () => {
             </div>
 
             {/* Certificate Navigation Buttons */}
-            <div className="flex gap-6 mt-4">
+           <div className="flex gap-6 mt-4">
               <button
                 onClick={() => {
                   const certificates = [
+                    "/VTUInternship.png",
                     "/CourseCompletionGlowlogics.png",
                     "/InternshipGlowlogics.png",
                     "/PlacementGlowlogics.png",
@@ -708,6 +709,7 @@ const FullStackProgram = () => {
                     "/CourseCompletionGlowlogics.png",
                     "/InternshipGlowlogics.png",
                     "/PlacementGlowlogics.png",
+                     "/VTUInternship.png",
                   ];
                   let currentIndex =
                     parseInt(
@@ -728,6 +730,7 @@ const FullStackProgram = () => {
                 ▶
               </button>
             </div>
+
 
             {/* Fullscreen Popup Modal */}
             <div

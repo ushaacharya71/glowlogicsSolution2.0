@@ -617,48 +617,62 @@ const FullStackCourse = () => {
 
   {/* Certificate Navigation Buttons */}
   <div className="flex gap-6 mt-4">
-    <button
-      onClick={() => {
-        const certificates = [
-          "/CourseCompletionGlowlogics.png",
-          "/InternshipGlowlogics.png",
-          "/PlacementGlowlogics.png",
-        ];
-        let currentIndex =
-          parseInt(document.getElementById("cert-img").getAttribute("data-index")) || 0;
-        currentIndex = (currentIndex - 1 + certificates.length) % certificates.length;
-        const img = document.getElementById("cert-img");
-        img.src = certificates[currentIndex];
-        img.setAttribute("alt", `Certificate ${currentIndex + 1}`);
-        img.setAttribute("data-index", currentIndex);
-        document.getElementById("modal-img").src = certificates[currentIndex];
-      }}
-      className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700"
-    >
-      ◀
-    </button>
+              <button
+                onClick={() => {
+                  const certificates = [
+                    "/VTUInternship.png",
+                    "/CourseCompletionGlowlogics.png",
+                    "/InternshipGlowlogics.png",
+                    "/PlacementGlowlogics.png",
+                  ];
+                  let currentIndex =
+                    parseInt(
+                      document
+                        .getElementById("cert-img")
+                        .getAttribute("data-index")
+                    ) || 0;
+                  currentIndex =
+                    (currentIndex - 1 + certificates.length) %
+                    certificates.length;
+                  const img = document.getElementById("cert-img");
+                  img.src = certificates[currentIndex];
+                  img.setAttribute("alt", `Certificate ${currentIndex + 1}`);
+                  img.setAttribute("data-index", currentIndex);
+                  document.getElementById("modal-img").src =
+                    certificates[currentIndex];
+                }}
+                className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700"
+              >
+                ◀
+              </button>
 
-    <button
-      onClick={() => {
-        const certificates = [
-          "/CourseCompletionGlowlogics.png",
-          "/InternshipGlowlogics.png",
-          "/PlacementGlowlogics.png",
-        ];
-        let currentIndex =
-          parseInt(document.getElementById("cert-img").getAttribute("data-index")) || 0;
-        currentIndex = (currentIndex + 1) % certificates.length;
-        const img = document.getElementById("cert-img");
-        img.src = certificates[currentIndex];
-        img.setAttribute("alt", `Certificate ${currentIndex + 1}`);
-        img.setAttribute("data-index", currentIndex);
-        document.getElementById("modal-img").src = certificates[currentIndex];
-      }}
-      className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700"
-    >
-      ▶
-    </button>
-  </div>
+              <button
+                onClick={() => {
+                  const certificates = [
+                    "/CourseCompletionGlowlogics.png",
+                    "/InternshipGlowlogics.png",
+                    "/PlacementGlowlogics.png",
+                     "/VTUInternship.png",
+                  ];
+                  let currentIndex =
+                    parseInt(
+                      document
+                        .getElementById("cert-img")
+                        .getAttribute("data-index")
+                    ) || 0;
+                  currentIndex = (currentIndex + 1) % certificates.length;
+                  const img = document.getElementById("cert-img");
+                  img.src = certificates[currentIndex];
+                  img.setAttribute("alt", `Certificate ${currentIndex + 1}`);
+                  img.setAttribute("data-index", currentIndex);
+                  document.getElementById("modal-img").src =
+                    certificates[currentIndex];
+                }}
+                className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700"
+              >
+                ▶
+              </button>
+            </div>
 
   {/* Fullscreen Popup Modal */}
   <div
