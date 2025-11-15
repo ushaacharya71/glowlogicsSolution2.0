@@ -5,6 +5,10 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+  rel="stylesheet"
+/>;
 
 export default function CertificatePage() {
   const [open, setOpen] = useState(false);
@@ -17,18 +21,29 @@ export default function CertificatePage() {
     }
   }, [open]);
 
-  ///////////////////////////////////////////////////////////////////////////////////
+  ////Here I have update the Certificate verification code (the link which is linked with the appscript MYPROJECT code updation @h22)////
   const [certId, setCertId] = useState("");
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // Replace with your real Google Apps Script URL
+  // Apps Script URL
   const apiURL =
-    "https://script.google.com/macros/s/AKfycbwyd9G-DoprZ2yBqZogM2QBHFi4C545qat_vEKNrLzbHaPrS21Ezbmw_0yt6zDxJ6nrYA/exec";
+    "https://script.google.com/macros/s/AKfycbxbZ7feV-y23xwAKPodm0zMe-8EmYesJ5R4AEYagFSJ0mIqkEe1oKinHacqRIVwnlfa/exec";
 
-  const handleVerify = async () => {
-    if (!certId.trim()) {
-      alert("Please enter a Certificate ID");
+  // Auto-detect ?id=
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const idFromUrl = params.get("id");
+    if (idFromUrl) {
+      setCertId(idFromUrl);
+      verifyCertificate(idFromUrl);
+    }
+  }, []);
+
+  // Verify Function
+  const verifyCertificate = async (id) => {
+    if (!id.trim()) {
+      alert("Please enter a Certificate ID!");
       return;
     }
 
@@ -36,105 +51,123 @@ export default function CertificatePage() {
     setResult(null);
 
     try {
-      const res = await fetch(`${apiURL}?id=${certId}`);
+      const res = await fetch(`${apiURL}?id=${encodeURIComponent(id)}`);
       const data = await res.json();
-
-      if (data.valid) {
-        setResult({ status: "found", data });
-      } else {
-        setResult({ status: "notfound" });
-      }
+      setResult(data);
+      console.log("Verification Response:", data);
     } catch (error) {
-      console.error("Error verifying certificate:", error);
-      alert("Something went wrong. Please try again later.");
+      console.error("Error:", error);
+      alert("Something went wrong. Try later.");
     } finally {
       setLoading(false);
     }
   };
-
+  // ✅ Manual verify button
   const url = typeof window !== "undefined" ? window.location.href : "";
   const title =
     "I just earned my ISO & AICTE verified certificate from GlowLogics Solutions! ";
   return (
     <div className="min-h-screen bg-orange-100 flex flex-col items-center p-20">
       {/* Header */}
-      <div className="flex flex-col items-center p-6 min-h-screen bg-gradient-to-br">
-        <div className="w-full lg:w-1/2 mx-auto relative flex flex-col items-center border-4 border-orange-700 rounded-xl shadow-md overflow-hidden">
-          <img
-            src="/Sample Internship Certificate- Glowlogics.pdf.png"
-            alt="Glowlogics Certificate Sample"
-            className="object-contain"
+
+      <div className="bg-gradient-to-br justify-center p-10">
+        <div className="max-w-lg w-full text-center mx-auto">
+          <h1 className="text-4xl font-[Poppins] font-semibold mb-6  tracking-wider text-orange-600">
+            VERIFY YOUR CERTIFICATE
+          </h1>
+
+          {/* Input */}
+          <input
+            type="text"
+            placeholder="Enter Certificate ID"
+            value={certId}
+            onChange={(e) => setCertId(e.target.value)}
+            className="border-2 border-orange-300 focus:ring-2 focus:ring-orange-400 p-3 rounded-lg w-full mb-4 text-center text-lg"
           />
-        </div>
 
-        <h1 className="text-5xl font-bold mb-4 p-8 text-orange-600">
-          Verify Certificate
-        </h1>
+          {/* Button */}
+          <button
+            onClick={() => verifyCertificate(certId)}
+            disabled={loading}
+            className={`${
+              loading ? "bg-gray-400" : "bg-orange-500 hover:bg-orange-600"
+            } text-white px-6 py-2 rounded-lg font-semibold transition duration-200 w-full`}
+          >
+            {loading ? "Verifying..." : "Verify"}
+          </button>
 
-        <input
-          type="text"
-          placeholder="Enter Certificate ID"
-          value={certId}
-          onChange={(e) => setCertId(e.target.value)}
-          className="border-2 border-orange-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-300 p-3 rounded-lg w-80 mb-4 outline-none text-center"
-        />
+          {/* SUCCESS */}
+          {result && result.valid && (
+            <div className="mt-8 p-6 bg-white rounded-xl shadow-lg border-l-4 border-green-500 text-left">
+              <h2 className="text-2xl font-bold text-green-600 mb-4">
+                ✅ Certificate Verified
+              </h2>
 
-        <button
-          onClick={handleVerify}
-          className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-medium transition duration-200"
-        >
-          {loading ? "Verifying..." : "Verify"}
-        </button>
+              <div className="space-y-2">
+                <p>
+                  <b>Name:</b> {result.name}
+                </p>
+                <p>
+                  <b>Course:</b> {result.course}
+                </p>
+                <p>
+                  <b>Internship ID:</b> {result.internshipId}
+                </p>
+                <p>
+                  <b>Course Completion ID:</b> {result.courseCompletionId}
+                </p>
+                <p>
+                  <b>Issue Date:</b> {result.issueDate}
+                </p>
+                <p>
+                  <b>Email:</b> {result.email}
+                </p>
+                <p>
+                  <b>Phone:</b> {result.phone}
+                </p>
+                <p>
+                  <b>Batch:</b> {result.batch}
+                </p>
+                {/* <p><b>Status:</b> {result.status}</p> */}
+              </div>
 
-        {result && result.status === "found" && (
-          <div className="mt-8 p-5 border rounded-lg bg-orange-50 w-full max-w-md shadow-inner">
-            <h2 className="text-lg font-semibold text-orange-600 mb-3">
-              ✅ Certificate Verified
-            </h2>
-            <div className="text-sm text-gray-800 space-y-1">
-              <p>
-                <b>Certificate ID:</b> {result.data.certificateId}
-              </p>
-              <p>
-                <b>Name:</b> {result.data.name}
-              </p>
-              <p>
-                <b>Course:</b> {result.data.course}
-              </p>
-              <p>
-                <b>Batch:</b> {result.data.batch}
-              </p>
-              <p>
-                <b>Issue Date:</b> {result.data.issueDate}
-              </p>
-              <p>
-                <b>Phone:</b> {result.data.phone}
-              </p>
-              <p>
-                <b>Email:</b> {result.data.email}
-              </p>
-              <a
-                // href={result.data.link}
-                target="_blank"
-                rel="noreferrer"
-                className="text-orange-600  font-medium mt-2 inline-block"
-              >
-                Download Certificate : Comming Soon...
-              </a>
+              {/* Links */}
+              <div className="mt-6 space-y-3">
+                {result.internshipLink && (
+                  <a
+                    href={result.internshipLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block bg-gradient-to-r from-orange-500 to-yellow-400 text-white text-center py-3 rounded-lg font-medium hover:from-orange-600 hover:to-yellow-500"
+                  >
+                    🧾 View Internship Certificate
+                  </a>
+                )}
+
+                {result.courseCompletionLink && (
+                  <a
+                    href={result.courseCompletionLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block bg-gradient-to-r from-blue-500 to-indigo-400 text-white text-center py-3 rounded-lg font-medium hover:from-blue-600 hover:to-indigo-500"
+                  >
+                    🎓 View Course Completion Certificate
+                  </a>
+                )}
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {result && result.status === "notfound" && (
-          <div className="mt-8 p-5 border rounded-lg bg-red-100 w-full max-w-md shadow-inner">
-            <h2 className="text-lg font-semibold text-red-700">
-              ❌ Certificate Not Found
-            </h2>
-            <p className="text-sm text-gray-700 mt-2">
-              Please check the Certificate ID and try again.
-            </p>
-          </div>
-        )}
+          {/* FAIL */}
+          {result && !result.valid && (
+            <div className="mt-8 p-6 bg-red-50 border-l-4 border-red-500 rounded-lg shadow-md text-left">
+              <h2 className="text-2xl font-bold text-red-600 mb-2">
+                ❌ Certificate Not Found
+              </h2>
+              <p>Please check your Certificate ID and try again.</p>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Main Content */}
