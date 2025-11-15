@@ -72,7 +72,7 @@ export default function CertificatePage() {
 
       <div className="bg-gradient-to-br justify-center p-10">
         <div className="max-w-lg w-full text-center mx-auto">
-          <h1 className="text-4xl font-[Poppins] font-semibold mb-6 font-strech text-orange-600">
+          <h1 className="text-4xl font-[Poppins] font-semibold mb-6  tracking-wider text-orange-600">
             VERIFY YOUR CERTIFICATE
           </h1>
 
