@@ -33,6 +33,7 @@ export default {
         },
       },
 
+
       // ✅ Animations
       animation: {
         marquee: 'marquee 40s linear infinite', // ⏳ slower

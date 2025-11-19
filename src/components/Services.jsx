@@ -2,17 +2,16 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import {
   FaChalkboardTeacher,
-  FaProjectDiagram,
   FaBriefcase,
   FaBullseye,
   FaUsers,
 } from "react-icons/fa";
 import { MdPeopleAlt, MdCalendarMonth, MdAssignment } from "react-icons/md";
-import { useNavigate } from "react-router-dom"; // <-- added for navigation
+import { useNavigate } from "react-router-dom";
 
 export default function GlowlogicsUltimate() {
   const cursorRef = useRef(null);
-  const navigate = useNavigate(); // <-- initialize navigate
+  const navigate = useNavigate();
 
   useEffect(() => {
     const cursor = cursorRef.current;
@@ -30,9 +29,6 @@ export default function GlowlogicsUltimate() {
 
   return (
     <div className="relative min-h-screen flex flex-col lg:flex-row justify-center items-start gap-12 p-10 bg-orange-100 overflow-hidden">
-      {/* Subtle Glass Background Shadow */}
-      <div className="absolute inset-0 bg-gradient-to-br"></div>
-
       {/* Heading Section */}
       <motion.div
         initial={{ x: -50, opacity: 0 }}
@@ -43,44 +39,25 @@ export default function GlowlogicsUltimate() {
         <h2 className="text-5xl font-bold text-gray-900 mb-4 leading-tight">
           Why <span className="text-[#ff6e0c]">Glowlogics Solutions</span>?
         </h2>
+
         <p className="text-black text-lg leading-relaxed">
           At Glowlogics, we help students, graduates, and working professionals
           turn skills into real careers. Our ISO- and MSME-certified programs
-          are designed to bridge the gap between learning and hiring. Whether
-          you are aiming for IT, electronics, or business roles, our training is
-          built around what companies actually look for.
+          bridge the gap between learning and hiring.
         </p>
 
         <ul className="list-disc pl-6 text-black mt-4 space-y-2 text-base">
-          <li>
-            Industry-Certified Programs: ISO & MSME-recognized certifications
-            trusted by employers.
-          </li>
-          <li>
-            Live Projects & Case Studies: Build real-world skills with
-            portfolio-worthy projects.
-          </li>
-          <li>
-            Dedicated Career Support: Resume building, LinkedIn profile
-            guidance, mock interviews, and placement help.
-          </li>
-          <li>
-            Lifetime Learning Access: Stay updated with evolving tech through
-            lifetime course access.
-          </li>
-          <li>
-            National Hackathons & Workshops: Exclusive events in
-            collaboration with E-Cell IIT Hyderabad & Techfest IIT Bombay.
-          </li>
-          <li>Flexible Programs: Options for engineering students, graduates.</li>
-          <li>
-            Strong Learner Community: Connect with mentors, peers, and hiring
-            companies.
-          </li>
+          <li>ISO & MSME-recognized certifications trusted by employers.</li>
+          <li>Portfolio-building live projects and case studies.</li>
+          <li>Placement support with resume & LinkedIn guidance.</li>
+          <li>Lifetime access to updated learning materials.</li>
+          <li>Hackathons with IIT Hyderabad & IIT Bombay.</li>
+          <li>Flexible programs for students & graduates.</li>
+          <li>Strong learner community & hiring network.</li>
         </ul>
       </motion.div>
 
-      {/* Main Content */}
+      {/* Main Cards Section */}
       <motion.div
         className="relative lg:w-2/3 backdrop-blur-xl bg-white/40 border border-white/30 rounded-3xl p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 shadow-[0_20px_50px_rgba(0,0,0,0.1)] z-10"
         initial={{ opacity: 0, scale: 0.9 }}
@@ -91,8 +68,16 @@ export default function GlowlogicsUltimate() {
           <motion.div
             key={index}
             whileHover={{ scale: 1.08 }}
-            onClick={item.onClick} // <-- attach the click handler
-            className="cursor-pointer group bg-white/30 backdrop-blur-lg rounded-2xl p-8 border border-white/30 shadow-lg hover:shadow-2xl transition-all duration-500"
+            onClick={item.onClick ? () => item.onClick(navigate) : null}
+            className={`
+              cursor-pointer group rounded-2xl p-8
+              backdrop-blur-lg bg-white/30 transition-all duration-500
+              shadow-lg hover:shadow-2xl
+              ${item.glow
+                ? "border-2 border-orange-400 shadow-[0_0_12px_rgba(255,140,0,0.5)] hover:shadow-[0_0_18px_rgba(255,140,0,0.8)]"
+                : "border border-white/30"
+              }
+            `}
           >
             <div className="flex justify-center items-center mb-6">
               <div
@@ -101,6 +86,7 @@ export default function GlowlogicsUltimate() {
                 {item.icon}
               </div>
             </div>
+
             <h3 className="text-lg font-semibold text-center mb-2 text-gray-900">
               {item.title}
             </h3>
@@ -109,7 +95,7 @@ export default function GlowlogicsUltimate() {
         ))}
       </motion.div>
 
-      {/* Smooth Magnetic Cursor */}
+      {/* Custom Cursor */}
       <div
         ref={cursorRef}
         className="fixed w-4 h-4 rounded-full bg-black opacity-80 pointer-events-none z-[9999] mix-blend-difference -translate-x-1/2 -translate-y-1/2"
@@ -122,14 +108,8 @@ const data = [
   {
     icon: <FaChalkboardTeacher />,
     title: "Learn from Industry Experts",
-    desc: "Live sessions led by professionals from top MNCs.",
+    desc: "Live sessions by professionals from top MNCs. Build real-world projects.",
     color: "text-red-500",
-  },
-  {
-    icon: <FaProjectDiagram />,
-    title: "Hands-On Projects",
-    desc: "Build real-world projects for your portfolio.",
-    color: "text-yellow-500",
   },
   {
     icon: <FaBriefcase />,
@@ -140,7 +120,7 @@ const data = [
   {
     icon: <FaBullseye />,
     title: "Career Support",
-    desc: "Resume building, mock interviews, and placement guidance.",
+    desc: "Resume building, mock interviews, and placement preparation.",
     color: "text-green-500",
   },
   {
@@ -152,20 +132,39 @@ const data = [
   {
     icon: <MdCalendarMonth />,
     title: "Hackathons & Workshops",
-    desc: "Access national-level events through our collaborations.",
+    desc: "Participate in national-level events and tech workshops.",
     color: "text-pink-500",
   },
   {
     icon: <MdPeopleAlt />,
-    title: "30,000+ Students",
+    title: "30,000+ Learners",
     desc: "A growing community learning and getting hired across industries.",
     color: "text-indigo-500",
   },
+
+  // 🔥 Verification Cards With Glowing Orange Border
   {
     icon: <MdAssignment />,
     title: "Certificate Verification",
-    desc: "Verify your GlowLogics certificate instantly using your unique ID. Share and showcase your achievement.",
+    desc: "Verify your Glowlogics certificate instantly using your unique ID.",
     color: "text-orange-500",
-    onClick: () => window.location.pathname = "/certificate-verification", // <-- for navagation routing nad import kr diyaa hai
+    glow: true,
+    onClick: (navigate) => navigate("/certificate-verification"),
+  },
+  {
+    icon: <MdAssignment />,
+    title: "Placement Training Certificate Verification",
+    desc: "Verify your placement training completion recognized by recruiters.",
+    color: "text-green-500",
+    glow: true,
+    onClick: (navigate) => navigate("/placement-verification"),
+  },
+  {
+    icon: <MdAssignment />,
+    title: "VTU Internship Certificate Verification",
+    desc: "Verify your VTU-approved internship certificate authenticity.",
+    color: "text-yellow-500",
+    glow: true,
+    onClick: (navigate) => navigate("/vtu-verification"),
   },
 ];
