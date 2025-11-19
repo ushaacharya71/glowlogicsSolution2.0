@@ -3,179 +3,255 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FiLinkedin } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-  rel="stylesheet"
-/>;
 export default function PlacementCertificate() {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  const [certId, setCertId] = useState("");
+  const [result, setResult] = useState(null);
+
+  const API_URL =
+    "https://script.google.com/macros/s/AKfycbxA6l_CeEic-bkz7Sj_LvNEKFHyHe7j_LqfqsT1MjM3vUoyZMKFZgV3f4I1ZvN0a-FM8g/exec";
+
+  // When modal opens, run animation loader
   useEffect(() => {
     if (open) {
       setLoading(true);
-      const timer = setTimeout(() => setLoading(false), 3000);
+      const timer = setTimeout(() => setLoading(false), 2500);
       return () => clearTimeout(timer);
     }
   }, [open]);
+
+  // Verify Certificate Function
+  const verifyCertificate = async () => {
+    if (!certId.trim()) {
+      alert("Enter Certificate ID");
+      return;
+    }
+
+    setLoading(true);
+    setResult(null);
+
+    try {
+      const response = await fetch(
+        `${API_URL}?id=${encodeURIComponent(certId)}`
+      );
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      let data;
+      try {
+        data = await response.json();
+      } catch (jsonError) {
+        console.error("JSON Parse Error:", jsonError);
+        throw new Error("Invalid JSON received from server");
+      }
+
+      setResult(data);
+    } catch (err) {
+      console.error("Verification Error:", err);
+
+      setResult({
+        valid: false,
+        message: "Server error. Please try again.",
+      });
+    }
+
+    setLoading(false);
+  };
+
   const url = typeof window !== "undefined" ? window.location.href : "";
   const title =
     "I just earned my ISO & AICTE verified certificate from GlowLogics Solutions! ";
+
   return (
     <div className="min-h-screen bg-orange-100 flex flex-col items-center p-20">
       <main className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-3 gap-6">
-  {/* Left Section */}
-  <section className="lg:col-span-2 bg-white shadow-md rounded-lg p-6">
+        {/* LEFT SECTION */}
+        <section className="lg:col-span-2 bg-white shadow-md rounded-lg p-6">
+          <h1 className="text-3xl font-bold mb-3 text-orange-500">
+            Glowlogics Placement Training Certificate Verification
+          </h1>
+          <p className="text-gray-700 mb-6">
+            Validate your Placement Training Certificate issued by Glowlogics
+            Solutions. Enter your Certificate ID to verify authenticity and
+            confirm your successful completion.
+          </p>
 
-    {/* Header */}
-    <h1 className="text-3xl font-bold mb-3 text-orange-500">
-      Glowlogics Placement Training Certificate Verification
-    </h1>
-    <p className="text-gray-700 mb-6">
-      Validate your Placement Training Certificate issued by Glowlogics Solutions.
-      Enter your Certificate ID to verify authenticity, confirm your successful
-      completion, and access detailed verification data.
-    </p>
+          {/* Logo */}
+          <div className="flex items-center mb-6 gap-4">
+            <div className="w-20 h-20 flex items-center justify-center ">
+              <img src="/1.svg" alt="Glowlogics Logo" className="w-16 h-16" />
+            </div>
+            <div>
+              <p className="font-semibold text-lg">Glowlogics Solutions</p>
+              <p className="text-gray-600 text-sm">
+                Industry-focused Placement & Skill Development training for job
+                readiness.
+              </p>
+            </div>
+          </div>
 
-    {/* Glowlogics Logo & Description */}
-    <div className="flex items-center mb-6 gap-4">
-      <div className="w-20 h-20 flex items-center justify-center ">
-        <img src="/1.svg" alt="Glowlogics Logo" className="w-16 h-16" />
-      </div>
-      <div>
-        <p className="font-semibold text-lg">Glowlogics Solutions</p>
-        <p className="text-gray-600 text-sm">
-          Glowlogics offers industry-focused Placement Preparation & Skill Development
-          programs trusted by students across India. Each certificate reflects verified
-          training and job-ready skill development.
-        </p>
-      </div>
-    </div>
+          {/*  VERIFICATION FORM WORKING NOW */}
+          <div className="mb-6">
+            <label className="block text-gray-700 font-semibold mb-2">
+              Enter Certificate ID
+            </label>
 
-    {/* Verification Form */}
-    <div className="mb-6">
-      <label className="block text-gray-700 font-semibold mb-2">
-        Enter Certificate ID
-      </label>
-      <input
-        type="text"
-        placeholder="e.g., GLPT-2025-12345"
-        className="w-full border border-gray-300 rounded-lg p-2 mb-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
-      />
-      <button className="w-full bg-orange-400 text-white py-2 rounded-lg hover:bg-orange-500 transition">
-        Verify Certificate
-      </button>
-    </div>
+            <input
+              type="text"
+              value={certId}
+              onChange={(e) => setCertId(e.target.value)}
+              placeholder="e.g., GLPT-2025-12345"
+              className="w-full border border-gray-300 rounded-lg p-2 mb-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
+            />
 
-    {/* Why Verification Matters */}
-    <div className="mb-6">
-      <h2 className="font-semibold mb-2 text-gray-800">Why This Certificate Matters</h2>
-      <ul className="list-disc list-inside text-gray-700 space-y-1">
-        <li>📌 Ensures the certificate is original and issued by Glowlogics</li>
-        <li>📌 Enhances your resume & LinkedIn profile credibility</li>
-        <li>📌 Helps HR teams and recruiters validate training authenticity</li>
-        <li>📌 Secure, tamper-proof verification database</li>
-      </ul>
-    </div>
+            <button
+              onClick={verifyCertificate}
+              className="w-full bg-orange-400 text-white py-2 rounded-lg hover:bg-orange-500 transition"
+            >
+              {loading ? "Verifying..." : "Verify Certificate"}
+            </button>
+          </div>
 
-    {/* Authority Info */}
-    <div className="flex flex-wrap justify-between text-sm text-gray-600">
-      <p>
-        <strong>Verification Authority:</strong> Glowlogics Solutions
-      </p>
-      <p>
-        <strong>Validity:</strong> Lifetime – No Expiry
-      </p>
-    </div>
-  </section>
+          {/* 🔥 RESULT BOX */}
+          {result && (
+            <div className="mt-4 p-4 bg-gray-50 rounded-lg shadow">
+              {result.valid ? (
+                <div>
+                  <h3 className="text-green-600 font-bold text-xl mb-2">
+                    Certificate Verified ✔️
+                  </h3>
+                  <p>
+                    <strong>Name:</strong> {result.name}
+                  </p>
+                  <p>
+                    <strong>Issue Date:</strong> {result.issueDate}
+                  </p>
+                  <p>
+                    <strong>Certificate ID:</strong> {result.certificateId}
+                  </p>
 
-  {/* Right Section */}
-  <aside className="bg-white shadow-md rounded-lg p-6">
-    <h2 className="font-semibold text-lg mb-4 flex items-center gap-2 text-gray-800">
-      Share Your Achievement
-    </h2>
-    <p className="text-gray-600 text-sm mb-3">
-      Share your verified certificate with recruiters and your professional network.
-    </p>
+                  {result.certificateLink && (
+                    <a
+                      href={result.certificateLink}
+                      target="_blank"
+                      className="text-blue-600 underline mt-2 block"
+                    >
+                      🔗 View Certificate PDF
+                    </a>
+                  )}
+                </div>
+              ) : (
+                <p className="text-red-500 font-semibold">
+                  ❌ {result.message}
+                </p>
+              )}
+            </div>
+          )}
 
-    {/* Social Sharing */}
-    <div className="flex space-x-3 mb-4">
-      <a
-        href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-          url
-        )}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="p-2 rounded bg-gray-100 hover:bg-gray-200"
-      >
-        <FiLinkedin className="text-orange-400 text-xl" />
-      </a>
+          {/* Why matters */}
+          <div className="mt-6">
+            <h2 className="font-semibold mb-2 text-gray-800">
+              Why This Certificate Matters
+            </h2>
+            <ul className="list-disc list-inside text-gray-700 space-y-1">
+              <li>📌 Verified & Authentic Certificate</li>
+              <li>📌 Boosts resume credibility</li>
+              <li>📌 Helps recruiters validate your training</li>
+            </ul>
+          </div>
+        </section>
 
-      <a
-        href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-          url
-        )}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="p-2 rounded bg-gray-100 hover:bg-gray-200"
-      >
-        <FaFacebook className="text-orange-400 text-xl" />
-      </a>
+        {/* RIGHT SECTION */}
+        <aside className="bg-white shadow-md rounded-lg p-6">
+          <h2 className="font-semibold text-lg mb-4 flex items-center gap-2 text-gray-800">
+            Share Your Achievement
+          </h2>
+          <p className="text-gray-600 text-sm mb-3">
+            Share your verified certificate on social media or add it directly
+            to your LinkedIn profile.
+          </p>
 
-      <a
-        href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
-          url
-        )}&text=${encodeURIComponent(title)}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="p-2 rounded bg-gray-100 hover:bg-gray-200"
-      >
-        <FaXTwitter className="text-black text-xl" />
-      </a>
+          {/* Social Buttons */}
+          <div className="flex space-x-3 mb-4">
+            <a
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+                url
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded bg-gray-100 hover:bg-gray-200"
+            >
+              <FiLinkedin className="text-orange-400 text-xl" />
+            </a>
+            <a
+              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                url
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded bg-gray-100 hover:bg-gray-200"
+            >
+              <FaFacebook className="text-orange-400 text-xl" />
+            </a>
+            <a
+              href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
+                url
+              )}&text=${encodeURIComponent(title)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded bg-gray-100 hover:bg-gray-200"
+            >
+              <FaXTwitter className="text-black text-xl" />
+            </a>
+            <a
+              href={`https://wa.me/?text=${encodeURIComponent(
+                `${title} ${url}`
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded bg-gray-100 hover:bg-gray-200"
+            >
+              <FaWhatsapp className="text-green-500 text-xl" />
+            </a>
+          </div>
 
-      <a
-        href={`https://wa.me/?text=${encodeURIComponent(`${title} ${url}`)}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="p-2 rounded bg-gray-100 hover:bg-gray-200"
-      >
-        <FaWhatsapp className="text-green-500 text-xl" />
-      </a>
-    </div>
+          <button
+            onClick={() => {
+              const certUrl =
+                typeof window !== "undefined" ? window.location.href : "";
+              window.open(
+                `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+                  certUrl
+                )}`,
+                "_blank"
+              );
+            }}
+            className="w-full bg-orange-400 text-white py-2 rounded-lg hover:bg-orange-500 transition"
+          >
+            Add to My LinkedIn Profile
+          </button>
 
-    {/* Add to LinkedIn */}
-    <button
-      onClick={() => {
-        const certUrl =
-          typeof window !== "undefined" ? window.location.href : "";
-        window.open(
-          `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-            certUrl
-          )}`,
-          "_blank"
-        );
-      }}
-      className="w-full bg-orange-400 text-white py-2 rounded-lg hover:bg-orange-500 transition"
-    >
-      Add to My LinkedIn Profile
-    </button>
+          {/* Additional Info */}
+          <div className="mt-8">
+            <h3 className="font-semibold mb-3 text-gray-800">
+              Why VTU Certificates Matter
+            </h3>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li>🎓 Recognized by top universities and recruiters</li>
+              <li>🏆 Ensures academic credibility and authenticity</li>
+              <li>💼 Helps in career growth & internships</li>
+            </ul>
+          </div>
+        </aside>
+      </main>
 
-    {/* Additional Training Info */}
-    <div className="mt-8">
-      <h3 className="font-semibold mb-3 text-gray-800">Training Highlights</h3>
-      <ul className="space-y-2 text-sm text-gray-700">
-        <li>🎯 Industry-Aligned Placement Training</li>
-        <li>💼 Resume Building, Mock Interviews & HR Readiness</li>
-        <li>📊 Practical Assignments & Real-World Projects</li>
-        <li>🏆 Recognized by companies hiring Glowlogics-trained candidates</li>
-      </ul>
-    </div>
-  </aside>
-</main>
-
+      {/* MODAL BELOW (OPTIONAL) */}
       <div className="mt-10 max-w-6xl w-full rounded-xl border shadow-md bg-white p-6 mx-auto text-center">
         {/* Button box */}
         {!open && (
