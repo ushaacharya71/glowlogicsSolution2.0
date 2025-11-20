@@ -1,26 +1,49 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const PlacementVerification = () => {
   const [certId, setCertId] = useState("");
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const apiURL = "https://script.google.com/macros/s/AKfycby0h2aw7pUCCCXF40RVTIST3s68yTROE_I7v-f2JDMec6boV-ZH9-Tvdzb9eIMb0E69NQ/exec?id="; // <--- Replace this
+  const location = useLocation();
 
-  const handleVerify = async () => {
-    if (!certId.trim()) return;
+  // Your Apps Script Web App URL (via Vercel proxy later)
+  const apiURL =
+    "https://script.google.com/macros/s/AKfycby0h2aw7pUCCCXF40RVTIST3s68yTROE_I7v-f2JDMec6boV-ZH9-Tvdzb9eIMb0E69NQ/exec?id=";
+
+  // -----------------------------
+  // Auto-Verify when ?id=XXXX is present
+  // -----------------------------
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const idFromURL = params.get("id");
+
+    if (idFromURL) {
+      setCertId(idFromURL);
+      handleVerify(idFromURL); // Auto verify
+    }
+  }, [location]);
+
+  // -----------------------------
+  // Verify function (supports manual + auto)
+  // -----------------------------
+  const handleVerify = async (manualId) => {
+    const finalId = manualId || certId;
+
+    if (!finalId.trim()) return;
 
     setLoading(true);
     setResult(null);
 
     try {
-      const res = await fetch(apiURL + encodeURIComponent(certId));
+      const res = await fetch(apiURL + encodeURIComponent(finalId));
       const data = await res.json();
       setResult(data);
     } catch (error) {
-  console.error("Verification error:", error);
-  setResult({ valid: false, message: "Something went wrong!" });
-}
+      console.error("Verification error:", error);
+      setResult({ valid: false, message: "Something went wrong!" });
+    }
 
     setLoading(false);
   };
@@ -28,7 +51,6 @@ const PlacementVerification = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-50 to-yellow-100 p-8">
       <div className="max-w-xl w-full bg-white shadow-xl rounded-2xl p-8">
-
         {/* Title */}
         <h1 className="text-4xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-yellow-500">
           Placement Certificate Verification
@@ -44,7 +66,7 @@ const PlacementVerification = () => {
             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-400"
           />
           <button
-            onClick={handleVerify}
+            onClick={() => handleVerify()}
             className="bg-orange-500 text-white px-5 py-3 rounded-lg hover:bg-orange-600 transition"
           >
             {loading ? "Verifying..." : "Verify"}
@@ -60,10 +82,18 @@ const PlacementVerification = () => {
                   ✔ Certificate Verified
                 </h2>
 
-                <p><b>Name:</b> {result.name}</p>
-                <p><b>Issue Date:</b> {result.issueDate}</p>
-                <p><b>Certificate ID:</b> {result.certificateId}</p>
-                <p><b>Email:</b> {result.email ? result.email : "Not available"}</p>
+                <p>
+                  <b>Name:</b> {result.name}
+                </p>
+                <p>
+                  <b>Issue Date:</b> {result.issueDate}
+                </p>
+                <p>
+                  <b>Certificate ID:</b> {result.certificateId}
+                </p>
+                <p>
+                  <b>Email:</b> {result.email ? result.email : "Not available"}
+                </p>
 
                 {result.certificateLink && (
                   <a
