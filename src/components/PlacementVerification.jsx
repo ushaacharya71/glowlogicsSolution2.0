@@ -5,7 +5,7 @@ const PlacementVerification = () => {
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const apiURL = "https://script.google.com/macros/s/AKfycbzki8tuNz01QAvA9BeCwWKZecnUXOSg0dE8KY89L1mIWRqm_qdy9ekXK_C7FF2D8K43mw/exec?id="; // <--- Replace this
+  const apiURL = "https://script.google.com/macros/s/AKfycby0h2aw7pUCCCXF40RVTIST3s68yTROE_I7v-f2JDMec6boV-ZH9-Tvdzb9eIMb0E69NQ/exec?id="; // <--- Replace this
 
   const handleVerify = async () => {
     if (!certId.trim()) return;
