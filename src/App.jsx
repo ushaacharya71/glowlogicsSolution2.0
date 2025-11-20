@@ -21,7 +21,9 @@ import GlobalReachSection from "./components/GlobalReachSection";
 import HeroSection from "./components/HeroSection";
 import Offer from "./components/Offer";
 import Certificate from "./components/certificate"; /*/////////{--------This is the database file to verify the certificate---}//////////*/
-import PlacementCertificate from "./components/placementCertificate";
+// import PlacementCertificate from "./components/placementCertificate";
+import PlacementVerification from "./components/PlacementVerification";
+
 import VtuCertificate from "./components/VtuCertificatee";
 
 //////////////////////////////////////////////////////////////////////////////////
@@ -168,10 +170,12 @@ function App() {
         />
         <Route path="/programs/Blaw" element={<Blaw />} />
         <Route path="/certificate-verification" element={<Certificate />} />
-        <Route
+        <Route path="/placement-verification" element={<PlacementVerification />} />
+
+        {/* <Route
           path="/placement-verification"
           element={<PlacementCertificate />}
-        />
+        /> */}
         <Route path="/vtu-verification" element={<VtuCertificate />} />
       </Routes>
       <Niche />
