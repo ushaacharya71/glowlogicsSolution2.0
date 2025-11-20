@@ -71,10 +71,9 @@ export default function CertificatePage() {
       {/* Header */}
 
       <div className="bg-gradient-to-br justify-center p-10">
-        <div className="max-w-lg w-full text-center mx-auto">
-          <h1 className="text-4xl font-[Poppins] font-semibold mb-6  tracking-wider text-orange-600">
-            VERIFY YOUR CERTIFICATE
-          </h1>
+        <div className="max-w-5xl w-full bg-white shadow-xl rounded-2xl p-8 mb-10">
+          <h1 className="text-4xl font-bold font-[Poppins] text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-yellow-500">
+            Internship & Course Completion Certificate Verification    </h1>
 
           {/* Input */}
           <input
@@ -82,7 +81,7 @@ export default function CertificatePage() {
             placeholder="Enter Certificate ID"
             value={certId}
             onChange={(e) => setCertId(e.target.value)}
-            className="border-2 border-orange-300 focus:ring-2 focus:ring-orange-400 p-3 rounded-lg w-full mb-4 text-center text-lg"
+            className="border-2 border-o focus:ring-2 focus:ring-orange-400 p-3 rounded-lg w-full mb-4 text-center text-lg"
           />
 
           {/* Button */}
