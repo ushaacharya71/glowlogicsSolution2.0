@@ -51,10 +51,10 @@ export default function MarqueeSlider() {
   return (
     <motion.section
       className="w-full bg-orange-100 py-16 px-4 text-center"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      viewport={{ once: true }}
+      // initial={{ opacity: 0, y: 50 }}
+      // whileInView={{ opacity: 1, y: 0 }}
+      // transition={{ duration: 0.6, ease: "easeOut" }}
+      // viewport={{ once: true }}
     >
       {/* ✅ Heading */}
       <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-3">

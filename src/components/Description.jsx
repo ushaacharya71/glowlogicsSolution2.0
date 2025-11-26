@@ -4,20 +4,20 @@ import { FaDownload } from "react-icons/fa";
 function About() {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 1 }}
-      className="w-full flex justify-center bg-gradient-to-b from-orange-50 via-orange-100 to-orange-200"
+      // initial={{ opacity: 0, y: 50 }}
+      // whileInView={{ opacity: 1, y: 0 }}
+      // viewport={{ once: true, amount: 0.2 }}
+      // transition={{ duration: 1 }}
+      className="w-full flex justify-center bg-gradient-to-b bg-orange-100 "
     >
       {/* 🔶 Inner Glassy Orange Container */}
       <div className="rounded-3xl overflow-hidden m-4 md:m-10 bg-gradient-to-r from-[#ff6e0c] via-[#ff823d] to-[#ff994f] backdrop-blur-md border border-white/30 shadow-2xl max-w-[90rem] w-full">
         {/* First Section */}
         <motion.section
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 1 }}
+          // initial={{ opacity: 0, y: 50 }}
+          // whileInView={{ opacity: 1, y: 0 }}
+          // viewport={{ once: true, amount: 0.2 }}
+          // transition={{ duration: 1 }}
           className="w-full px-6 md:px-12 py-12 md:py-20 text-white space-y-16 rounded-t-3xl"
         >
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center drop-shadow-md">
