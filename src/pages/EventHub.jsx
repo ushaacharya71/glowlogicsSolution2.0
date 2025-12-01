@@ -42,7 +42,7 @@ const EventHub = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
-          className="eventhub-btn mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg text-lg font-semibold shadow-md hover:bg-blue-700 transition-all"
+          className="eventhub-btn mt-6 px-6 py-3 bg-blue-600 text-black rounded-lg text-lg font-bold shadow-md hover:bg-blue-700 transition-all"
         >
           Start Learning
         </motion.button>
