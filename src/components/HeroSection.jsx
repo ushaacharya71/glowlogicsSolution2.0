@@ -24,7 +24,7 @@ const imageCards = [
 // ✅ Map course names to routes
 const courseRoutes = {
   "Artificial Intelligence": "/programs/Ai",
-  "Data Science with MI": "/programs/DataSciences",
+  "Data Science with ML": "/programs/DataSciences",
   "Cyber Security & Ethical Hacking": "/programs/CyberSecurity",
   "Web Development full Stack": "/programs/webDev",
   "Full Stack JAVA": "/programs/JavaFullstack",

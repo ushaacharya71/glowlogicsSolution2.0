@@ -13,7 +13,7 @@ const programData = [
     title: "UI/UX",
     slug: "UIUX",
     category: "Crash Course",
-    author: "📅 This Batch Is Now Live",
+    author: "📅 Selfbased •",
 
     image:
       "https://img.freepik.com/premium-vector/modern-3d-illustration-landing-page-ui-design_145666-1960.jpg",
@@ -168,20 +168,20 @@ const programData = [
     popupTitle: "Become a Certified Cyber Security Expert",
   },
 
-  {
-    id: 14,
-    title: "UI/UX",
-    slug: "UIUX",
-    category: "BTech",
-    author: "📅 This Batch Is Now Live",
+  // {
+  //   id: 14,
+  //   title: "UI/UX",
+  //   slug: "UIUX",
+  //   category: "BTech",
+  //   author: "📅 Selfbased •",
 
-    image:
-      "https://img.freepik.com/free-photo/representations-user-experience-interface-design_23-2150104516.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
-    desc: "Design apps and websites people love to use.",
-    details:
-      "Learn UI/UX skills like wireframing, prototyping, user flow creation, and real-world design projects. No coding needed — just creativity and curiosity.",
-    popupTitle: "Start Your UI/UX Design Journey Today!",
-  },
+  //   image:
+  //     "https://img.freepik.com/free-photo/representations-user-experience-interface-design_23-2150104516.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
+  //   desc: "Design apps and websites people love to use.",
+  //   details:
+  //     "Learn UI/UX skills like wireframing, prototyping, user flow creation, and real-world design projects. No coding needed — just creativity and curiosity.",
+  //   popupTitle: "Start Your UI/UX Design Journey Today!",
+  // },
   {
     id: 15,
     title: "Cloud Computing",
@@ -286,8 +286,8 @@ const programData = [
     id: 22,
     title: "Power BI",
     slug: "PowerBi",
-    category: "Graduates",
-    author: "📅 Next Batch Starting Soon",
+    category: "Crash Course",
+    author: "📅 Selfbased ",
 
     image:
       "https://img.freepik.com/premium-photo/businessman-hand-pressing-keyboard-with-mock-up-chart-slide-show-presentation-display-laptop_281691-370.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
@@ -329,7 +329,7 @@ const programData = [
     id: 25,
     title: "Advance Excel",
     slug: "AdvancedExcel",
-    category: "Graduates",
+    category: "Crash Course",
     author: "Selfbased",
 
     image:
@@ -344,8 +344,8 @@ const programData = [
     id: 26,
     title: "Accounting",
     slug: "Accounting",
-    category: "Graduates",
-    author: "Glowlogics Solutions",
+    category: "Crash Course",
+    author: "Selfbased ",
 
     image:
       "https://img.freepik.com/free-photo/top-viewtop-view-manager-employee-doing-teamwork-business-office-looking-charts-laptop-display_482257-2443.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
