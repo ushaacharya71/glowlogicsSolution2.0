@@ -176,7 +176,7 @@ const FullStackCourse = () => {
                       <button
                         className="px-6 py-2 bg-gray-800 text-white rounded-full shadow hover:bg-gray-700 transition"
                         onClick={() =>
-                          window.open("https://rzp.io/rzp/GL9k", "_blank")
+                          window.open("https://rzp.io/rzp/NT4k", "_blank")
                         }
                       >
                         Pay Now

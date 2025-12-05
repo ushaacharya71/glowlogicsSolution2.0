@@ -77,7 +77,7 @@ const HeroSection = () => {
 
   const technicalCourses = [
     "Artificial Intelligence",
-    "Data Science with MI",
+    "Data Science with ML",
     "Cyber Security & Ethical Hacking",
     "Web Development full Stack",
     "Full Stack JAVA",
