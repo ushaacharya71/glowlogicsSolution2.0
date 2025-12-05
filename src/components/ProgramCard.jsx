@@ -23,20 +23,20 @@ const programData = [
     popupTitle: "Start Your UI/UX Design Journey Today!",
   },
 
-  {
-    id: 3,
-    title: "Advance Excel",
-    slug: "AdvancedExcel",
-    category: "Crash Course",
-    author: "Selfbased",
+  // {
+  //   id: 3,
+  //   title: "Advance Excel",
+  //   slug: "AdvancedExcel",
+  //   category: "Crash Course",
+  //   author: "Selfbased",
 
-    image:
-      "https://img.freepik.com/premium-photo/spreadsheet-document-information-financial-startup-concept-snugly_31965-600877.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
-    desc: "Master Excel for data analysis, reporting & automation.",
-    details:
-      "Learn formulas, pivot tables, dashboards, macros, and more through a self-paced program. Build skills to handle real-world business data confidently",
-    popupTitle: "Learn Advanced Excel at Your Own Pace",
-  },
+  //   image:
+  //     "https://img.freepik.com/premium-photo/spreadsheet-document-information-financial-startup-concept-snugly_31965-600877.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
+  //   desc: "Master Excel for data analysis, reporting & automation.",
+  //   details:
+  //     "Learn formulas, pivot tables, dashboards, macros, and more through a self-paced program. Build skills to handle real-world business data confidently",
+  //   popupTitle: "Learn Advanced Excel at Your Own Pace",
+  // },
 
   {
     id: 4,
@@ -426,20 +426,20 @@ const programData = [
       "Master HR operations, recruitment, payroll, employee management, finance basics, and business accounting through a self-paced program designed for career growth.",
     popupTitle: "Become Skilled in HRM & Finance",
   },
-  {
-    id: 33,
-    title: "Advance Excel",
-    slug: "AdvancedExcel",
-    category: "Masters",
-    author: "Selfbased",
-    // date: "",
-    image:
-      "https://img.freepik.com/premium-photo/spreadsheet-document-information-financial-startup-concept-snugly_31965-600877.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
-    desc: "Master Excel for data analysis, reporting & automation.",
-    details:
-      "Learn formulas, pivot tables, dashboards, macros, and more through a self-paced program. Build skills to handle real-world business data confidently",
-    popupTitle: "Learn Advanced Excel at Your Own Pace",
-  },
+  // {
+  //   id: 33,
+  //   title: "Advance Excel",
+  //   slug: "AdvancedExcel",
+  //   category: "Masters",
+  //   author: "Selfbased",
+  //   // date: "",
+  //   image:
+  //     "https://img.freepik.com/premium-photo/spreadsheet-document-information-financial-startup-concept-snugly_31965-600877.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
+  //   desc: "Master Excel for data analysis, reporting & automation.",
+  //   details:
+  //     "Learn formulas, pivot tables, dashboards, macros, and more through a self-paced program. Build skills to handle real-world business data confidently",
+  //   popupTitle: "Learn Advanced Excel at Your Own Pace",
+  // },
 
   // {
   //   id: 31,
