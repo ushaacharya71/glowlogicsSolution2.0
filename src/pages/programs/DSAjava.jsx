@@ -767,7 +767,7 @@ const FullStackCourse = () => {
             <div className="flex w-max animate-marquee space-x-6 px-6 items-start animation-running hover:[animation-play-state:paused]">
              {[...Array(2)].flatMap(() =>
                 [
-                    {
+                   {
     name: "Vrinda K",
     title: "Dayalbagh Educational Institute",
     text: "I had a great learning experience with Glow Logics while pursuing their cloud computing course. The curriculum was hands-on and project-focused, which helped me apply theoretical concepts to real-world scenarios. The projects I worked on not only deepened my understanding but also significantly strengthened my resume. I’m truly grateful for the practical exposure and support provided throughout the course.",
@@ -918,43 +918,106 @@ const FullStackCourse = () => {
     text: "I'm Dhanush from Bengaluru, currently in my fourth year of BE in Computer Science and Engineering at R R Institute of Technology, Bengaluru.I recently completed the Web Development course at Glowlogic Solutions, which was an excellent learning experience. The course content was well-structured, covering both fundamental and advanced topics in a clear, step-by-step manner. The mentors were highly knowledgeable, approachable, and always willing to clarify doubts with practical examples. Their guidance made even complex concepts easy to understand. The hands-on projects and real-world examples helped me gain confidence in applying what I learned. This course strengthened my skills in frontend development (HTML, CSS) and backend development (MongoDB, APIs, and full-stack development). I now feel more confident creating new projects and interfaces. I am sincerely thankful to the team for their guidance and support throughout this journey. ",
     img: "/dhanush.png",
   },
-   {
+  {
     name: " PALAKURLA SAI TEJA",
     title: "Sree Dattha Group of Engineering ",
     text: "I am PALAKURLA SAI TEJA and I am pursuing B-tech in Sree Dattha group of engineering and science I'm happy to take training in Glowlogics solutions for the domain of App development and thankyou for your training session. It helped me enhance my skills and gain more practical knowledge over App development  Thanks to team glowlogics for all the support and knowledge",
     img: "/PALAKURLA.png",
   },
-   {
+  {
     name: "Nahiza Khanum,",
     title: "Gandhi Institute of Technology and Management",
     text: "Myself Nahiza Khanum, a final-year Engineering student from Bangalore. I recently completed my Cybersecurity and Ethical Hacking course, and the experience has been truly transformative. The program not only deepened my understanding of core cybersecurity concepts but also gave me hands-on exposure to penetration testing, threat analysis, and advanced ethical hacking techniques. The trainers were highly knowledgeable, always encouraging us to think critically and apply concepts to real-world scenarios. This course has strengthened my technical skills and boosted my confidence in navigating the dynamic field of cybersecurity. I’m extremely grateful for the guidance and support I received throughout this journey, and I’m excited to apply these skills as I step forward in my career.",
     img: "/nahiziya.png",
   },
-   {
+  {
     name: "Fija Latif Mahat",
     title: "MIT",
     text: "I'm Fija Latif Mahat,From Pune. Currently I'm studying in Second year of BSC Animation at MIT Arts Commerce and Science College Alandi, Pune. I recently completed the UI/UX design course at Glowlogic Solutions, and it was a great learning experience. The course content was well-structured and easy to understand, covering both design theory and practical tools like Figma. The trainer was very supportive and explained each topic clearly with real-life examples. This course helped me build a strong foundation in UI/UX, and I feel more confident in designing user-friendly interfaces now. I’m thankful to the team for their guidance and support throughout the journey.",
     img: "/Fija.png",
   },
-   {
-    name: "S. Naresh Narayanan",
+  {
+    name: "S.Naresh Narayanan",
     title: "MIT",
     text: "Glowlogics was very supportive and explained everything clearly. They guided me step by step and made sure I understood each part of the project. Whenever I had doubts, they were quick to help and gave useful suggestions. Their teaching style was easy to follow, and it made learning more enjoyable and confident for me. Thank you glowlogics✨",
     img: "/Naresh.png",
   },
 
-   {
+  {
     name: "Shashank S",
     title: "Canara Engineering College",
     text: " I am truly grateful for the opportunity to undergo internship training at Glowlogic Solutions in the field of Cybersecurity. This experience has deepened my understanding of network security, ethical hacking, and real-world threat mitigation techniques. I sincerely thank the team at Glowlogic for their guidance, support, and for providing a hands-on learning environment that has strengthened both my technical skills and professional outlook in this critical domain.",
     img: "/u.png",
   },
 
-   {
+  {
     name: "Hudha Shahista",
     title: "MIT",
     text: "I enrolled in the online VLSI course at Glowlogic and had a great learning experience. The sessions were well-structured, starting from basics and moving to advanced topics with clear explanations. The trainers are highly knowledgeable, approachable, and made the online classes interactive. Hands-on practice with tools was provided, which gave real industry exposure even in an online format. Doubt-clearing and mentorship were excellent, and career guidance was also very supportive. Overall, it’s a very effective online course for anyone aspiring to enter the VLSI field.",
     img: "/h.png",
+  },
+
+   {
+    name: "Bhoomika MN",
+    title: "BGSIT",
+    text: "My experience at GlowLogics Solutions while learning Data Science has been exceptionally positive. I had a really great experience with the Data Science course. When I joined, I wasn’t completely sure what to expect, but the training turned out to be much better than I imagined. The classes were clear, well-organized, and easy to follow, even when the topics were advanced. What I liked most was the balance between theory and practical work. We didn’t just learn the concepts we actually worked on real-time projects, which helped me understand how data science is used in real situations. The instructors were very supportive and explained everything with patience. They made sure we understood each topic before moving forward, and they were always available to clear doubts. Because of this course, I feel much more confident in my skills. I gained hands-on experience, learned useful tools, and now I feel ready to take the next step toward a career in data science.",
+    img: "/Bhoomika MN.png",
+  },
+
+
+   {
+    name: "S.Manoj Kumar",
+    title: "Mepco Schlenk Engineering Cx`ollege ",
+    text: "I am truly grateful to GlowLogics Solutions for providing me with a highly valuable learning experience in Artificial Intelligence. The training was well-structured, balancing both theoretical concepts and practical hands-on sessions. The instructors were knowledgeable, supportive, and always approachable, which made the learning process smooth and engaging. Working on real-time datasets helped me understand AI models more clearly and improved my confidence in coding, data preprocessing, and model building. This certification has strengthened my technical skills and motivated me to continue my journey in AI and Data Science. I sincerely appreciate the opportunity, guidance, and support I received throughout the course, which will definitely help me in my future endeavors.",
+    img: "/S.Manoj Kumar.png",
+  },
+
+   {
+    name: "Thrisha K S",
+    title: "S.E.A College of Engineering and Technology ",
+    text: "The AI online classes were very helpful for me to understand the basics of Python, machine learning, and libraries like NumPy and Seaborn. The sessions were clear and well-structured, which made it easier to learn step by step. This training improved my confidence in programming and gave me practical knowledge that I can use in my projects and future career. I am thankful for the guidance and support provided during the course.",
+    img: "/Thrisha.png",
+  },
+
+   {
+    name: "Manya",
+    title: "BMS",
+    text: "I'm Manya umesh, from banglore,Currently, I’m studying in 3rd year of Bachelor of computer applications, at BMS college of Commerce and Management I recently completed the Artificial Intelligence course at Glowlogic Solutions, and it was a great learning experience. The course content was well-structured and easy to understand, covering both AI concepts and practical applications. The trainer was very supportive and explained each topic clearly with real-life examples. This course helped me build a strong foundation in AI, and I feel more confident in working with intelligent systems and problem-solving approaches now. I’m thankful to the team for their guidance and support throughout the journe",
+    img: "/Manya.png",
+  },
+
+  {
+    name: "Sharath H D",
+    title: "Government Engineering College, Challakere, Chitradurga",
+    text: "My name is Sharath H D. I have taken the Full Stack Java and Cyber Security & Ethical Hacking courses at Glowlogics Company. All the mentors supported me a lot and explained every concept clearly. They clarified all my doubts in a way that I could easily understand. The recorded classes were also very useful, and I have learned many things from them. I have also received the certificates. I would like to express my heartfelt gratitude.",
+    img: "/Sharath.png",
+  },
+  {
+    name: "Kaunain Fathima",
+    title: "KNS Institute of Technology",
+    text: "I'm  Kaunain Fathima , from Bangalore.Pursuing Information Science & Engineering in KNS Institute of Technology.During my final year of Engineering, I had the chance to dive into Cybersecurity and Ethical Hacking through a specialized course. It wasn’t just theory , I got to practice real-world techniques like ethical hacking and threat detection. The instructors focused on critical thinking and real scenarios, which really helped me connect what I learned with actual cyber defense challenges. I’m grateful for the opportunity and excited to build on these skills as I enter the tech industry.",
+    img: "/Kaunain Fathima.png",
+  },
+
+   {
+    name: " Tejaswini.K",
+    title: " JSS College.",
+    text: "My name is Tejaswini.K and I am from karadahalli.I m currently in the second year of my MSC in computer science at Jss college Mysore. Recently I completed certification course in Artificial intelligence and had a great learning experience the course content was well structured and beginner - friendly and the instructor explained concepts clearly with practical example. Thank you for providing such a valuable learning opportunit",
+    img: "/Tejswani.png",
+  },
+
+   {
+    name: "Teja S",
+    title: "S.E.A college of Engineering and Technology ",
+    text: "I had a very good learning experience with Glow Logics AI online classes. The trainers explained concepts clearly with practical examples, and the course was well-structured and easy to follow. Overall, it was a great platform to build AI knowledge.",
+    img: "/Teja.png",
+  },
+
+    {
+    name: "THARANI P",
+    title: "Sri Krishna College of Technology",
+    text: "I had the opportunity to participate in a 3-month online internship with Glow Logistics , Bangalore.,under the VLSI Design course. This program provided me with valuable exposure to the fundamentals and advanced concepts of VLSI design, including practical insights into design methodologies, simulation techniques, and industry tools. The structured training, combined with hands-on tasks, helped me enhance my technical knowledge and problem-solving skills. I am grateful to Glowlogics for offering this learning platform and for the guidance provided throughout the internship.",
+    img: "/TARA.png",
   },
 
                 ].map((item, index) => (
