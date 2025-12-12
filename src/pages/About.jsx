@@ -273,7 +273,7 @@ export default function About3DMarquee() {
           </p>
         </div> */}
 
-      {/* Right Logo - increased size */}
+      {/* Right Logo - increased size by github harshjaiswal.prgm@gmail.com update number 436*/}
       {/* <div className="w-32 h-32 md:w-40 md:h-40 flex-shrink-0 shadow-md rounded-lg p-2 bg-white hover:scale-95 transition-transform duration-300 flex items-center justify-center self-center">
           <img
             src="/eCell.png"
