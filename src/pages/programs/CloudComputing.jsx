@@ -1019,6 +1019,12 @@ const FullStackProgram = () => {
     text: "I had the opportunity to participate in a 3-month online internship with Glow Logistics , Bangalore.,under the VLSI Design course. This program provided me with valuable exposure to the fundamentals and advanced concepts of VLSI design, including practical insights into design methodologies, simulation techniques, and industry tools. The structured training, combined with hands-on tasks, helped me enhance my technical knowledge and problem-solving skills. I am grateful to Glowlogics for offering this learning platform and for the guidance provided throughout the internship.",
     img: "/TARA.png",
   },
+    {
+    name: "V.SWETHA",
+    title: "AVC COLLEGE OF ENGINEERING,MAYILADUTHURAI",
+    text: "I am truly grateful to glowlogics solutions for providing me with an excellent learning experience in full stack web development . The training was well structured ,and the instructors were knowledgeable ,supportive throughout .This training was greatly enhanced my confidence . I sincerely appreciate the support and guidance I received during the course.The curriculum covered real-world concepts instead of just theory, which actually helped me understand how full-stack development works in practical projects.Each module was delivered in a clear and organized manner, making it easier to follow even the more complex topics.",
+    img: "/SWETHA.png",
+  },
 
                 ].map((item, index) => (
                   <div
