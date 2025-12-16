@@ -981,6 +981,27 @@ const FullStackCourse = () => {
     text: "I am truly grateful to glowlogics solutions for providing me with an excellent learning experience in full stack web development . The training was well structured ,and the instructors were knowledgeable ,supportive throughout .This training was greatly enhanced my confidence . I sincerely appreciate the support and guidance I received during the course.The curriculum covered real-world concepts instead of just theory, which actually helped me understand how full-stack development works in practical projects.Each module was delivered in a clear and organized manner, making it easier to follow even the more complex topics.",
     img: "/SWETHA.png",
   },
+
+   {
+    name: "Harshitha R",
+    title: "Dayananda Sagar College of Engineering",
+    text: "I am extremely grateful to GlowLogics Solutions for providing me with an excellent learning experience. The training was well-structured, offering a balanced combination of theoretical concepts and practical sessions that helped me gain strong foundational knowledge along with hands-on exposure. I would also like to specially appreciate the GlowLogics Help Desk, which was consistently responsive and proactive in resolving queries. Their timely support and guidance ensured that doubts were addressed quickly, allowing for uninterrupted learning throughout the program. The real-time projects and practical assignments significantly enhanced my confidence and technical skills. I sincerely appreciate the overall support provided by the GlowLogics team.",
+    img: "/Harshitha.png",
+  },
+
+    {
+    name: "PRATHEEP",
+    title: "K.S.Rangasamy College of Arts and Science",
+    text: "I completed my UI/UX course at GlowLogics Solutions with a great learning experience. The training provided a strong foundation in user interface and user experience design. I gained hands-on knowledge in wireframing, prototyping, and usability principles. The course focused on user-centered design and real-world project practices. The instructors explained concepts clearly and supported practical learning. This training helped improve my design thinking and problem-solving skills. Overall, GlowLogics Solutions offers a valuable and well-structured UI/UX course.",
+    img: "/PRATHEEP.png",
+  },
+
+    {
+    name: "Bhavana MR",
+    title: "UBDT College Davanagere",
+    text: "I would like to express my sincere gratitude to Glow Logics for providing an excellent Full Stack Java training program. The course was well-structured and covered all essential concepts, including front-end, back-end, and database technologies. The trainers were highly experienced, supportive, and explained topics in a clear and easy-to-understand manner with real-time examples. Regular practical sessions, assignments, and projects helped in gaining hands-on experience and improved problem-solving skills. The learning environment was positive and motivating, and continuous guidance was provided throughout the course. Overall, this training greatly enhanced my technical knowledge, confidence, and preparedness for a professional career in software development.",
+    img: "/Bhavana.png",
+  },
                 ].map((item, index) => (
                   <div
                     key={index}
