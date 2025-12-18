@@ -1029,6 +1029,73 @@ const FullStackCourse = () => {
     img: "/Bhavana.png",
   },
 
+   {
+    name: "PunyaShree",
+    title: "UBDT College Davanagere",
+    text: "Hi I'm Punyashree from Mandya University. I took an artificial intelligence course and I have completed it successfully Glowlogics solution is wonderful and you can achieve your goal easily . They teach you in the easiest form . First i thought that it is fake but then one of my senior suggest this , then will attend class regularly and it is well mannered and discipline. If you can't attend the class from other reasons, you can also get the recorded classes. Thank you for this opportunity.",
+    img: "/PunyaShree.png",
+  },
+
+
+   {
+    name: "Usha M ",
+    title: "Jawaharlal Nehru New College",
+    text: "I am truly grateful for the enriching experience I had during my UI/UX course in glowlogics .It was my first online course which felt good. As I was interested in this course I had a great time in this topic.The sessions were thoughtfully structured, blending creative design principles with practical, real-world applications. Each module pushed me to think deeper about user needs, empathy, and problem-solving. The guidance from the mentors was incredibly supportive—they encouraged exploration, creativity, and continuous improvement. This journey has not only strengthened my design skills but also boosted my confidence to work on meaningful and user-centered projects. I’m thankful for the opportunity, the learning, and the growth this course has given me.",
+    img: "/Usha.png",
+  },
+
+   {
+    name: "Kavita Mane",
+    title: "Rukmini Shetty Memorial Sudhakar Shetty College",
+    text: "My name is Kavita Mane, I am from dharwad currently I am studying in BCA 3rd year in Rukmini Shetty memorial sudhakar shetty college of BCA  DHARWAD and I done specialisation course in Cyber Security and ethical hacking course our mentor was very gentle and kind for expressing there knowledge to us and very friendly environment I wish it could be a offline classes then we will gain more knowledge from our mentor and I really thank glowlogics company which gave me the practical knowledge of cyber security and ethical hacking course and I gained more knowledge from classes and from mentor Once again thank you so much glowlogics company for making my good future and career.",
+    img: "/Kavita.png",
+  },
+
+   {
+    name: "KK.Lakshmi Sri Vyshnavi",
+    title: "Malineni Laksmaih Women’s Engineering College",
+    text: "My name is K.Lakshmi Sri Vyshnavi and I’m from Guntur. I’m currently in my 3rd year BTech at Malineni Laksmaih Women’s Engineering College.Recently I completed my course in Artificial Intelligence which provided me with valuable insights and practical knowledge. The training was engaging and well-structured, with a clear focus on both theoretical concepts and their real-world applications. The instructors made learning easy through their approachable teaching style and relevant examples. I sincerely appreciate the support and guidance I received during the course.The faculty was very helpful in clearing our doubts. We enjoyed listening too. I got more information about the AI which is helpful in future, ThankYou GlowLogics.",
+    img: "/KLakshmi.png",
+  },
+
+   {
+    name: "Dhyan Shetty",
+    title: "NMAMIT",
+    text: "I had a fantastic experience training with GlowLogics Solutions. The course on IoT and Web Development offered the perfect blend of expert mentorship and practical, real-world project exposure. The supportive environment and well-structured curriculum have given me the confidence and skills to excel in the field. Highly recommended!",
+    img: "/Dhyan.png",
+  },
+
+  {
+    name: "Sriram A Jetty",
+    title: "Yenepoya Institute of Technology, Moodbidri",
+    text: "I taken a Cyber Security and Ethical Hacking course in glowlogic. I learn lot of things like what is an hacking and  what are the releted in this cyber security and network so on . In this trainer explain a topic step by step . step with practical examples, which makes difficult concepts easy to understand. The learning environment is supportive and the faculty is helpful.",
+    img: "/Sriram.png",
+  },
+
+  {
+    name: "Parikshit Sharma",
+    title: "Baderia Global Institute of Engineering",
+    text: "’m grateful to share my enriching journey with Glowlogics Solution. This experience provided me with hands-on exposure to real-world projects, helping me strengthen my technical skills, problem-solving abilities, and professional mindset. With continuous guidance and constructive feedback from my mentor, I gained clarity, confidence, and a disciplined approach to challenges. Overall, my time at Glowlogics Solution has been a valuable learning experience that broadened my perspective and motivated me to strive for excellence.",
+    img: "/Parikshit.png",
+  },
+
+
+   {
+    name: "Anusha B Neeralagi",
+    title: "Sri krishna Institute of Technology",
+    text: "I'm really thankful for glowlogic solution for providing me with an excellent learning experience in VLSI design was very informative and strengthened my basics in digital design and chip architecture.”A great learning experience—clear explanation of VLSI concepts and hands-on practice. The course helped me understand real-time VLSI applications and improved my technical skills.",
+    img: "/Anusha.png",
+  },
+
+
+   {
+    name: "Rachana ",
+    title: "Shridevi Degree College",
+    text: "Glowlogics offers a truly enriching learning experience with interactive classes and engaging doubt-clearing sessions that make complex topics easy to understand. The hands-on exposure through real-time projects effectively bridges the gap between theory and practice. Supportive mentors consistently guided us, helping strengthen my technical foundation and build confidence in solving real-world problems.",
+    img: "/Rachana.png",
+  },
+
+
                 ].map((item, index) => (
                   <div
                     key={index}
