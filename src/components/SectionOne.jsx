@@ -1,6 +1,5 @@
-
 import { motion } from "framer-motion";
-import { FaArrowRight, FaPhoneAlt, FaEnvelope,} from "react-icons/fa";
+import { FaArrowRight, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { MdOutlineDesktopMac } from "react-icons/md";
 
 const SupportSection = () => {
@@ -15,15 +14,16 @@ const SupportSection = () => {
         className="w-full bg-white rounded-3xl shadow-xl p-8 flex flex-col lg:flex-row justify-between items-center gap-8 mb-16"
       >
         <div className="flex-1 space-y-4">
-          <p className="text-sm font-semibold text-gray-500 uppercase">Support</p>
+          <p className="text-sm font-semibold text-gray-500 uppercase">
+            Support
+          </p>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
             Student Support <br className="hidden md:block" />
-           Glowlogics Solutions
+            Glowlogics Solutions
           </h2>
           <p className="text-gray-500 text-lg">
-
-            Get better help from our best support help@glowlogics.in We’re here to guide you through every step.
-
+            Get better help from our best support help@glowlogics.in We’re here
+            to guide you through every step.
           </p>
         </div>
         <div className="flex-1">
@@ -44,11 +44,22 @@ const SupportSection = () => {
           transition={{ duration: 0.4, delay: 0.1 }}
           className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all"
         >
-          <p className="text-xs uppercase font-semibold text-gray-500 mb-2">Demo</p>
-          <h3 className="text-xl font-bold text-gray-800 mb-4">Request a free demo</h3>
+          <p className="text-xs uppercase font-semibold text-gray-500 mb-2">
+            Demo
+          </p>
+          <h3 className="text-xl font-bold text-gray-800 mb-4">
+            Request a free demo
+          </h3>
+          <p className="text-sm text-gray-600 leading-relaxed mb-4">
+  Get a personalized walkthrough of our platform and explore how our
+  solutions can support your goals.
+</p>
           <div className="flex items-center gap-3 mt-6">
             <MdOutlineDesktopMac className="text-green-500 text-2xl" />
-            <a href="#" className="text-green-600 font-medium hover:underline text-sm flex items-center">
+            <a
+              href="#"
+              className="text-green-600 font-medium hover:underline text-sm flex items-center"
+            >
               Request <FaArrowRight className="ml-1" />
             </a>
           </div>
@@ -56,23 +67,36 @@ const SupportSection = () => {
 
         {/* Card 2 */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.2 }}
-          className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all"
-        >
-          <p className="text-xs uppercase font-semibold text-gray-500 mb-2">Call Us</p>
-          <h3 className="text-xl font-bold text-gray-800 mb-4">Have doubt? Call Us</h3>
-          <div className="flex items-center gap-3 mt-6">
-            <FaPhoneAlt className="text-blue-500 text-lg" />
-            <a
-              href="tel:+919"
-              className="text-blue-600 font-medium hover:underline text-sm flex items-center"
-            >
-              +91 9620294767 <FaArrowRight className="ml-1" />
-            </a>
-          </div>
-        </motion.div>
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.4, delay: 0.2 }}
+  className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all"
+>
+  <p className="text-xs uppercase font-semibold text-gray-500 mb-2">
+    Call Us
+  </p>
+
+  <h3 className="text-xl font-bold text-gray-800 mb-2">
+    Have doubt? Call Us
+  </h3>
+
+  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+    Kindly note that our call support is available from <strong>12:00 PM to 8:00 PM</strong>.
+    Calls will be attended during working hours only. For other queries, please drop us a
+    message via WhatsApp.
+  </p>
+
+  <div className="flex items-center gap-3 mt-4">
+    <FaPhoneAlt className="text-blue-500 text-lg" />
+    <a
+      href="tel:+919620294767"
+      className="text-blue-600 font-medium hover:underline text-sm flex items-center"
+    >
+      +91 9620294767 <FaArrowRight className="ml-1" />
+    </a>
+  </div>
+</motion.div>
+
 
         {/* Card 3 */}
         <motion.div
@@ -81,15 +105,24 @@ const SupportSection = () => {
           transition={{ duration: 0.4, delay: 0.3 }}
           className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all"
         >
-          <p className="text-xs uppercase font-semibold text-gray-500 mb-2">Query</p>
-          <h3 className="text-xl font-bold text-gray-800 mb-4">Have query? Mail Us</h3>
+          <p className="text-xs uppercase font-semibold text-gray-500 mb-2">
+            Query
+          </p>
+          <h3 className="text-xl font-bold text-gray-800 mb-4">
+            Have query? Mail Us
+          </h3>
+          <p className="text-sm text-gray-600 mb-4">
+  Send us your questions anytime, and our team will get back to you as soon as possible.
+</p>
+
+
           <div className="flex items-center gap-3 mt-6">
             <FaEnvelope className="text-purple-500 text-lg" />
             <a
               href="mailto:hr@glowlogics.in"
               className="text-blue-600 font-medium hover:underline text-sm flex items-center"
             >
-            help@glowlogics.in <FaArrowRight className="ml-1" />
+              help@glowlogics.in <FaArrowRight className="ml-1" />
             </a>
           </div>
         </motion.div>
