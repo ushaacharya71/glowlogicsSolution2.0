@@ -127,7 +127,7 @@ const OfferBanner = () => {
 
             {/* Offer Content */}
             <div className="relative text-center z-10">
-              <p className="text-gray-600 text-sm mb-1">✨ Anniversary Deal ✨</p>
+              <p className="text-gray-600 text-sm mb-1">✨ New Year Offer ✨</p>
               <h2 className="text-4xl font-extrabold text-orange-600 animate-pulse">
                 33.33% OFF
               </h2>

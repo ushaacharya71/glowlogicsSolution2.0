@@ -50,6 +50,22 @@ export default function GlowlogicsUltimate() {
           <li>ISO & MSME-recognized certifications trusted by employers.</li>
           <li>Portfolio-building live projects and case studies.</li>
           <li>Placement support with resume & LinkedIn guidance.</li>
+          <li>
+            Industry-designed curriculum aligned with current market demands.
+          </li>
+          <li>Mentorship from experienced professionals and domain experts.</li>
+          <li>Hands-on assignments with real-world problem statements.</li>
+          <li>
+            Regular assessments and personalized feedback for improvement.
+          </li>
+          <li>
+            Soft skills, communication, and interview preparation sessions.
+          </li>
+          <li>Internship opportunities for practical industry exposure.</li>
+          <li>Career guidance with one-on-one mentoring support.</li>
+          <li>Exposure to latest tools, technologies, and best practices.</li>
+          <li>Beginner-to-advanced learning paths with structured progress.</li>
+          <li>Mock interviews and project reviews by industry experts.</li>
           <li>Lifetime access to updated learning materials.</li>
           <li>Hackathons with IIT Hyderabad & IIT Bombay.</li>
           <li>Flexible programs for students & graduates.</li>
@@ -73,9 +89,10 @@ export default function GlowlogicsUltimate() {
               cursor-pointer group rounded-2xl p-8
               backdrop-blur-lg bg-white/30 transition-all duration-500
               shadow-lg hover:shadow-2xl
-              ${item.glow
-                ? "border-2 border-orange-400 shadow-[0_0_12px_rgba(255,140,0,0.5)] hover:shadow-[0_0_18px_rgba(255,140,0,0.8)]"
-                : "border border-white/30"
+              ${
+                item.glow
+                  ? "border-2 border-orange-400 shadow-[0_0_12px_rgba(255,140,0,0.5)] hover:shadow-[0_0_18px_rgba(255,140,0,0.8)]"
+                  : "border border-white/30"
               }
             `}
           >
