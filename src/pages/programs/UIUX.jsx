@@ -613,11 +613,11 @@ const FullStackProgram = () => {
               <ul className="text-gray-800 space-y-3 text-left list-disc list-inside">
                 <li>
                   Current Batch:{" "}
-                  <span className="text-black font-bold">1 Sep 2025</span>
+                  <span className="text-black font-bold">---</span>
                 </li>
                 <li>
                   Upcoming Batch:{" "}
-                  <span className="text-black font-bold">Nov 2025</span>
+                  <span className="text-black font-bold">---</span>
                 </li>
                 {/* <li>
                   Upcoming Batch:{" "}
