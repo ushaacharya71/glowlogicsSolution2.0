@@ -10,7 +10,9 @@ export default function TermsAndConditions() {
 
       {/* Header */}
       <div className="mt-4 mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold mb-2">Terms & Conditions</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-2">
+          Terms & Conditions
+        </h1>
         <p className="text-sm text-gray-500">Last Updated: November 2025</p>
       </div>
 
@@ -49,8 +51,8 @@ export default function TermsAndConditions() {
             <li>{`These Terms and any dispute or claim relating to it, or its enforceability, shall be governed by and construed in accordance with the laws of India.`}</li>
             <li>{`All disputes arising out of or in connection with these Terms shall be subject to the exclusive jurisdiction of the courts in Mangalore, Karnataka.`}</li>
             <li>{`All concerns or communications relating to these Terms must be communicated to us using the contact information provided on this website.`}</li>
-            <li>{`In case of any refunds approved by Glowlogics Solutions private limited, it will take 14-17 working days for the refund to be processed to you.`}</li>
-            <li>{`It will take 14-17 working days for the refund to be credited to you in original method.`}</li>
+            <li>{`Once the dashboard is issued by Glowlogics Solutions Private Limited, no refunds will be applicable under any circumstances.`}</li>
+            <li>{`Refund requests will not be entertained after the dashboard has been issued or access has been provided.`}</li>
           </ul>
         </div>
 
