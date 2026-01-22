@@ -533,18 +533,18 @@ const FullStackCourse = () => {
               </h3>
 
               <ul className="text-gray-800 space-y-3 text-left list-disc list-inside">
-                <li>
+                {/* <li>
                   Current Batch:{" "}
                   <span className="text-black font-bold">13 Oct 2025</span>
+                </li> */}
+                <li>
+                  Upcoming Batch:{" "}
+                  <span className="text-black font-bold">2 Feb 2026</span>
                 </li>
                 <li>
                   Upcoming Batch:{" "}
-                  <span className="text-black font-bold">20 Jan 2026</span>
+                  <span className="text-black font-bold">April 2026</span>
                 </li>
-                {/* <li>
-                  Upcoming Batch:{" "}
-                  <span className="text-black font-bold">Dec 2025</span>
-                </li> */}
               </ul>
             </div>
 
