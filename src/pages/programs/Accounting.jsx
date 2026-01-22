@@ -575,19 +575,19 @@ const FullStackCourse = () => {
                 Live Batch Updates 📅
               </h3>
 
-              <ul className="text-gray-800 space-y-3 text-left list-disc list-inside">
+               <ul className="text-gray-800 space-y-3 text-left list-disc list-inside">
                 {/* <li>
                   Current Batch:{" "}
-                  <span className="text-black font-bold">2 July 2025</span>
+                  <span className="text-black font-bold">13 Oct 2025</span>
                 </li> */}
                 <li>
                   Upcoming Batch:{" "}
-                  <span className="text-black font-bold">---</span>
+                  <span className="text-black font-bold">2 Feb 2026</span>
                 </li>
-                {/* <li>
+                <li>
                   Upcoming Batch:{" "}
-                  <span className="text-black font-bold">Jan 2025</span>
-                </li> */}
+                  <span className="text-black font-bold">April 2026</span>
+                </li>
               </ul>
             </div>
 
