@@ -18,6 +18,7 @@ const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("home");
+  const [open, setOpen] = useState(false);
 
   const lastScrollY = useRef(window.scrollY);
   const location = useLocation();
@@ -154,20 +155,66 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Buttons */}
-          <div className="hidden md:flex items-center gap-3">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              className="px-5 py-2 border border-black text-sm rounded-full font-semibold hover:bg-black hover:text-white transition"
-            >
-              <a href="https://glowlogics.edmingle.com"> LogIn</a>
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              className="text-sm font-medium text-gray-800 hover:text-black transition"
-            >
-              {/* <b>Contact</b> */}
-            </motion.button>
-          </div>
+          <div className="hidden md:flex items-center gap-3 relative">
+  {/* LOGIN BUTTON */}
+ <motion.button
+  whileHover={{ scale: 1.05 }}
+  onClick={(e) => {
+    e.stopPropagation();
+    setOpen((prev) => !prev);
+  }}
+  className="px-5 py-2 border border-black text-sm rounded-full font-semibold
+  hover:bg-black hover:text-white transition relative z-50"
+>
+  Login
+</motion.button>
+
+
+  {/* DROPDOWN */}
+  <AnimatePresence>
+    {open && (
+      <>
+        {/* BACKDROP (click outside to close) */}
+        <div
+          className="fixed inset-0 z-40"
+          onClick={() => setOpen(false)}
+        />
+
+        <motion.div
+          initial={{ opacity: 0, y: 6, scale: 0.98 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 6, scale: 0.98 }}
+          transition={{ duration: 0.15, ease: "easeOut" }}
+          className="absolute right-0 top-14 w-52 bg-white border border-gray-200
+          rounded-2xl shadow-xl overflow-hidden z-50"
+        >
+          <a
+            href="https://glowlogics.edmingle.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-3 px-5 py-3 text-sm
+            hover:bg-gray-100 transition"
+          >
+            🎓 Student Login
+          </a>
+
+          <a
+            href="https://crm.glowlogics.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-3 px-5 py-3 text-sm
+            hover:bg-gray-100 transition"
+          >
+            🏢 CRM Login
+          </a>
+        </motion.div>
+      </>
+    )}
+  </AnimatePresence>
+</div>
+
 
           {/* Mobile Hamburger */}
           <div className="md:hidden">
