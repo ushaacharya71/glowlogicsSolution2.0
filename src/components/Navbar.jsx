@@ -200,7 +200,7 @@ const Navbar = () => {
           </a>
 
           <a
-            href="https://crm.glowlogics.in"
+            href="https://gmp.glowlogics.in"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
