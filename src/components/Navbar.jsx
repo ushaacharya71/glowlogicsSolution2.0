@@ -207,7 +207,7 @@ const Navbar = () => {
             className="flex items-center gap-3 px-5 py-3 text-sm
             hover:bg-gray-100 transition"
           >
-            🏢 CRM Login
+            🏢 GMP Login
           </a>
         </motion.div>
       </>
