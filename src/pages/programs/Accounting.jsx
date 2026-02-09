@@ -572,7 +572,7 @@ const FullStackCourse = () => {
           <div className="w-full lg:w-1/2 mx-auto relative flex flex-col items-center">
             <div className="bg-[#f9fbff] rounded-xl shadow-md p-8 max-w-md mx-auto text-center border border-orange-600 mb-6">
               <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">
-                Live Batch Updates 📅
+                 Self Placed Program
               </h3>
 
                <ul className="text-gray-800 space-y-3 text-left list-disc list-inside">
@@ -580,14 +580,14 @@ const FullStackCourse = () => {
                   Current Batch:{" "}
                   <span className="text-black font-bold">13 Oct 2025</span>
                 </li> */}
-                <li>
+                {/* <li>
                   Upcoming Batch:{" "}
                   <span className="text-black font-bold">2 Feb 2026</span>
-                </li>
-                <li>
-                  Upcoming Batch:{" "}
-                  <span className="text-black font-bold">April 2026</span>
-                </li>
+                </li> */}
+                {/* <li>
+
+                  <span className="text-black font-bold">Self Paced Learning</span>
+                </li> */}
               </ul>
             </div>
 

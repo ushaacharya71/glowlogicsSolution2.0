@@ -560,10 +560,10 @@ const FullStackCourse = () => {
          <div className="w-full lg:w-1/2 mx-auto relative flex flex-col items-center">
    <div className="bg-[#f9fbff] rounded-xl shadow-md p-8 max-w-md mx-auto text-center border border-orange-600 mb-6">
               <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">
-                Live Batch Updates 📅
+                 Self Placed Program
               </h3>
 
-              <ul className="text-gray-800 space-y-3 text-left list-disc list-inside">
+              {/* <ul className="text-gray-800 space-y-3 text-left list-disc list-inside">
                 <li>
                   Current Batch:{" "}
                   <span className="text-black font-bold">-----</span>
@@ -576,7 +576,7 @@ const FullStackCourse = () => {
                   Upcoming Batch:{" "}
                   <span className="text-black font-bold">------</span>
                 </li>
-              </ul>
+              </ul> */}
             </div>
 
   {/* Certificate Image with Hover Zoom */}
