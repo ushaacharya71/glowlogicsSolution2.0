@@ -35,13 +35,20 @@ export default function Footer() {
   return (
     <footer className="relative w-full bg-white text-black px-6 md:px-16 py-20 font-sans overflow-hidden">
       {/* Background Watermark */}
-      <h1
-        className="absolute top-10 left-1/2 -translate-x-1/2
-text-[10rem] font-extrabold text-orange-200
-font-['Montserrat'] tracking-tight select-none pointer-events-none"
-      >
-        Glowlogics
-      </h1>
+    <h1
+  className="
+    absolute top-8 md:top-10 left-1/2 -translate-x-1/2
+    text-[3.5rem] sm:text-[5rem] md:text-[7rem] lg:text-[10rem]
+    font-extrabold tracking-tight
+    text-orange-200
+    font-['Montserrat']
+    select-none pointer-events-none
+    whitespace-nowrap
+  "
+>
+  Glowlogics
+</h1>
+
 
       <div className="relative max-w-7xl mx-auto">
         {/* Top Footer Grid */}
