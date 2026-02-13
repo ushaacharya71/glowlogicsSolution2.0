@@ -1,183 +1,310 @@
+// import { motion } from "framer-motion";
+// import { FaDownload } from "react-icons/fa";
+
+// function About() {
+//   return (
+//     <motion.div
+//       // initial={{ opacity: 0, y: 50 }}
+//       // whileInView={{ opacity: 1, y: 0 }}
+//       // viewport={{ once: true, amount: 0.2 }}
+//       // transition={{ duration: 1 }}
+//       className="w-full flex justify-center bg-gradient-to-b bg-orange-100 "
+//     >
+//       {/* 🔶 Inner Glassy Orange Container */}
+//       <div className="rounded-3xl overflow-hidden m-4 md:m-10 bg-gradient-to-r from-[#ff6e0c] via-[#ff823d] to-[#ff994f] backdrop-blur-md border border-white/30 shadow-2xl max-w-[90rem] w-full">
+//         {/* First Section */}
+//         <motion.section className="w-full px-6 md:px-12 py-14 text-white rounded-t-3xl">
+//           {/* TOP: Mission & Vision */}
+//           <div className="grid md:grid-cols-2 gap-6 mb-14">
+//             {/* Mission */}
+//             <div className="bg-white/15 backdrop-blur-md rounded-2xl p-8 shadow-xl border border-white/30">
+//               <p className="text-sm uppercase tracking-wider text-white/80 mb-2">
+//                 What We Aspire To Be
+//               </p>
+//               <h3 className="text-3xl font-bold mb-4">Our Mission</h3>
+//               <p className="text-white/90 leading-relaxed">
+//                 By putting the customer first and delivering excellence through
+//                 innovation, we aim to create impactful learning experiences that
+//                 empower students with real-world skills and career confidence.
+//               </p>
+//             </div>
+
+//             {/* Vision */}
+//             <div className="bg-white/15 backdrop-blur-md rounded-2xl p-8 shadow-xl border border-white/30">
+//               <p className="text-sm uppercase tracking-wider text-white/80 mb-2">
+//                 Who We Are, What We Do
+//               </p>
+//               <h3 className="text-3xl font-bold mb-4">Our Vision</h3>
+//               <p className="text-white/90 leading-relaxed">
+//                 Create intelligent software solutions that drive business
+//                 success, foster innovation, and build a future-ready workforce
+//                 through technology-driven education.
+//               </p>
+//             </div>
+//           </div>
+
+//           {/* BOTTOM: Core Values */}
+//           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
+//             {[
+//               {
+//                 title: "Be the Best",
+//                 desc: "We strive for excellence in everything we do.",
+//                 color: "from-blue-600 to-blue-400",
+//               },
+//               {
+//                 title: "Empower Through Technology",
+//                 desc: "Using tech as a force to enable growth.",
+//                 color: "from-orange-500 to-orange-400",
+//               },
+//               {
+//                 title: "Embrace Openness",
+//                 desc: "Transparency, trust, and collaboration.",
+//                 color: "from-pink-500 to-pink-400",
+//               },
+//               {
+//                 title: "People First",
+//                 desc: "Learners and mentors are at our core.",
+//                 color: "from-purple-500 to-purple-400",
+//               },
+//               {
+//                 title: "Deliver on Promise",
+//                 desc: "We do what we commit, every time.",
+//                 color: "from-indigo-500 to-indigo-400",
+//               },
+//             ].map((item, i) => (
+//               <motion.div
+//                 key={i}
+//                 whileHover={{ y: -8 }}
+//                 className={`rounded-xl p-6 text-center shadow-xl bg-gradient-to-b ${item.color}`}
+//               >
+//                 <h4 className="font-bold text-lg mb-2">{item.title}</h4>
+//                 <p className="text-sm text-white/90 leading-relaxed">
+//                   {item.desc}
+//                 </p>
+//               </motion.div>
+//             ))}
+//           </div>
+//         </motion.section>
+//       </div>
+//     </motion.div>
+//   );
+// }
+
+// export default About;
+
+
+
+// import { motion } from "framer-motion";
+
+// function About() {
+//   return (
+//     <motion.div className="w-full flex justify-center bg-gradient-to-b from-orange-50 to-orange-100 py-10">
+//       {/* Glass Container */}
+//       <div
+//         className="
+//           max-w-[90rem] w-full mx-4 md:mx-10
+//           rounded-3xl overflow-hidden
+//           bg-white/25 backdrop-blur-xl
+//           border border-white/30 shadow-2xl
+//         "
+//       >
+//         {/* ===================== MISSION & VISION ===================== */}
+//         <section className="px-6 md:px-12 py-14">
+//           <div className="grid md:grid-cols-2 gap-8 mb-16">
+//             {/* Mission */}
+//             <div className="relative bg-white/40 backdrop-blur-lg rounded-2xl p-8 border border-white/40 shadow-xl">
+//               <span className="absolute -top-3 left-6 bg-white text-black text-xs font-semibold px-3 py-1 rounded-full shadow">
+//                 WHAT WE ASPIRE TO BE
+//               </span>
+
+//               <h3 className="text-4xl font-extrabold text-black/90 mb-4">
+//                 OUR MISSION
+//               </h3>
+
+//               <p className="text-black/80 leading-relaxed">
+//                Our mission is to empower students and young professionals with industry-aligned, practical skills that prepare them for the real world. By offering a wide range of internship programs, technical bootcamps, and project-based training, we strive to ensure a seamless transition from classroom education to corporate employment. Our goal is to not just train, but to mentor and guide every learner toward meaningful, long-term career success.
+//               </p>
+//             </div>
+
+//             {/* Vision */}
+//             <div className="relative bg-white/40 backdrop-blur-lg rounded-2xl p-8 border border-white/40 shadow-xl">
+//               <span className="absolute -top-3 left-6 bg-white text-black text-xs font-semibold px-3 py-1 rounded-full shadow">
+//                 WHO WE ARE, WHAT WE DO
+//               </span>
+
+//               <h3 className="text-4xl font-extrabold text-black/90 mb-4">
+//                 OUR VISION
+//               </h3>
+
+//               <p className="text-black/80 leading-relaxed">
+//                At Glowlogics, our vision is to democratize access to quality education and skill development, making it both affordable and effective. We aim to be a catalyst for change in the education ecosystem by enabling individuals from all walks of life to harness their potential, adapt to evolving industries, and thrive in the digital age. Through strategic partnerships and real-time learning modules, we envision a future where no learner is left behind.
+//               </p>
+//             </div>
+//           </div>
+
+//           {/* ===================== CORE VALUES ===================== */}
+//           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
+//             {[
+//               {
+//     title: "EXCELLENCE IN OUTCOMES",
+//     desc: "We focus on real results — skills, confidence, and career readiness that truly matter.",
+//     color: "from-blue-500/90 to-blue-300/90",
+//   },
+//   {
+//     title: "LEARNING THROUGH TECHNOLOGY",
+//     desc: "We use modern tools and platforms to make learning practical, engaging, and effective.",
+//     color: "from-orange-500/90 to-orange-300/90",
+//   },
+//   {
+//     title: "TRANSPARENCY & TRUST",
+//     desc: "Clear guidance, honest support, and no false promises — your growth comes first.",
+//     color: "from-pink-500/90 to-pink-300/90",
+//   },
+//   {
+//     title: "STUDENTS AT THE CENTER",
+//     desc: "Every program is designed around student needs, learning pace, and career goals.",
+//     color: "from-purple-500/90 to-purple-300/90",
+//   },
+//   {
+//     title: "COMMITMENT TO YOUR FUTURE",
+//     desc: "We stand by our learners, supporting them beyond training toward long-term success.",
+//     color: "from-indigo-500/90 to-indigo-300/90",
+//   },
+//             ].map((item, i) => (
+//               <motion.div
+//                 key={i}
+//                 whileHover={{ y: -10 }}
+//                 transition={{ type: "spring", stiffness: 200 }}
+//                 className={`
+//                   relative min-h-[280px] rounded-2xl p-6 pt-14
+//                   text-center text-white shadow-xl
+//                   bg-gradient-to-b ${item.color}
+//                 `}
+//               >
+//                 {/* Icon Placeholder */}
+//                 <div className="absolute top-5 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white/90 text-black flex items-center justify-center font-bold shadow">
+//                   ★
+//                 </div>
+
+//                 <h4 className="font-extrabold uppercase tracking-wide text-lg mb-3">
+//                   {item.title}
+//                 </h4>
+
+//                 <p className="text-sm leading-relaxed text-white/90">
+//                   {item.desc}
+//                 </p>
+//               </motion.div>
+//             ))}
+//           </div>
+//         </section>
+//       </div>
+//     </motion.div>
+//   );
+// }
+
+// export default About;
+
+
 import { motion } from "framer-motion";
-import { FaDownload } from "react-icons/fa";
 
 function About() {
   return (
-    <motion.div
-      // initial={{ opacity: 0, y: 50 }}
-      // whileInView={{ opacity: 1, y: 0 }}
-      // viewport={{ once: true, amount: 0.2 }}
-      // transition={{ duration: 1 }}
-      className="w-full flex justify-center bg-gradient-to-b bg-orange-100 "
-    >
-      {/* 🔶 Inner Glassy Orange Container */}
-      <div className="rounded-3xl overflow-hidden m-4 md:m-10 bg-gradient-to-r from-[#ff6e0c] via-[#ff823d] to-[#ff994f] backdrop-blur-md border border-white/30 shadow-2xl max-w-[90rem] w-full">
-        {/* First Section */}
-        <motion.section
-          // initial={{ opacity: 0, y: 50 }}
-          // whileInView={{ opacity: 1, y: 0 }}
-          // viewport={{ once: true, amount: 0.2 }}
-          // transition={{ duration: 1 }}
-          className="w-full px-6 md:px-12 py-12 md:py-20 text-white space-y-16 rounded-t-3xl"
-        >
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center drop-shadow-md">
-            Learn from Experts at Top MNCs
-          </h2>
+    <section className="w-full bg-[#fff3e6] py-20 flex justify-center">
+      {/* Main Glass Wrapper */}
+      <div className="max-w-[90rem] w-full mx-4 md:mx-10 rounded-3xl bg-white/60 border border-white/40 shadow-2xl">
 
-          {/* Approach, Vision, Mission Cards */}
-          <div className="space-y-10">
+        {/* ===================== MISSION & VISION ===================== */}
+        <section className="px-6 md:px-12 py-16">
+          <div className="grid md:grid-cols-2 gap-10 mb-20">
+
+            {/* Mission */}
+            <div className="relative bg-white rounded-2xl p-10 shadow-lg">
+              <span className="absolute -top-3 left-6 bg-gray-100 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full">
+                WHAT WE ASPIRE TO BE
+              </span>
+
+              <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+                Our Mission
+              </h3>
+
+              <p className="text-gray-600 leading-relaxed text-base">
+                Our mission is to empower students and young professionals with
+                industry-aligned, practical skills that prepare them for the
+                real world. Through internships, bootcamps, and project-based
+                learning, we ensure a smooth transition from education to
+                meaningful careers.
+              </p>
+            </div>
+
+            {/* Vision */}
+            <div className="relative bg-white rounded-2xl p-10 shadow-lg">
+              <span className="absolute -top-3 left-6 bg-gray-100 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full">
+                WHO WE ARE, WHAT WE DO
+              </span>
+
+              <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+                Our Vision
+              </h3>
+
+              <p className="text-gray-600 leading-relaxed text-base">
+                Our vision is to make quality education accessible, affordable,
+                and effective for every learner. We aim to create an ecosystem
+                where students can continuously learn, adapt, and grow with
+                confidence in an ever-evolving digital world.
+              </p>
+            </div>
+          </div>
+
+          {/* ===================== CORE VALUES ===================== */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
             {[
-              {
-                title: "Who We Are",
-                text: "Glowlogics Solutions is a government-recognized MSME and proudly certified under the Startup India initiative. We offer ISO-certified internship and training programs designed to bridge the gap between academic knowledge and industry demands. As official collaborators with Techfest, IIT Bombay, and E-Cell, IIT Hyderabad, we actively conduct nationwide hackathons, workshops, and innovation challenges to equip students with cutting-edge skills. Our commitment is to deliver practical, hands-on learning experiences that not only enhance technical know-how but also build confidence and job-readiness among today’s youth.",
-                img: "https://img.freepik.com/free-photo/guy-shows-document-girl-group-young-freelancers-office-have-conversation-working_146671-13569.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_incoming&w=740&q=80",
-              },
-              {
-                title: "Our Vision",
-                text: "At Glowlogics, our vision is to democratize access to quality education and skill development, making it both affordable and effective. We aim to be a catalyst for change in the education ecosystem by enabling individuals from all walks of life to harness their potential, adapt to evolving industries, and thrive in the digital age. Through strategic partnerships and real-time learning modules, we envision a future where no learner is left behind.",
-                img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&auto=format&fit=crop&q=60",
-              },
-              {
-                title: "Our Mission",
-                text: "Our mission is to empower students and young professionals with industry-aligned, practical skills that prepare them for the real world. By offering a wide range of internship programs, technical bootcamps, and project-based training, we strive to ensure a seamless transition from classroom education to corporate employment. Our goal is to not just train, but to mentor and guide every learner toward meaningful, long-term career success.",
-                img: "https://img.freepik.com/free-photo/business-strategy-success-target-goals_1421-33.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_incoming&w=740&q=80",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className={`flex flex-col md:flex-row items-center gap-8 ${
-                  i % 2 !== 0 ? "md:flex-row-reverse" : ""
-                }`}
+            {
+    title: "Excellence in Outcomes",
+    desc: "We focus on real skills, confidence, and career readiness that truly matter. Our programs are designed to deliver practical outcomes that students can apply immediately in academic, professional, and real-world environments.",
+    gradient: "from-[#7aaeff] to-[#b6d2ff]",
+  },
+  {
+    title: "Learning Through Technology",
+    desc: "Modern tools and platforms make learning practical, engaging, and effective. We integrate industry-relevant technologies to ensure students stay updated with current trends and digital workflows.",
+    gradient: "from-[#ff9f5a] to-[#ffd1ad]",
+  },
+  {
+    title: "Transparency & Trust",
+    desc: "Clear guidance, honest support, and no false promises at any stage. We believe trust is built through open communication, realistic expectations, and consistent mentorship.",
+    gradient: "from-[#ff8fc7] to-[#ffd0e6]",
+  },
+  {
+    title: "Students at the Center",
+    desc: "Every program is designed around student needs and career goals. From curriculum planning to mentorship, learner growth and comfort remain our top priority.",
+    gradient: "from-[#c59bff] to-[#e4d3ff]",
+  },
+  {
+    title: "Commitment to Your Future",
+    desc: "We support learners beyond training toward long-term success. Our guidance continues through career planning, skill refinement, and professional growth opportunities.",
+    gradient: "from-[#8f9bff] to-[#c6ccff]",
+  },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ y: -6, scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 180 }}
+                className={`relative min-h-[320px] rounded-2xl px-6 py-10 pt-16
+                  text-center text-white shadow-lg bg-gradient-to-b ${item.gradient}`}
               >
-                {/* Text */}
-                <div className="md:w-1/2 space-y-4">
-                  <h3 className="text-2xl font-bold text-white/90">
-                    {item.title}
-                  </h3>
-                  <p className="text-base leading-relaxed text-white/80 hover:text-white transition-colors duration-300">
-                    {item.text}
-                  </p>
-                </div>
 
-                {/* Image */}
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="md:w-1/2 h-56 rounded-2xl overflow-hidden shadow-2xl border border-white/40"
-                >
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    className="w-full h-full object-cover"
-                  />
-                </motion.div>
-              </div>
+                <h4 className="font-extrabold text-sm uppercase tracking-wide mb-3">
+                  {item.title}
+                </h4>
+
+                <p className="text-sm leading-relaxed text-gray-700">
+                  {item.desc}
+                </p>
+              </motion.div>
             ))}
           </div>
-
-          {/* CTA Button */}
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            href="/GlowLogics.pdf"
-            download
-            className="inline-flex gap-3 items-center px-8 py-3 bg-gradient-to-r from-zinc-900 via-black to-zinc-800 rounded-full text-white font-semibold shadow-lg hover:from-[#6b9e17] hover:to-[#8ac926] transition-all duration-300"
-          >
-            <FaDownload />
-            Download Brochure
-          </motion.a>
-        </motion.section>
-
-        {/* Second Section */}
-        <motion.section
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 1 }}
-          className="bg-gradient-to-r from-[#ff823d] to-[#ff994f] text-white py-16 px-6 md:px-12 rounded-b-3xl"
-        >
-          <motion.div
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            transition={{ duration: 1 }}
-            className="border-t-2 border-white/60 mb-12 origin-left"
-          ></motion.div>
-
-          <div className="grid md:grid-cols-[1fr_3fr_2fr] gap-10 md:gap-16 text-base md:text-lg items-start">
-            <div className="font-semibold text-xl md:text-2xl">
-              What You’ll Experience with Glowlogics ✨
-            </div>
-
-            {/* POINTS */}
-            <div className="space-y-6 text-justify">
-              {[
-                {
-                  heading: "→ Collaborative Learning Environment",
-                  desc: "Learn alongside passionate students, professionals, and industry mentors...",
-                },
-                {
-                  heading: "→ Skills You Can Actually Use",
-                  desc: "Our programs focus on practical, real-world applications not just theory...",
-                },
-                {
-                  heading: "→ Guidance from Industry Experts",
-                  desc: "Gain insights from experienced professionals and mentors from top MNCs...",
-                },
-                {
-                  heading: "→ Career-Driven Training",
-                  desc: "Everything you do with us is designed with employability in mind...",
-                },
-              ].map((point, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: i * 0.2 }}
-                  className="space-y-1"
-                >
-                  <p className="font-semibold text-white">{point.heading}</p>
-                  <p className="leading-relaxed text-white/80">{point.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Blogs + Image */}
-            <div className="flex flex-col md:flex-row gap-6 items-start">
-              <div className="flex flex-col gap-4">
-                <p className="text-xl font-semibold">Our Blogs 📚</p>
-                <ul className="space-y-2 underline text-base md:text-lg text-white/90">
-                  {[
-                    "Latest Trends",
-                    "Career Tips",
-                    "Industry Insights",
-                    "Learning Resources",
-                  ].map((blog, i) => (
-                    <li key={i}>
-                      <a
-                        href="#"
-                        className="hover:text-white transition-colors"
-                      >
-                        {blog}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="w-full md:w-40 h-auto rounded-xl overflow-hidden shadow-lg border border-white/40"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1627556704243-5f0771d90783?w=500&auto=format&fit=crop&q=60"
-                  alt="Blog Preview"
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-            </div>
-          </div>
-        </motion.section>
+        </section>
       </div>
-    </motion.div>
+    </section>
   );
 }
 
