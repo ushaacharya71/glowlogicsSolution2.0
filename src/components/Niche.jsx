@@ -134,7 +134,7 @@ export default function Footer() {
         <div className="mt-16 pt-6 border-t border-black/20 flex flex-col gap-6">
           {/* Copyright + Links */}
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-black/70 gap-4">
-            <p>© {new Date().getFullYear()} Glowlogics. All rights reserved.</p>
+            <p>© {2024} Glowlogics. All rights reserved.</p>
 
             <div className="flex gap-4">
               <Link to="/legal-terms" className="hover:underline">
