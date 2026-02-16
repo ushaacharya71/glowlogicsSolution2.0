@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 
+
 const faqs = [
   {
     question: "What is Glowlogics Solutions?",
