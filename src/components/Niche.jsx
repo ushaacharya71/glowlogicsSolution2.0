@@ -35,8 +35,8 @@ export default function Footer() {
   return (
     <footer className="relative w-full bg-white text-black px-6 md:px-16 py-20 font-sans overflow-hidden">
       {/* Background Watermark */}
-    <h1
-  className="
+      <h1
+        className="
     absolute top-8 md:top-10 left-1/2 -translate-x-1/2
     text-[3.5rem] sm:text-[5rem] md:text-[7rem] lg:text-[10rem]
     font-extrabold tracking-tight
@@ -45,10 +45,9 @@ export default function Footer() {
     select-none pointer-events-none
     whitespace-nowrap
   "
->
-  Glowlogics
-</h1>
-
+      >
+        Glowlogics
+      </h1>
 
       <div className="relative max-w-7xl mx-auto">
         {/* Top Footer Grid */}
@@ -57,11 +56,19 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Our Products</h3>
             <ul className="space-y-2 text-black/70">
-              <li>Tech Programs</li>
+              <li>
+                <button onClick={() => handleNavClick("programs")}>
+                  Learning Programs
+                </button>
+              </li>
               <li>Workshops</li>
-              <li>Bootcamps</li>
-              <li>E-Books</li>
-              <li>Certifications</li>
+              <li>Hackathons</li>
+               <li>
+                <button onClick={() => handleNavClick("services")}>
+              Certifications
+                </button>
+              </li>
+
             </ul>
           </div>
 
@@ -81,10 +88,10 @@ export default function Footer() {
               </li>
               <li>
                 <button onClick={() => handleNavClick("eventhub")}>
-                  Events
+                  Event Hub
                 </button>
               </li>
-              <li>Media</li>
+
             </ul>
           </div>
 
@@ -92,8 +99,14 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Help Resources</h3>
             <ul className="space-y-2 text-black/70">
-              <li>FAQ</li>
-              <li>Support</li>
+              <li>
+                <button onClick={() => handleNavClick("faq")}>FAQ</button>
+              </li>
+              <li>
+                <button onClick={() => handleNavClick("support")}>
+                  Support
+                </button>
+              </li>
               <li>
                 <button onClick={() => handleNavClick("privacy-policy")}>
                   Privacy Policy

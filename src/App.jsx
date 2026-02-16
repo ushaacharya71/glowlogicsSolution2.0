@@ -104,10 +104,19 @@ function HomePage() {
         <Services />
       </section>
       <GlobalReachSection />
-      <FAQSection />
+      <section id="faq">
+        <FAQSection />
+      </section>
+
       <Image3DSlider />
       <Testimonial />
-      <SectionOne />
+
+      <section id="support">
+        <SectionOne />
+      </section>
+      <section id="eventhub">
+        <EventHub />
+      </section>
 
       {/* <Certificate /> */}
     </>
@@ -170,8 +179,10 @@ function App() {
         />
         <Route path="/programs/Blaw" element={<Blaw />} />
         <Route path="/certificate-verification" element={<Certificate />} />
-        <Route path="/placement-verification" element={<PlacementVerification />} />
-
+        <Route
+          path="/placement-verification"
+          element={<PlacementVerification />}
+        />
         {/* <Route
           path="/placement-verification"
           element={<PlacementCertificate />}
