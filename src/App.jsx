@@ -114,9 +114,9 @@ function HomePage() {
       <section id="support">
         <SectionOne />
       </section>
-      <section id="eventhub">
+      {/* <section id="eventhub">
         <EventHub />
-      </section>
+      </section> */}
 
       {/* <Certificate /> */}
     </>
