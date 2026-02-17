@@ -204,15 +204,15 @@ export default function MarqueeSlider() {
           {[
             "🚀 Gen AI & Prompt Engineering Program Comming soon",
             "🔥 Live Hackathons Launching Shortly",
-            "📢 International Internship Programs Opening Soon",
+            "📢 Internship Program are live now",
             "💡 AI & Emerging Tech Workshops Starting Soon",
-            "🌍 Global Placement Partnerships Expanding",
+            "🌍 Placement Partnerships Expanding",
           ].concat([
             "🚀 Gen AI & Prompt Engineering Program Comming soon",
             "🔥 Live Hackathons Launching Shortly",
-            "📢 International Internship Programs Opening Soon",
+            "📢 Internship Programs are live now",
             "💡 AI & Emerging Tech Workshops Starting Soon",
-            "🌍 Global Placement Partnerships Expanding",
+            "🌍 Placement Partnerships Expanding",
           ]).map((text, index) => (
             <span key={index} className="whitespace-nowrap">
               {text}
