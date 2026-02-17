@@ -500,7 +500,7 @@ const programData = [
   {
     id: 37,
     title: "Gen AI & Prompt Engineering",
-    category: "Masters",
+    category: "BTech",
     author: "Batch will be Live Soon!",
     image:
       "https://pub-e93d5c9fdf134c89830082377f6df465.r2.dev/2024/11/Generative-AI-edited.webp",

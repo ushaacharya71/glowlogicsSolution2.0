@@ -91,6 +91,19 @@ export default function Footer() {
                   Event Hub
                 </button>
               </li>
+            <li className="relative">
+  <a
+    href="https://glowlogics.blogspot.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:underline font-medium flex items-center gap-2"
+  >
+    Glowlogics Blog
+    <span className="bg-red-600 text-white text-[10px] px-1 py-[1px] rounded-full font-semibold tracking-wide animate-pulse">
+      New
+    </span>
+  </a>
+</li>
 
             </ul>
           </div>
