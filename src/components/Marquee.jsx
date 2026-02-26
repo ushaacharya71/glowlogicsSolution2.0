@@ -1,7 +1,8 @@
+
 // import { motion } from "framer-motion";
 // import { useEffect, useState } from "react";
 
-// // ✅ Logo Imports (30 total)
+// // ✅ Logo Imports
 // import logo1 from "../assets/logos/logo1.png";
 // import logo2 from "../assets/logos/logo2.png";
 // import logo3 from "../assets/logos/logo3.png";
@@ -33,39 +34,60 @@
 // import logo29 from "../assets/logos/logo29.png";
 // import logo30 from "../assets/logos/newlogo.svg";
 
-// // ✅ Full logo array
 // const logos = [
-//   logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10,
-//   logo11, logo12, logo13, logo14, logo15, logo16, logo17, logo18, logo19, logo20,
-//   logo21, logo22, logo23, logo24, logo25, logo26, logo27, logo28, logo29, logo30,
+//   logo1,
+//   logo2,
+//   logo3,
+//   logo4,
+//   logo5,
+//   logo6,
+//   logo7,
+//   logo8,
+//   logo9,
+//   logo10,
+//   logo11,
+//   logo12,
+//   logo13,
+//   logo14,
+//   logo15,
+//   logo16,
+//   logo17,
+//   logo18,
+//   logo19,
+//   logo20,
+//   logo21,
+//   logo22,
+//   logo23,
+//   logo24,
+//   logo25,
+//   logo26,
+//   logo27,
+//   logo28,
+//   logo29,
+//   logo30,
 // ];
 
 // export default function MarqueeSlider() {
-//   const [speed, setSpeed] = useState(60); // default speed
+//   const [speed, setSpeed] = useState(60);
 
 //   useEffect(() => {
 //     const isMobile = window.innerWidth < 768;
-//     setSpeed(isMobile ? 90 : 60); // slower speed on small screens
+//     setSpeed(isMobile ? 90 : 60);
 //   }, []);
 
 //   return (
-//     <motion.section
-//       className="w-full bg-orange-100 py-16 px-4 text-center"
-//       // initial={{ opacity: 0, y: 50 }}
-//       // whileInView={{ opacity: 1, y: 0 }}
-//       // transition={{ duration: 0.6, ease: "easeOut" }}
-//       // viewport={{ once: true }}
-//     >
-//       {/* ✅ Heading */}
+//     <section className="w-full bg-gradient-to-b from-orange-50 to-orange-100 py-16 px-4 text-center">
+//       {/* Heading */}
 //       <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-3">
 //         Top Companies Where Our Learners Currently Work
 //       </h2>
 //       <p className="text-sm md:text-base text-gray-600 mb-10">
-//         Making an impact in their fields, our learners work at top companies all around the world.
+//         Making an impact in their fields, our learners work at top companies all
+//         around the world.
 //       </p>
 
-//       {/* ✅ Marquee Row 1 */}
-//       <div className="overflow-hidden mb-6">
+//       {/* ================= ROW 1 : LOGOS ================= */}
+//       <div className="overflow-hidden mb-10">
 //         <motion.div
 //           className="flex w-max gap-12"
 //           animate={{ x: ["0%", "-50%"] }}
@@ -79,41 +101,54 @@
 //               <img
 //                 src={logo}
 //                 alt={`logo-${index}`}
-//                 className="h-24 md:h-28 object-contain rounded-xl transition-transform duration-300 hover:scale-110"
+//                 className="h-20 md:h-24 object-contain rounded-xl transition-transform duration-300 hover:scale-110"
 //               />
 //             </div>
 //           ))}
 //         </motion.div>
 //       </div>
 
-//       {/* ✅ Marquee Row 2 (reverse direction) */}
-//       {/* <div className="overflow-hidden">
+//       {/* ================= ROW 2 : COMING SOON MARQUEE ================= */}
+//       <div className="overflow-hidden bg-gradient-to-r from-orange-500 to-orange-400 rounded-xl py-6 shadow-lg">
 //         <motion.div
-//           className="flex w-max gap-12"
+//           className="flex w-max gap-24 text-white font-semibold text-lg md:text-1xl tracking-wide font-['Inter']"
 //           animate={{ x: ["-50%", "0%"] }}
-//           transition={{ ease: "linear", duration: speed, repeat: Infinity }}
+//           transition={{ ease: "linear", duration: 30, repeat: Infinity }}
 //         >
-//           {[...logos, ...logos].map((logo, index) => (
-//             <div
-//               key={`row2-${index}`}
-//               className="flex items-center justify-center min-w-[120px] px-4"
-//             >
-//               <img
-//                 src={logo}
-//                 alt={`logo-${index}`}
-//                 className="h-24 md:h-28 object-contain rounded-xl transition-transform duration-300 hover:scale-110"
-//               />
-//             </div>
-//           ))}
+//           {[
+//             "Gen AI & Prompt Engineering Program Coming Soon",
+//             "Live Hackathons Launching Shortly",
+//             "Internship Programs Are Live Now",
+//             "AI & Emerging Tech Workshops Starting Soon",
+//             "Global Placement Partnerships Expanding",
+//           ]
+//             .concat([
+//               "Gen AI & Prompt Engineering Program Coming Soon",
+//               "Live Hackathons Launching Shortly",
+//               "Internship Programs Are Live Now",
+//               "AI & Emerging Tech Workshops Starting Soon",
+//               "Global Placement Partnerships Expanding",
+//             ])
+//             .map((text, index) => (
+//               <span key={index} className="poppins whitespace-nowrap">
+//                 {text}
+//               </span>
+//             ))}
 //         </motion.div>
-//       </div> */}
-//     </motion.section>
+//       </div>
+//     </section>
 //   );
 // }
 
-
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import {
+  FaRobot,
+  FaTrophy,
+  FaUserGraduate,
+  FaMicrochip,
+  FaGlobe,
+} from "react-icons/fa";
 
 // ✅ Logo Imports
 import logo1 from "../assets/logos/logo1.png";
@@ -153,6 +188,14 @@ const logos = [
   logo21, logo22, logo23, logo24, logo25, logo26, logo27, logo28, logo29, logo30,
 ];
 
+const announcements = [
+  { icon: <FaRobot />, text: "Gen AI & Prompt Engineering Program Coming Soon" },
+  { icon: <FaTrophy />, text: "Live Hackathons Launching Shortly" },
+  { icon: <FaUserGraduate />, text: "Internship Programs Are Live Now" },
+  { icon: <FaMicrochip />, text: "AI & Emerging Tech Workshops Starting Soon" },
+  { icon: <FaGlobe />, text: "Global Placement Partnerships Expanding" },
+];
+
 export default function MarqueeSlider() {
   const [speed, setSpeed] = useState(60);
 
@@ -169,11 +212,12 @@ export default function MarqueeSlider() {
         Top Companies Where Our Learners Currently Work
       </h2>
       <p className="text-sm md:text-base text-gray-600 mb-10">
-        Making an impact in their fields, our learners work at top companies all around the world.
+        Making an impact in their fields, our learners work at top companies all
+        around the world.
       </p>
 
       {/* ================= ROW 1 : LOGOS ================= */}
-      <div className="overflow-hidden mb-10">
+      <div className="overflow-hidden mb-12">
         <motion.div
           className="flex w-max gap-12"
           animate={{ x: ["0%", "-50%"] }}
@@ -194,28 +238,22 @@ export default function MarqueeSlider() {
         </motion.div>
       </div>
 
-      {/* ================= ROW 2 : COMING SOON MARQUEE ================= */}
-      <div className="overflow-hidden bg-transparent backdrop-blur-md rounded-xl py-2 shadow-md ">
+      {/* ================= ROW 2 : ANNOUNCEMENT MARQUEE ================= */}
+      <div className="overflow-hidden bg-gradient-to-r from-orange-700 to-orange-500 rounded-xl py-5 shadow-xl">
         <motion.div
-          className="flex w-max gap-16 text-[#ff6e0c] font-semibold text-sm md:text-base tracking-wide"
+          className="flex w-max gap-24 text-white font-semibold text-lg md:text-3xl tracking-wide font-['Inter']"
           animate={{ x: ["-50%", "0%"] }}
-          transition={{ ease: "linear", duration: 35, repeat: Infinity }}
+          transition={{ ease: "linear", duration: 30, repeat: Infinity }}
         >
-          {[
-            "🚀 Gen AI & Prompt Engineering Program Comming soon",
-            "🔥 Live Hackathons Launching Shortly",
-            "📢 Internship Program are live now",
-            "💡 AI & Emerging Tech Workshops Starting Soon",
-            "🌍 Placement Partnerships Expanding",
-          ].concat([
-            "🚀 Gen AI & Prompt Engineering Program Comming soon",
-            "🔥 Live Hackathons Launching Shortly",
-            "📢 Internship Programs are live now",
-            "💡 AI & Emerging Tech Workshops Starting Soon",
-            "🌍 Placement Partnerships Expanding",
-          ]).map((text, index) => (
-            <span key={index} className="whitespace-nowrap">
-              {text}
+          {[...announcements, ...announcements].map((item, index) => (
+            <span
+              key={index}
+              className="flex items-center gap-4 font-['DM Sans'] whitespace-nowrap"
+            >
+              <span className="text-xl md:text-2xl">
+                {item.icon}
+              </span>
+              {item.text}
             </span>
           ))}
         </motion.div>
