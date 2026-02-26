@@ -1,43 +1,40 @@
 import { useState } from "react";
-// import { Link } from "react-router-dom";
 import { FaCheckCircle, FaStar, FaUserFriends } from "react-icons/fa";
 import RoadmapFlow from "/RoadmapFlow.png";
+// import { FaQuoteLeft } from "react-icons/fa";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-// import { FaQuoteLeft } from "react-icons/fa";
 
 const FullStackCourse = () => {
   const [openSection, setOpenSection] = useState(null);
 
   const roleLogos = {
-    "Accountant – Starting Salary (India): ₹3 – ₹5.5 LPA": [
+    "Front-End Developer - Starting Salary: ₹4 – ₹8 LPA": [
       "data:image/png;base64,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",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1mfxOyRFkqOsS2bqbAv6Jme5aZst5647elBXv3sNokwJNbq3Wohed1XLWWg&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjl7XELiAxlFFuJltyWm6Th6inOxlVzxc7MMrSSbAJyYiszxgXSb41DDrv8Q&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPR10Fz15vjWryAGF7LWpwGCBpDyAiBOpgW5o3r--4GHkybcmtt0q5FI7cavs&s",
     ],
-    "Accounts Executive –  Starting Salary (India): ₹3 – ₹5 LPA": [
+    "Back-End Developer - Starting Salary: ₹5 – ₹9 LPA": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxSdO7qhiIhfW64Jzgkz4Cj7q0QULsDwlU1aoDKHgzoOwE7zTdiQXABFQI2Q&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFUnTw99fm9fVevBAnkSKTEI5XV_T9LbhKusHHYOdxLt2w6vvDTX-15ZO6uw&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWpsGe5iEJob0dcSB5w9P5aWFjriI1hp0gyk5BlsAn303UpqPqoxUUqNhUuZ0&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFJWrxnzTPiaRgGMzwh2fyV6kD15A-ihppe3wEcKFGD8pj1znEEBk1RytrrA&s",
     ],
-    "Tax Assistant –  Starting Salary (India): ₹3 – ₹5.5 LPA": [
-      "https://upload.wikimedia.org/wikipedia/commons/f/f6/TCS_New_Logo.svg",
-      "https://upload.wikimedia.org/wikipedia/commons/9/96/HCL_Technologies_Logo.svg",
-      "https://upload.wikimedia.org/wikipedia/commons/5/5a/ZOHO_logo.svg",
-      "https://upload.wikimedia.org/wikipedia/commons/f/f0/Salesforce.com_logo.svg",
+    "Full-Stack Developer - Starting Salary: ₹6 – ₹10 LPA": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9K8eaqkEKLNFWf7fzbQAca3McYHsdkvpKMtXwLKgEB_hDmtMn61N2v0DEgA&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRKP2CNJ_0aX4DAuhMIOmzxvMXUE8adsc5v8z44BExycJHV6oFEDsB1a1HmNA&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXESL8W6aoDD3CHdJhAz5rmb-MbmKKvvuatyvydeY-fxSHcDheXyKvmYG2W0A&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD75Ew8D4llFJk_ZTfQVFS8PwxlhVYwES4SOUQqTcmZtHPw5Pz42sC1coMWQ&s",
     ],
-    "Financial Analyst (Entry-Level) – Starting Salary (India): ₹4 – ₹7 LPA": [
+    "UI/UX Designer - Starting Salary: ₹3.5 – ₹6.5 LPA": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_P85o6q5b2clTlqYUhvgVMIdgUu6MqvzfBISHBirSsS0R7uJwK3u1Fd1bB-U&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQQ2ed2DEYUtBqM5QFnRlUDyMc6naNQ7ZqTLQ3pdl1WOk8NHom7ffKz3ub-g&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_ywGfT6BXzPfdxnmFPHu9WagIC7E_Dz9XlHiCyKOO0jjcX-iktawn2T41-4Q&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSze0EO7gJyuZJ7-LbrCiBH60WrvWTeLenF82OZdK0kaNvhnmmReIiMQFZvRg&s",
     ],
   };
-
   const [activeRole, setActiveRole] = useState(Object.keys(roleLogos)[0]);
-  /////////////////////////////////////////////////////////////////////////////////////////////
 
   const [showPayment, setShowPayment] = useState(false);
   const [showQR, setShowQR] = useState(false);
@@ -54,41 +51,42 @@ const FullStackCourse = () => {
     }
   }, [showQR]);
 
+  ////////////////////////////////////////////////////////////////////////////////////////////
+
   return (
     <>
       {/* Full-Stack Web Dev Section */}
-      <div className="bg-white text-black px-6 pt-32 md:pt-28 pb-0 flex flex-col-reverse md:flex-row items-center justify-between gap-10 max-w-7xl mx-auto">
+      <div className="bg-white text-black px-6 pt-20 pb-0 flex flex-col-reverse md:flex-row items-center justify-between gap-10 max-w-7xl mx-auto">
         {/* Left Content */}
         <div className="flex-1 w-full">
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
-            Accounting
+            Full-Stack Web Development
           </h1>
           <p className="text-lg text-gray-700 mb-6">
-            Become a job-ready accounting professional | Master Tally, Excel,
-            QuickBooks, Financial Reporting & Taxation
+            Learn to Build Modern Websites and Web Applications
           </p>
 
           {/* Benefits */}
           <ul className="space-y-3 text-gray-800 mb-6">
             <li className="flex items-start">
               <FaCheckCircle className="text-green-500 mt-1 mr-2" />
-              Learn real-world accounting concepts through hands-on projects
+              Learn to Build Modern Websites and Web Applications from Scratch
             </li>
             <li className="flex items-start">
               <FaCheckCircle className="text-green-500 mt-1 mr-2" />
-              Master tools like Excel, Tally, QuickBooks & Financial Analysis
+              Master Frontend, Backend, and Real-World Project Skills
             </li>
             <li className="flex items-start">
               <FaCheckCircle className="text-green-500 mt-1 mr-2" />
-              Career Mentorship + Build a strong Accounting Portfolio
+              From HTML Basics to Full Stack Deployment — All in One Program
             </li>
             <li className="flex items-start">
               <FaCheckCircle className="text-green-500 mt-1 mr-2" />
-              Includes resume review, mock interviews, and LinkedIn guidance
+              Hands-On Web Development Training with Industry Mentors
             </li>
             <li className="flex items-start">
               <FaCheckCircle className="text-green-500 mt-1 mr-2" />
-              Guaranteed Live Cohorts in the Next 90 Days
+              Build, Deploy, and Launch Your Career as a Web Developer
             </li>
           </ul>
 
@@ -105,7 +103,7 @@ const FullStackCourse = () => {
               </button>
 
               {/* Brochure Download */}
-              <a href="/ProgramsPDF/ACCOUNTS.pdf" download>
+              <a href="/ProgramsPDF/WEB.pdf" download>
                 <button className="border border-black text-black px-6 py-2 rounded-lg hover:bg-white transition">
                   Download brochure
                 </button>
@@ -167,7 +165,7 @@ const FullStackCourse = () => {
                       <button
                         className="px-6 py-2 bg-gray-800 text-white rounded-full shadow hover:bg-gray-700 transition"
                         onClick={() =>
-                          window.open("https://rzp.io/rzp/NT4k", "_blank")
+                          window.open("https://rzp.io/rzp/GL9k", "_blank")
                         }
                       >
                         Pay Now
@@ -206,6 +204,7 @@ const FullStackCourse = () => {
               </div>
             )}
           </div>
+
           {/* Rating & Learners */}
           <div className="flex items-center gap-6 mt-6 text-gray-700">
             <div className="flex items-center gap-2">
@@ -223,35 +222,40 @@ const FullStackCourse = () => {
         {/* Right Image */}
         <div className="flex-1 w-full flex justify-center max-w-2xl">
           <img
-            src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740"
-            alt="Full Stack Web Dev"
+            src="https://pub-e93d5c9fdf134c89830082377f6df465.r2.dev/2024/11/Generative-AI-edited.webp"
+            alt="Generative AI"
             className="rounded-2xl shadow-xl max-w-xl w-full"
           />
         </div>
       </div>
 
-      {/* Acccounting Overview Section */}
+      {/* WebDev Overview Section */}
       <div className="max-w-7xl mx-auto px-6 py-16 text-gray-800">
         {/* Section Heading */}
         <h2 className="text-3xl md:text-4xl font-semibold mb-4">
-          Accounting Certification Course{" "}
+          WebDev Certification Course{" "}
           <span className="font-bold text-black">Overview</span>
         </h2>
-        <p className="text-gray-600 mb-8 max-w-3xl">
-          Glowlogics Accounting training course covers core topics essential
-          for a professional in the field of accounting and finance. It includes
-          subjects such as emerging financial trends, new technologies and
-          tools, regulatory practices, and the core competencies required from
-          an accounting professional. With an emphasis on strategic thinking and
-          business acumen, the course also highlights the evolving role of
-          accountants in todays dynamic landscape.
+        <p className="text-gray-600 mb-8 max-w-5xl">
+          At Glowlogics, we help students grow from beginners to confident web
+          developers through a structured, industry-focused learning experience.
+          You’ll start with the basics like HTML, CSS, and JavaScript, then move
+          on to advanced skills including React, Angular, Node.js, and Express.
+          Our approach focuses on real-world application, not just theory.
+          You’ll work on live projects and practical tasks that mirror what’s
+          expected in today’s job market. Throughout the program, experienced
+          mentors from the industry will guide you, helping you build both
+          skills and confidence. Whether you are an engineering or degree
+          student, Glowlogics gives you a clear path to turn your interest in
+          coding into real career opportunities. Join us and start building
+          professional websites and web applications from scratch.
         </p>
 
         {/* Key Features */}
         <div className="mb-12">
           <div className="flex items-center gap-4 mb-6">
             <h3 className="text-2xl font-semibold">
-              Accounting Course Key Features
+              Web Development Program Key Features
             </h3>
             <span className="text-green-700 text-sm bg-green-100 border border-green-400 rounded-full px-4 py-1 flex items-center gap-2">
               ✅ 100% ISO Verified Internship
@@ -259,15 +263,17 @@ const FullStackCourse = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12 text-gray-700">
             {[
-              "Get Ahead and Stay Ahead With 35 Contact Hours of Dynamic, Live Virtual Learning",
-              "Gain Hands-on Practice With 12 Simulations, 500+ PMI-Exclusive Questions and a 1500+ Question Bank",
-              "Transform Project Management With AI Through Exclusive Masterclasses on Generative AI",
-              "Access to Cheat Sheet, Study Plans and Exam Application Support from Experts",
-              "Lead the Way in Project Management With India’s Largest PMI Partner",
-              "24x7 Course Assistance",
+              "HTML, CSS, JavaScript Basics",
+              "3 Responsive Web Design",
+              "React, Angular, or Vue.js Frameworks",
+              "Node.js & Express.js Backend Development",
+              "Full Stack Integration (Frontend + Backend Connection)",
+              "Authentication & Authorization",
+              "Globally Validated Certification – Backed by ISO & MSME",
+              "Building Real-World Web Applications",
             ].map((item, idx) => (
               <div key={idx} className="flex items-start gap-2">
-                <span className="text-blue-600 text-xl">✔</span>
+                <span className="text-orange-600 text-xl">✔</span>
                 <p>{item}</p>
               </div>
             ))}
@@ -279,14 +285,9 @@ const FullStackCourse = () => {
           <h3 className="text-2xl font-semibold mb-6">Skills Covered</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-8 text-gray-700">
             {[
-              "Work breakdown structure",
-              "Project cost estimating",
-              "Resource allocation",
-              "Cost management",
-              "Gantt charts",
-              "Engineering economics",
-              "Mathematical project scheduling models",
-              "Leadership",
+              "How to create real websites and apps from scratch",
+              "Frontend (what users see) + Backend (how apps work) + Deployment (making apps live)",
+              "Building your own GitHub project portfolio",
             ].map((skill, index) => (
               <div key={index} className="flex items-start gap-2">
                 <span className="text-[#ff6e0c] text-xl">✔</span>
@@ -301,11 +302,17 @@ const FullStackCourse = () => {
       <div className="max-w-7xl mx-auto px-6 py-16 bg-white text-gray-800">
         <h2 className="text-3xl font-semibold mb-2">Benefits</h2>
         <p className="mb-8 text-gray-600 max-w-4xl">
-          The AccountingPro® certification can help you land lucrative roles in
-          finance, auditing, consulting, government, and other dynamic
-          industries. AccountingPro® certified professionals drive greater
-          financial accuracy and compliance, and are often rewarded with
-          substantial pay raises as shown below.
+          The Web Develpopment Certification Program at Glowlogics is designed
+          to help you build real, job-ready web development skills. You’ll learn
+          both frontend and backend technologies while working on real-world
+          projects that reflect what companies expect. Along with hands-on
+          experience, you’ll earn an ISO and MSME-recognized certification that
+          adds genuine value to your profile. The program includes personalized
+          mentor support, lifetime access to learning materials, and career
+          assistance to help you explore opportunities in industries like tech,
+          finance, healthcare, and beyond. Whether you are just starting out or
+          looking to grow, this program is built to help you move forward
+          confidently.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-50 border rounded-lg shadow-sm overflow-hidden">
@@ -317,7 +324,7 @@ const FullStackCourse = () => {
                 onClick={() => setActiveRole(role)}
                 className={`text-left px-6 py-4 hover:bg-blue-50 transition-all ${
                   activeRole === role
-                    ? "text-blue-600 font-semibold bg-blue-50"
+                    ? "text-orange-600 font-semibold bg-blue-50"
                     : "text-gray-800"
                 }`}
               >
@@ -343,120 +350,70 @@ const FullStackCourse = () => {
             </p>
           </div>
         </div>
-        <div>
-          <br></br>
-        </div>
+
         <div className="bg-white text-gray-800 p-6 space-y-6">
           {/* Title */}
           <h2 className="text-2xl font-semibold">
-            Accounting Certification Program{" "}
+            WebDevelopment Certification Program{" "}
             <span className="font-bold">Curriculum</span>
           </h2>
+
           {/* Defeniation */}
           <div>
             <h3 className="text-xl font-semibold mb-2">Definition</h3>
             <p>
-              Accounting<sup>®</sup> is the systematic process of recording,
-              analyzing, and reporting financial transactions to help businesses
-              make informed decisions. This program is designed to provide
-              learners with a strong foundation in financial and managerial
-              accounting, covering key topics such as journal entries, ledger
-              management, balance sheets, profit & loss statements, taxation,
-              and budgeting. With hands-on training in popular tools like Tally,
-              Excel, and GST filing software, the course prepares you for
-              real-world accounting tasks in corporate, startup, or freelance
-              environments. Ideal for students, business owners, and finance
-              professionals, this program builds the essential skills needed for
-              a successful career in accounting and finance.
+              The WebDevelopment Certification is for students who want to learn
+              how websites and web applications are actually built and used in
+              real companies. Whether you’re interested in becoming a web
+              developer, software engineer, full stack developer, or starting
+              your own tech project — this course teaches you both frontend and
+              backend skills step by step. You’ll work on real projects, learn
+              the latest tools, and get practical experience that helps you
+              build a strong career in web development. frameworks.
             </p>
           </div>
 
           {/* Course Content */}
           <div className="mt-8 space-y-3">
-            {/* <h3 className="text-xl font-semibold mb-4">Course Content</h3> */}
+            <h3 className="text-xl font-semibold mb-4">Course Content</h3>
 
             {[
               {
-                title: "Module 1: Introduction to Accounting",
+                title: "Module 1: Introduction to Web Development",
                 lessons: [
-                  { name: "Overview of Accounting Principles" },
-                  { name: "Accounting Terminology and Concepts" },
-                  { name: "Double-Entry Bookkeeping System" },
-                  { name: "Types of Accounts: Assets, Liabilities, Equity" },
+                  { name: "Basics of HTML, CSS, JavaScript" },
+                  { name: "Setting up your development environment" },
                 ],
               },
+              {
+                title: "Module 2: Advanced Front-End Technologies",
 
-              {
-                title: "Module 2: Financial Statements",
                 lessons: [
-                  { name: "Understanding Income Statements" },
-                  { name: "Balance Sheets and Cash Flow Statements" },
-                  { name: "Preparing Financial Statements" },
-                  { name: "Analyzing Financial Performance" },
+                  { name: "Building responsive websites" },
+                  { name: "JavaScript frameworks (React, Angular, or Vue.js)" },
+                  { name: "Front-end tools (Webpack, Babel)" },
                 ],
               },
               {
-                title: "Module 3: Accounting Cycle",
+                title: "Module 3: Back-End Development",
                 lessons: [
-                  { name: "Recording Transactions" },
-                  { name: "Journal Entries and Ledgers" },
-                  { name: "Adjusting Entries and Trial Balance" },
-                  {
-                    name: "Closing Accounts and Preparing Financial Statements",
-                  },
+                  { name: "Introduction to server-side programming" },
+                  { name: "Node.js, Express.js, RESTful API creation" },
+                  { name: "Database management (SQL, MongoDB)" },
                 ],
               },
               {
-                title: "Module 4: Managing Accounts Payable & Receivable",
+                title: "Module 4: Full Stack Development Integration",
                 lessons: [
-                  { name: "Introduction to Accounts Payable/Receivable" },
-                  { name: "Managing Cash Flow" },
-                  { name: "Invoicing and Billing Procedures" },
-                  { name: "Reconciliation of Accounts" },
+                  { name: "Connecting front-end and back-end" },
+                  { name: "Authentication & authorization" },
+                  { name: "Deployment using cloud services (AWS, Heroku)" },
                 ],
               },
               {
-                title: "Module 5: Payroll Accounting",
+                title: "Module 5: Capstone Project",
                 lessons: [
-                  { name: "Understanding Payroll Processing" },
-                  { name: "Calculating Employee Wages and Deductions" },
-                  { name: "Accounting for Employee Benefits and Taxes" },
-                ],
-              },
-              {
-                title: "Module 6: Taxation and Compliance",
-                lessons: [
-                  { name: "Overview of Taxation Systems" },
-                  { name: "Accounting for VAT, GST, and other taxes" },
-                  { name: "Preparing and Filing Tax Returns" },
-                  { name: "Regulatory Compliance and Auditing" },
-                ],
-              },
-              {
-                title: "Module 7: Budgeting and Forecasting",
-                lessons: [
-                  { name: "Budgeting Techniques" },
-                  { name: "Financial Forecasting Models" },
-                  { name: "Monitoring Budget Performance" },
-                  { name: "Variance Analysis" },
-                ],
-              },
-              {
-                title: "Module 8: Accounting Software Training",
-                lessons: [
-                  {
-                    name: "Introduction to Popular Accounting Software (QuickBooks, Tally, etc.)",
-                  },
-                  { name: "Managing Financial Data with Software" },
-                  { name: "Automating Financial Processes" },
-                ],
-              },
-              {
-                title: "Module 9: Financial Analysis and Reporting",
-                lessons: [
-                  { name: "Techniques for Analyzing Financial Datan" },
-                  { name: "Creating Reports for Management and Investors" },
-                  { name: "Ratio Analysis and Key Financial Indicators" },
+                  { name: "Develop a fully functional web application" },
                 ],
               },
             ].map((section, index) => (
@@ -514,36 +471,36 @@ const FullStackCourse = () => {
             <div className="bg-white border rounded-lg shadow-md divide-y">
               {[
                 {
-                  q: "Who can join this Accounting Certification Program?",
-                  a: "Commerce, management, engineering, and degree students from any year or background can join. No prior accounting experience is required.",
+                  q: "Who can join this Web Development Certification Course?",
+                  a: "Engineering and degree students from any year (1st–4th year) or background can join.No prior coding experience is required.",
                 },
                 {
-                  q: "Do I need any specific background before enrolling?",
-                  a: "No. This program starts from the basics and gradually covers advanced accounting concepts, making it suitable for beginners.",
+                  q: "Do I need to know programming before enrolling?",
+                  a: "No. The course starts from basics like HTML, CSS, and JavaScript. We cover both beginner and advanced topics step by step.",
                 },
                 {
-                  q: "How long is the Accounting certification valid for?",
-                  a: "The Accounting Certification from Glowlogics is ISO- and MSME-recognized and valid for a lifetime.",
+                  q: "How long is the WebDevelopment certification valid for?",
+                  a: "WebDevelopment certification is valid for Lifetime.",
                 },
                 {
                   q: "What skills will I learn in this course?",
-                  a: "You’ll learn financial accounting, Tally software, GST filing, payroll management, financial statements preparation, and business taxation basics.",
+                  a: "You’ll learn frontend development (HTML, CSS, JavaScript, React), backend development (Node.js, Express), databases (MongoDB, SQL), API creation, project deployment, and building complete websites and apps.",
                 },
                 {
-                  q: "How long is the course, and what is the learning mode?",
-                  a: "The course runs for 2–3 months with 60+ hours of live interactive classes, mentor-led doubt-clearing sessions, and real-world project work.",
+                  q: " How long is the program, and what is the learning mode?",
+                  a: "The course typically runs for 2–3 months with 60+ hours of live or guided learning sessions, including project work. Sessions are conducted online.",
                 },
                 {
                   q: "Will I get a certificate after completing the course?",
-                  a: "Yes. You’ll receive an ISO- and MSME-recognized Accounting Certification after completing training and submitting required project work.",
+                  a: "Yes. You’ll receive an ISO- and MSME-recognized Web Development Certification upon completing training and submitting required projects.",
                 },
                 {
                   q: "Is there any placement guarantee?",
-                  a: "We provide placement assistance including resume review, interview preparation, and referrals. Final job offers depend on your skills and performance.",
+                  a: "We provide placement assistance, but actual job offers depend on individual performance, skills, and interview outcomes.",
                 },
                 {
                   q: "How do I register and pay the course fee?",
-                  a: "You can register through our official form link or Company QR Code. Payment details will be shared after your registration is confirmed.",
+                  a: "You can register through our official form link, Company QR Code, Payment details will be shared after registration confirmation.",
                 },
               ].map((item, idx) => (
                 <div key={idx} className="group">
@@ -572,22 +529,22 @@ const FullStackCourse = () => {
           <div className="w-full lg:w-1/2 mx-auto relative flex flex-col items-center">
             <div className="bg-[#f9fbff] rounded-xl shadow-md p-8 max-w-md mx-auto text-center border border-orange-600 mb-6">
               <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">
-                 Self Placed Program
+                Live Batch Updates 📅
               </h3>
 
-               <ul className="text-gray-800 space-y-3 text-left list-disc list-inside">
+              <ul className="text-gray-800 space-y-3 text-left list-disc list-inside">
                 {/* <li>
                   Current Batch:{" "}
                   <span className="text-black font-bold">13 Oct 2025</span>
                 </li> */}
-                {/* <li>
+                <li>
                   Upcoming Batch:{" "}
                   <span className="text-black font-bold">2 Feb 2026</span>
-                </li> */}
-                {/* <li>
-
-                  <span className="text-black font-bold">Self Paced Learning</span>
-                </li> */}
+                </li>
+                <li>
+                  Upcoming Batch:{" "}
+                  <span className="text-black font-bold">April 2026</span>
+                </li>
               </ul>
             </div>
 
@@ -683,7 +640,6 @@ const FullStackCourse = () => {
               </button>
             </div>
 
-
             {/* Fullscreen Popup Modal */}
             <div
               id="cert-modal"
@@ -719,7 +675,7 @@ const FullStackCourse = () => {
             <div className="flex w-max animate-marquee space-x-6 px-6 items-start animation-running hover:[animation-play-state:paused]">
               {[...Array(2)].flatMap(() =>
                 [
-                 {
+                  {
     name: "Vrinda K",
     title: "Dayalbagh Educational Institute",
     text: "I had a great learning experience with Glow Logics while pursuing their cloud computing course. The curriculum was hands-on and project-focused, which helped me apply theoretical concepts to real-world scenarios. The projects I worked on not only deepened my understanding but also significantly strengthened my resume. I’m truly grateful for the practical exposure and support provided throughout the course.",
@@ -870,39 +826,39 @@ const FullStackCourse = () => {
     text: "I'm Dhanush from Bengaluru, currently in my fourth year of BE in Computer Science and Engineering at R R Institute of Technology, Bengaluru.I recently completed the Web Development course at Glowlogic Solutions, which was an excellent learning experience. The course content was well-structured, covering both fundamental and advanced topics in a clear, step-by-step manner. The mentors were highly knowledgeable, approachable, and always willing to clarify doubts with practical examples. Their guidance made even complex concepts easy to understand. The hands-on projects and real-world examples helped me gain confidence in applying what I learned. This course strengthened my skills in frontend development (HTML, CSS) and backend development (MongoDB, APIs, and full-stack development). I now feel more confident creating new projects and interfaces. I am sincerely thankful to the team for their guidance and support throughout this journey. ",
     img: "/dhanush.png",
   },
-  {
+   {
     name: " PALAKURLA SAI TEJA",
     title: "Sree Dattha Group of Engineering ",
     text: "I am PALAKURLA SAI TEJA and I am pursuing B-tech in Sree Dattha group of engineering and science I'm happy to take training in Glowlogics solutions for the domain of App development and thankyou for your training session. It helped me enhance my skills and gain more practical knowledge over App development  Thanks to team glowlogics for all the support and knowledge",
     img: "/PALAKURLA.png",
   },
-  {
+   {
     name: "Nahiza Khanum,",
     title: "Gandhi Institute of Technology and Management",
     text: "Myself Nahiza Khanum, a final-year Engineering student from Bangalore. I recently completed my Cybersecurity and Ethical Hacking course, and the experience has been truly transformative. The program not only deepened my understanding of core cybersecurity concepts but also gave me hands-on exposure to penetration testing, threat analysis, and advanced ethical hacking techniques. The trainers were highly knowledgeable, always encouraging us to think critically and apply concepts to real-world scenarios. This course has strengthened my technical skills and boosted my confidence in navigating the dynamic field of cybersecurity. I’m extremely grateful for the guidance and support I received throughout this journey, and I’m excited to apply these skills as I step forward in my career.",
     img: "/nahiziya.png",
   },
-  {
+   {
     name: "Fija Latif Mahat",
     title: "MIT",
     text: "I'm Fija Latif Mahat,From Pune. Currently I'm studying in Second year of BSC Animation at MIT Arts Commerce and Science College Alandi, Pune. I recently completed the UI/UX design course at Glowlogic Solutions, and it was a great learning experience. The course content was well-structured and easy to understand, covering both design theory and practical tools like Figma. The trainer was very supportive and explained each topic clearly with real-life examples. This course helped me build a strong foundation in UI/UX, and I feel more confident in designing user-friendly interfaces now. I’m thankful to the team for their guidance and support throughout the journey.",
     img: "/Fija.png",
   },
-  {
-    name: "S.Naresh Narayanan",
+   {
+    name: "S. Naresh Narayanan",
     title: "MIT",
     text: "Glowlogics was very supportive and explained everything clearly. They guided me step by step and made sure I understood each part of the project. Whenever I had doubts, they were quick to help and gave useful suggestions. Their teaching style was easy to follow, and it made learning more enjoyable and confident for me. Thank you glowlogics✨",
     img: "/Naresh.png",
   },
 
-  {
+   {
     name: "Shashank S",
     title: "Canara Engineering College",
     text: " I am truly grateful for the opportunity to undergo internship training at Glowlogic Solutions in the field of Cybersecurity. This experience has deepened my understanding of network security, ethical hacking, and real-world threat mitigation techniques. I sincerely thank the team at Glowlogic for their guidance, support, and for providing a hands-on learning environment that has strengthened both my technical skills and professional outlook in this critical domain.",
     img: "/u.png",
   },
 
-  {
+   {
     name: "Hudha Shahista",
     title: "MIT",
     text: "I enrolled in the online VLSI course at Glowlogic and had a great learning experience. The sessions were well-structured, starting from basics and moving to advanced topics with clear explanations. The trainers are highly knowledgeable, approachable, and made the online classes interactive. Hands-on practice with tools was provided, which gave real industry exposure even in an online format. Doubt-clearing and mentorship were excellent, and career guidance was also very supportive. Overall, it’s a very effective online course for anyone aspiring to enter the VLSI field.",
@@ -913,63 +869,63 @@ const FullStackCourse = () => {
     name: "Bhoomika MN",
     title: "BGSIT",
     text: "My experience at GlowLogics Solutions while learning Data Science has been exceptionally positive. I had a really great experience with the Data Science course. When I joined, I wasn’t completely sure what to expect, but the training turned out to be much better than I imagined. The classes were clear, well-organized, and easy to follow, even when the topics were advanced. What I liked most was the balance between theory and practical work. We didn’t just learn the concepts we actually worked on real-time projects, which helped me understand how data science is used in real situations. The instructors were very supportive and explained everything with patience. They made sure we understood each topic before moving forward, and they were always available to clear doubts. Because of this course, I feel much more confident in my skills. I gained hands-on experience, learned useful tools, and now I feel ready to take the next step toward a career in data science.",
-    img: "/Bhoomika MN.png",
+    img: "Bhoomika MN.png",
   },
 
 
    {
-    name: "S.Manoj Kumar",
+    name: "Bhoomika MN",
     title: "Mepco Schlenk Engineering Cx`ollege ",
     text: "I am truly grateful to GlowLogics Solutions for providing me with a highly valuable learning experience in Artificial Intelligence. The training was well-structured, balancing both theoretical concepts and practical hands-on sessions. The instructors were knowledgeable, supportive, and always approachable, which made the learning process smooth and engaging. Working on real-time datasets helped me understand AI models more clearly and improved my confidence in coding, data preprocessing, and model building. This certification has strengthened my technical skills and motivated me to continue my journey in AI and Data Science. I sincerely appreciate the opportunity, guidance, and support I received throughout the course, which will definitely help me in my future endeavors.",
-    img: "/S.Manoj Kumar.png",
+    img: "S.Manoj Kumar.png",
   },
 
    {
     name: "Thrisha K S",
     title: "S.E.A College of Engineering and Technology ",
     text: "The AI online classes were very helpful for me to understand the basics of Python, machine learning, and libraries like NumPy and Seaborn. The sessions were clear and well-structured, which made it easier to learn step by step. This training improved my confidence in programming and gave me practical knowledge that I can use in my projects and future career. I am thankful for the guidance and support provided during the course.",
-    img: "/Thrisha.png",
+    img: "Thrisha.png",
   },
 
    {
     name: "Manya",
     title: "BMS",
     text: "I'm Manya umesh, from banglore,Currently, I’m studying in 3rd year of Bachelor of computer applications, at BMS college of Commerce and Management I recently completed the Artificial Intelligence course at Glowlogic Solutions, and it was a great learning experience. The course content was well-structured and easy to understand, covering both AI concepts and practical applications. The trainer was very supportive and explained each topic clearly with real-life examples. This course helped me build a strong foundation in AI, and I feel more confident in working with intelligent systems and problem-solving approaches now. I’m thankful to the team for their guidance and support throughout the journe",
-    img: "/Manya.png",
+    img: "Manya.png",
   },
 
   {
     name: "Sharath H D",
     title: "Government Engineering College, Challakere, Chitradurga",
     text: "My name is Sharath H D. I have taken the Full Stack Java and Cyber Security & Ethical Hacking courses at Glowlogics Company. All the mentors supported me a lot and explained every concept clearly. They clarified all my doubts in a way that I could easily understand. The recorded classes were also very useful, and I have learned many things from them. I have also received the certificates. I would like to express my heartfelt gratitude.",
-    img: "/Sharath.png",
+    img: "Sharath.png",
   },
   {
     name: "Kaunain Fathima",
     title: "KNS Institute of Technology",
     text: "I'm  Kaunain Fathima , from Bangalore.Pursuing Information Science & Engineering in KNS Institute of Technology.During my final year of Engineering, I had the chance to dive into Cybersecurity and Ethical Hacking through a specialized course. It wasn’t just theory , I got to practice real-world techniques like ethical hacking and threat detection. The instructors focused on critical thinking and real scenarios, which really helped me connect what I learned with actual cyber defense challenges. I’m grateful for the opportunity and excited to build on these skills as I enter the tech industry.",
-    img: "/Kaunain Fathima.png",
+    img: "Kaunain Fathima.png",
   },
 
    {
     name: " Tejaswini.K",
     title: " JSS College.",
     text: "My name is Tejaswini.K and I am from karadahalli.I m currently in the second year of my MSC in computer science at Jss college Mysore. Recently I completed certification course in Artificial intelligence and had a great learning experience the course content was well structured and beginner - friendly and the instructor explained concepts clearly with practical example. Thank you for providing such a valuable learning opportunit",
-    img: "/Tejswani.png",
+    img: "Tejswani.png",
   },
 
    {
     name: "Teja S",
     title: "S.E.A college of Engineering and Technology ",
     text: "I had a very good learning experience with Glow Logics AI online classes. The trainers explained concepts clearly with practical examples, and the course was well-structured and easy to follow. Overall, it was a great platform to build AI knowledge.",
-    img: "/Teja.png",
+    img: "Teja.png",
   },
 
     {
     name: "THARANI P",
     title: "Sri Krishna College of Technology",
     text: "I had the opportunity to participate in a 3-month online internship with Glow Logistics , Bangalore.,under the VLSI Design course. This program provided me with valuable exposure to the fundamentals and advanced concepts of VLSI design, including practical insights into design methodologies, simulation techniques, and industry tools. The structured training, combined with hands-on tasks, helped me enhance my technical knowledge and problem-solving skills. I am grateful to Glowlogics for offering this learning platform and for the guidance provided throughout the internship.",
-    img: "/TARA.png",
+    img: "TARA.png",
   },
     {
     name: "V.SWETHA",
@@ -998,7 +954,6 @@ const FullStackCourse = () => {
     text: "I would like to express my sincere gratitude to Glow Logics for providing an excellent Full Stack Java training program. The course was well-structured and covered all essential concepts, including front-end, back-end, and database technologies. The trainers were highly experienced, supportive, and explained topics in a clear and easy-to-understand manner with real-time examples. Regular practical sessions, assignments, and projects helped in gaining hands-on experience and improved problem-solving skills. The learning environment was positive and motivating, and continuous guidance was provided throughout the course. Overall, this training greatly enhanced my technical knowledge, confidence, and preparedness for a professional career in software development.",
     img: "/Bhavana.png",
   },
-
    {
     name: "PunyaShree",
     title: "UBDT College Davanagere",
@@ -1064,6 +1019,7 @@ const FullStackCourse = () => {
     text: "Glowlogics offers a truly enriching learning experience with interactive classes and engaging doubt-clearing sessions that make complex topics easy to understand. The hands-on exposure through real-time projects effectively bridges the gap between theory and practice. Supportive mentors consistently guided us, helping strengthen my technical foundation and build confidence in solving real-world problems.",
     img: "/Rachana.png",
   },
+
 
                 ].map((item, index) => (
                   <div
