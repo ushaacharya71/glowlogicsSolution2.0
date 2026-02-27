@@ -63,12 +63,11 @@ export default function Footer() {
               </li>
               <li>Workshops</li>
               <li>Hackathons</li>
-               <li>
+              <li>
                 <button onClick={() => handleNavClick("services")}>
-              Certifications
+                  Certifications
                 </button>
               </li>
-
             </ul>
           </div>
 
@@ -91,20 +90,19 @@ export default function Footer() {
                   Event Hub
                 </button>
               </li>
-            <li className="relative">
-  <a
-    href="https://glowlogics.blogspot.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:underline font-medium flex items-center gap-2"
-  >
-    Glowlogics Blog
-    <span className="bg-red-600 text-white text-[10px] px-1 py-[1px] rounded-full font-semibold tracking-wide animate-pulse">
-      New
-    </span>
-  </a>
-</li>
-
+              <li className="relative">
+                <a
+                  href="https://glowlogics.blogspot.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline font-medium flex items-center gap-2"
+                >
+                  Glowlogics Blog
+                  <span className="bg-red-600 text-white text-[10px] px-1 py-[1px] rounded-full font-semibold tracking-wide animate-pulse">
+                    New
+                  </span>
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -135,25 +133,36 @@ export default function Footer() {
 
           {/* Column 4 */}
           <div>
-            <h3 className="font-semibold mb-4">Connect with Us</h3>
-            <div className="flex items-center gap-4 text-xl">
-              <a href="https://www.instagram.com/glowlogics/" target="_blank">
-                <FaInstagram />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/glowlogics/"
-                target="_blank"
-              >
-                <FaLinkedin />
-              </a>
-              <a href="https://www.facebook.com/glowlogics/" target="_blank">
-                <FaFacebook />
-              </a>
-              <a href="https://wa.me/919620294767" target="_blank">
-                <FaWhatsapp />
-              </a>
-            </div>
-          </div>
+  <h3 className="font-semibold mb-4">Connect with Us</h3>
+
+  <div className="flex items-center gap-4 text-xl mb-4">
+    <a href="https://www.instagram.com/glowlogics/" target="_blank" rel="noopener noreferrer">
+      <FaInstagram />
+    </a>
+    <a
+      href="https://www.linkedin.com/company/glowlogics/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <FaLinkedin />
+    </a>
+    <a href="https://www.facebook.com/glowlogics/" target="_blank" rel="noopener noreferrer">
+      <FaFacebook />
+    </a>
+    <a href="https://wa.me/919620294767" target="_blank" rel="noopener noreferrer">
+      <FaWhatsapp />
+    </a>
+  </div>
+
+  <div>
+    <h3 className="font-semibold mb-1">Address:</h3>
+    <p className="text-sm text-gray-600 leading-relaxed">
+     Building No: 148, 2nd Floor,Outer Ring Rd, Jakkasandra,
+     HSR Layout 5th Sector, Bengaluru, Karnataka 560102
+    </p>
+  </div>
+</div>
+
         </div>
 
         {/* Bottom Bar */}
