@@ -90,7 +90,7 @@ export default function About3DMarquee() {
           </h2>
           <p className="text-gray-600 text-base md:text-lg max-w-xl mx-auto">
             Join thousands of learners transforming their careers with modern,
-            industry-relevant education—accessible anytime, anywhere.
+            industry-relevant education accessible anytime, anywhere.
           </p>
         </div>
 
