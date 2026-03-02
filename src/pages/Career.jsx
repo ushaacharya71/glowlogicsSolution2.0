@@ -6,10 +6,10 @@ const jobOpenings = [
   {
     id: 1,
     title: "Inside Sales Representative",
-    location: "Bangalore, Bangalore, Kolkata",
+    location: "Bangalore, Kolkata",
     category: "Sales",
     company: "Glowlogics",
-    companyLevel: "Mid-Level",
+    companyLevel: "Internship",
     exp: "Freshers, 1-3 years",
     ctc: "₹4-6 LPA",
     description:
@@ -18,7 +18,7 @@ const jobOpenings = [
   {
     id: 2,
     title: "Marketing Specialist",
-    location: "Bangalore, Bangalore,",
+    location: "Bangalore",
     category: "Marketing",
     company: "Glowlogics",
     companyLevel: "Entry-Level",
@@ -47,7 +47,7 @@ const jobOpenings = [
     company: "Glowlogics",
     companyLevel: "Senior-Level",
     exp: "5+ years",
-    ctc: "₹10-15 LPA",
+    ctc: "₹5-8 LPA",
     description:
       "Lead the sales team, drive KPIs, manage strategic clients and revenue pipelines.",
   },
@@ -78,7 +78,7 @@ const jobOpenings = [
   {
     id: 7,
     title: "B2B Sales",
-    location: "Bangalore and Bangalore",
+    location: "Bangalore",
     category: "Sales",
     company: "Glowlogics",
     companyLevel: "Mid-Level",
@@ -86,6 +86,31 @@ const jobOpenings = [
     ctc: "₹5-8 LPA",
     description:
       "Build and manage client relationships, pitch enterprise solutions.",
+  },
+
+   {
+    id: 8,
+    title: "Digital Marketing Specialist",
+    location: "Bangalore",
+    category: "Marketing",
+    company: "Glowlogics",
+    companyLevel: "Internship",
+    exp: "1-2 years",
+    ctc: "₹3-5 LPA",
+    description:
+      "Plan and execute digital campaigns, manage social media, and analyze performance metrics. assist in SEO/SEM efforts to increase online presence.",
+  },
+    {
+    id: 9,
+    title: "Human Resources",
+    location: "Bangalore",
+    category: "Human Resources",
+    company: "Glowlogics",
+    companyLevel: "Internship",
+    exp: "1-2 years",
+    ctc: "₹3-5 LPA",
+    description:
+      "Manage recruitment, employee relations, and HR policies to foster a positive work environment. Assist in talent acquisition, onboarding, and employee engagement initiatives.",
   },
 ];
 
