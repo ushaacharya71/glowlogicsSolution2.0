@@ -5,6 +5,36 @@ import { useNavigate } from "react-router-dom";
 const categories = ["All", "BTech", "Graduates", "Masters", "Crash Course"];
 
 const programData = [
+  {
+    id: 37,
+    title: "Gen AI & Prompt Engineering",
+    slug: "GenAi",
+    category: "BTech",
+    author: "📅 This Batch Is Now Live",
+    image:
+      "/generative_ai.webp",
+    desc: "Learn Generative AI and Prompt Engineering for Business Applications.",
+    details:
+      "Master the fundamentals of Generative AI and Prompt Engineering to enhance productivity, automate tasks, and unlock new business opportunities.",
+    popupTitle: "Learn Generative AI & Prompt Engineering",
+
+    highlight: true,
+    highlightStyle:
+      "bg-gradient-to-br from-white to-white border border-orange-400 shadow-[0_12px_35px_rgba(255,165,0,0.28)]",
+  },
+  {
+    id: 38,
+    title: "Embedded Systems",
+    slug: "EmbeddedSystems",
+    category: "BTech",
+    author: "📅 This Batch Is Now Live",
+    image:
+      "/embedded_systems.webp",
+    desc: "Master Embedded C, Microcontrollers, IoT, RTOS & Hardware Interfacing",
+    details:
+      "Build real-world Embedded & IoT projects from scratch. Master Embedded C, Arduino, ARM, ESP32, RTOS & Sensor Integration.",
+    popupTitle: "Embedded Systems Course",
+  },
   // Program data remains unchanged for brevity
   // <----------------------------THIS IS CRASH COURSE---------------------->
 
@@ -97,20 +127,6 @@ const programData = [
 
   // Tech
 
-  {
-    id: 9,
-    title: "DSA in JAVA",
-    slug: "dsajava", // I Added the slug for routing
-    category: "BTech",
-    author: "📅 This Batch Is Now Live",
-
-    image:
-      "https://img.freepik.com/premium-photo/java-programming-code-abstract-technology-background_272306-149.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740&q=80",
-    desc: "Master Java & DSA: Arrays, Linked Lists, Stacks, Queues & More.",
-    details:
-      "Master Data Structures and Algorithms in Java with problem-solving techniques, coding patterns, and real-world applications.",
-    popupTitle: "DSA in Java",
-  },
   {
     id: 10,
     title: "Full-Stack Web Development",
@@ -497,22 +513,6 @@ const programData = [
       "Develop effective communication strategies, from writing emails and reports to public speaking and client negotiations — essential for any career path.",
     popupTitle: "Upgrade Your Business Communication Skills",
   },
-  {
-    id: 37,
-    title: "Gen AI & Prompt Engineering",
-    category: "BTech",
-    author: "Batch will be Live Soon!",
-    image:
-      "https://pub-e93d5c9fdf134c89830082377f6df465.r2.dev/2024/11/Generative-AI-edited.webp",
-    desc: "Learn Generative AI and Prompt Engineering for Business Applications.",
-    details:
-      "Master the fundamentals of Generative AI and Prompt Engineering to enhance productivity, automate tasks, and unlock new business opportunities.",
-    popupTitle: "Learn Generative AI & Prompt Engineering",
-
-    highlight: true,
-    highlightStyle:
-      "bg-gradient-to-br from-white to-white border border-orange-400 shadow-[0_12px_35px_rgba(255,165,0,0.28)]",
-  },
 ];
 
 export default function ProgramShowcase() {
@@ -611,7 +611,6 @@ export default function ProgramShowcase() {
                   />
                   {[
                     "Entrepreneurship",
-                    "Gen AI & Prompt Engineering",
                     "Business Law",
                     "Business Communication",
                   ].includes(prog.title) ? (

@@ -59,6 +59,8 @@ import Entrepreneurship from "./pages/programs/Entrepreneurship"; //   added
 import BusinessCommunication from "./pages/programs/BusinessCommunication"; //   added
 import Blaw from "./pages/programs/Blaw"; //   added
 import DSAjava from "./pages/programs/DSAjava"; //   added
+import GenAi from "./pages/programs/GenAi";
+import EmbeddedSystems from "./pages/programs/EmbeddedSystems";
 
 // ✅ Scroll to section if route state has scrollTo
 function ScrollHandler() {
@@ -155,6 +157,8 @@ function App() {
         <Route path="/programs/AutoCAD" element={<AutoCAD />} />
         <Route path="/programs/JavaFullstack" element={<JavaFullstack />} />
         <Route path="/programs/dsajava" element={<DSAjava />} />
+        <Route path="/programs/GenAi" element={<GenAi />} />
+        <Route path="/programs/EmbeddedSystems" element={<EmbeddedSystems />} />
         <Route
           path="/programs/AppDevelopment"
           element={<AppDevelopment />}
