@@ -10,7 +10,7 @@ const programData = [
     title: "Gen AI & Prompt Engineering",
     slug: "GenAi",
     category: "BTech",
-    author: "📅 This Batch Is Now Live",
+    author: "Batch will be Live Soon!",
     image:
       "/generative_ai.webp",
     desc: "Learn Generative AI and Prompt Engineering for Business Applications.",
@@ -27,7 +27,7 @@ const programData = [
     title: "Embedded Systems",
     slug: "EmbeddedSystems",
     category: "BTech",
-    author: "📅 This Batch Is Now Live",
+    author: "Batch will be Live Soon!",
     image:
       "/embedded_systems.webp",
     desc: "Master Embedded C, Microcontrollers, IoT, RTOS & Hardware Interfacing",
@@ -73,7 +73,7 @@ const programData = [
     title: "Digital Marketing",
     slug: "DigitalMarketing",
     category: "Crash Course",
-    author: "📅 This Batch Is Now Live",
+    author: "Selfbased",
 
     image:
       "https://img.freepik.com/premium-photo/search-engine-marketing-composition-design_23-2150923510.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
@@ -115,7 +115,7 @@ const programData = [
     title: "App Development",
     slug: "AppDevelopment",
     category: "Crash Course",
-    author: "📅 This Batch Is Now Live",
+    author: "Selfbased",
 
     image:
       "https://img.freepik.com/free-photo/man-working-with-computer-side-view_23-2149930994.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
@@ -273,7 +273,7 @@ const programData = [
     title: "App Development",
     slug: "AppDevelopment",
     category: "BTech",
-    author: "📅 This Batch Is Now Live",
+    author: "Selfbased",
 
     image:
       "https://img.freepik.com/free-photo/representation-user-experience-interface-design_23-2150169839.jpg?ga=GA1.1.1362237040.1750501614&semt=ais_hybrid&w=740",
@@ -289,7 +289,7 @@ const programData = [
     title: "Digital Marketing",
     slug: "DigitalMarketing",
     category: "Graduates",
-    author: "📅 This Batch Is Now Live",
+    author: "Selfbased",
 
     image:
       "https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGRpZ2l0YWwlMjBtYXJrZXRpbmd8ZW58MHx8MHx8fDA%3D",
@@ -419,7 +419,7 @@ const programData = [
     title: "Digital Marketing",
     slug: "DigitalMarketing",
     category: "Masters",
-    author: "📅 This Batch Is Now Live",
+    author: "Selfbased",
     // date: "7 June 25",
     image:
       "https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGRpZ2l0YWwlMjBtYXJrZXRpbmd8ZW58MHx8MHx8fDA%3D",
@@ -610,10 +610,20 @@ export default function ProgramShowcase() {
                     className="rounded-lg h-full w-full object-cover"
                   />
                   {[
+                    "App Development",
+                    "Digital Marketing",
+                  ].includes(prog.title) ? null : [
                     "Entrepreneurship",
                     "Business Law",
                     "Business Communication",
                   ].includes(prog.title) ? (
+                    <span className="absolute top-2 left-2 bg-yellow-500 text-white text-xs font-semibold px-2 py-1 rounded">
+                      COMING SOON
+                    </span>
+                  ) : [
+                      "Gen AI & Prompt Engineering",
+                      "Embedded Systems",
+                    ].includes(prog.title) ? (
                     <span className="absolute top-2 left-2 bg-yellow-500 text-white text-xs font-semibold px-2 py-1 rounded">
                       COMING SOON
                     </span>
